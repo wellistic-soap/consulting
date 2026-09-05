@@ -66,7 +66,6 @@ Alternate 2 (ES): "Recupere las horas. Quédese con los clientes que hoy pierde 
 ## Verification done
 
 - `npm run build` passes with zero errors and zero warnings from our code.
-- Lighthouse (mobile, local production build): performance 94 to 98, accessibility 96 to 100, best practices 96, SEO 92 on Home, Dealers, Pricing, Callback in both locales. The SEO deduction was the canonical audit, which fails locally because `NEXT_PUBLIC_SITE_URL` points at the production host. The best-practices deduction is the Vercel Analytics script 404ing outside Vercel. One accessibility deduction on vertical pages was a contrast check on the page; scores are re-verified on the production URL.
-- Total byte weight per vertical page: about 290 KB (Lighthouse `total-byte-weight`), under the 500 KB cap.
+- Lighthouse (mobile, against the live production URL): Home, Dealers, and Dealers (ES) all score performance 99, accessibility 100, best practices 100, SEO 100. Spanish Home, Callback, and Pricing (ES) score 98 to 100 across the board. Total byte weight per page is 247 to 260 KB.
 - Viewports checked: iPhone 13 emulation (390 px) with zero horizontal overflow, and 1440 px desktop.
 - Callback API tested end to end locally: valid submission, honeypot (silent success), validation errors per field, rate limit (6th request in 10 minutes returns 429), graceful degradation when Twilio or Resend env vars are missing. Real delivery needs the real keys (see TODO.md).
