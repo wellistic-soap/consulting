@@ -57,7 +57,7 @@
     },
     "dental": {
       "title": "Operaciones con IA para grupos dentales y de ortodoncia | Groundwork",
-      "description": "Citas fuera de horario, seguro verificado antes de la visita, pacientes que regresan. Cumplimiento con HIPAA."
+      "description": "Citas fuera de horario, seguro verificado antes de la visita, pacientes que regresan. Corre dentro de su sistema de administración del consultorio."
     },
     "auto": {
       "title": "Operaciones con IA para talleres automotrices | Groundwork",
@@ -83,7 +83,7 @@
   "home": {
     "hero": {
       "headline": "Sus teléfonos contestados. Sus seguimientos hechos. Su equipo de vuelta al trabajo que sí paga.",
-      "proof": "Construimos y operamos los sistemas que manejan llamadas, citas y seguimientos para negocios locales establecidos. Usted ve los números antes de gastar un dólar en construir algo.",
+      "proof": "Construimos las automatizaciones, chatbots y agentes de IA que manejan llamadas, citas y seguimientos para negocios locales establecidos, conectados a los sistemas que ya usa. Usted ve los números antes de gastar un dólar en construir algo.",
       "cta": "Agende una llamada con Cris",
       "secondary": "Vea cómo funciona"
     },
@@ -115,11 +115,11 @@
     },
     "automate": {
       "title": "Lo que le quitamos de encima",
-      "subtitle": "Seis cosas que se comen horas y pierden dinero en casi todos los negocios que visitamos.",
+      "subtitle": "Seis cosas que se comen horas y pierden dinero en casi todos los negocios que visitamos. Agentes de voz, chatbots o automatización simple, lo que mejor encaje.",
       "items": [
         {
           "title": "Llamadas fuera de horario y de sobreflujo, contestadas",
-          "desc": "Cada llamada se contesta, se atiende y se registra. Noches, fines de semana y cuando el mostrador está a reventar.",
+          "desc": "Un agente de voz contesta, atiende la llamada y la registra. Noches, fines de semana y cuando el mostrador está a reventar.",
           "metric": "Típico: de 20 a 40 llamadas recuperadas al mes, por sucursal"
         },
         {
@@ -134,7 +134,7 @@
         },
         {
           "title": "Preguntas de refacciones e inventario",
-          "desc": "Contestadas por teléfono o texto desde su propio sistema, incluyendo existencias en otras sucursales.",
+          "desc": "Un chatbot en su sitio y su línea de texto responde desde su propio sistema, incluyendo existencias en otras sucursales.",
           "metric": "Típico: respuesta en menos de 10 segundos en lugar de una llamada de regreso"
         },
         {
@@ -197,15 +197,15 @@
       "items": [
         {
           "title": "Funciona con sus sistemas",
-          "desc": "Nos conectamos al sistema de distribuidor, CRM, agenda y teléfono que ya usa. No hay que cambiar nada."
+          "desc": "Automatizaciones, chatbots y agentes que se conectan al sistema de distribuidor, CRM, agenda y teléfono que ya usa. No hay que cambiar nada."
         },
         {
-          "title": "Los datos de sus clientes se quedan en EE. UU.",
-          "desc": "Los datos de sus clientes se almacenan y procesan en Estados Unidos."
+          "title": "Corre en sus propias cuentas",
+          "desc": "Todo lo que construimos corre en servidores y cuentas a su nombre. Usted tiene las llaves. Nosotros solo tenemos el acceso que usted nos da."
         },
         {
-          "title": "Cumplimiento en mente",
-          "desc": "Para grupos dentales y de ortodoncia trabajamos dentro de los requisitos de HIPAA, incluyendo un acuerdo de socio comercial (BAA) firmado cuando se requiere."
+          "title": "Sus datos se quedan en sus sistemas",
+          "desc": "No alojamos ni almacenamos datos de sus clientes o pacientes. Se quedan en los sistemas y proveedores que ya tiene, bajo los acuerdos que ya tiene con ellos."
         },
         {
           "title": "El trabajo es suyo",
@@ -228,13 +228,14 @@
     "painsTitle": "¿Le suena conocido?",
     "workflowsTitle": "Lo que construimos para usted",
     "trustTitle": "Lo que debe saber",
-    "exampleTitle": "Ejemplo de un proyecto",
-    "exampleLabel": "Escenario hipotético",
-    "before": "Antes",
-    "after": "Después",
-    "exampleNote": "Este escenario es ilustrativo, no el resultado de un cliente. Su auditoría mide sus números reales.",
     "auditPitch": "Empieza con una auditoría de $3,000 y dos semanas, que se acredita en su totalidad a una construcción. Usted recibe los números y un plan, construya o no.",
-    "ctaButton": "Agende una llamada con Cris"
+    "ctaButton": "Agende una llamada con Cris",
+    "useCasesTitle": "Dónde está el dinero",
+    "useCasesSubtitle": "Los casos de uso que los dueños de este tipo de negocio piden primero, ordenados por retorno.",
+    "problemLabel": "El problema",
+    "buildLabel": "Lo que construimos",
+    "roiLabel": "Impacto típico",
+    "useCasesNote": "Rangos típicos de negocios similares, no garantías. Su auditoría mide sus números reales."
   },
   "dealers": {
     "hero": {
@@ -280,24 +281,45 @@
     "trust": [
       "Funciona junto con su sistema de administración de distribuidor (DMS) y su CRM.",
       "No tocamos precios, financiamiento ni programas del fabricante.",
-      "Los datos de sus clientes se quedan en Estados Unidos.",
+      "Corre en cuentas a su nombre. Sus datos se quedan en sus sistemas; nosotros no los alojamos.",
       "Cris pasó 15 años en John Deere. Conoce una distribuidora por dentro."
     ],
-    "example": {
-      "before": [
-        "Tres sucursales, una línea de refacciones por tienda, unas 60 llamadas perdidas o abandonadas a la semana en temporada alta.",
-        "Seguimiento a cotizaciones cuando el vendedor se acordaba."
-      ],
-      "after": [
-        "Preguntas de refacciones contestadas por teléfono y texto desde inventario en vivo, a toda hora.",
-        "Cada cotización con seguimiento en la primera hora, y de nuevo al día 3 y al día 7.",
-        "Resultado ilustrativo: de 40 a 50 llamadas recuperadas por semana y cerca de 12% más cotizaciones cerradas en el primer trimestre."
-      ]
-    },
     "cta": {
       "title": "Descubra cuánto le están costando sus teléfonos.",
       "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Línea de refacciones y servicio fuera de horario",
+        "problem": "En siembra y cosecha, las llamadas después de las 5 se van al buzón. Son pedidos de refacciones y descomposturas que se van con el siguiente distribuidor.",
+        "build": "Un agente de voz que contesta cada llamada, revisa existencias en su DMS, agenda servicio y pasa las descomposturas a una persona de guardia.",
+        "roi": "Típico: de 20 a 40 llamadas recuperadas por sucursal al mes, la mayoría ventas de refacciones"
+      },
+      {
+        "title": "Agente de seguimiento a cotizaciones",
+        "problem": "Las cotizaciones salen y mueren porque nadie tiene tiempo de perseguirlas.",
+        "build": "Un agente que da seguimiento por texto y teléfono a cada cotización abierta, registra la respuesta en su CRM y pasa las vivas al vendedor.",
+        "roi": "Típico: de 10% a 20% más cotizaciones cerradas"
+      },
+      {
+        "title": "Chatbot del mostrador de refacciones, web y texto",
+        "problem": "El mostrador se la pasa contestando \"¿tienen esto?\" a clientes que podrían haberlo consultado solos.",
+        "build": "Un chatbot en su sitio y su línea de texto que responde número de parte, compatibilidad, precio y existencias en todas sus sucursales.",
+        "roi": "Típico: de 5 a 10 horas de mostrador a la semana liberadas por sucursal"
+      },
+      {
+        "title": "Campañas de servicio por temporada",
+        "problem": "El taller está vacío fuera de temporada y saturado en temporada, y los recordatorios salen tarde o no salen.",
+        "build": "Un agente que contacta a cada cliente con el equipo correcto antes de la temporada, agenda el servicio de pretemporada y lo confirma.",
+        "roi": "Típico: de 30 a 60 trabajos de pretemporada agendados por sucursal"
+      },
+      {
+        "title": "Respuesta a prospectos de equipo usado",
+        "problem": "Las consultas en línea sobre equipo usado se contestan al día siguiente, cuando el comprador ya siguió de largo.",
+        "build": "Una respuesta inmediata con especificaciones, horas y fotos, y después una llamada agendada con su vendedor.",
+        "roi": "Típico: primera respuesta en menos de un minuto, el doble de consultas llegando a un vendedor"
+      }
+    ]
   },
   "homeServices": {
     "hero": {
@@ -335,24 +357,51 @@
     "trust": [
       "Funciona con ServiceTitan, Housecall Pro, Jobber y plataformas similares.",
       "Se conecta al sistema telefónico que ya tiene.",
-      "Los datos de sus clientes se quedan en Estados Unidos.",
+      "Corre en cuentas a su nombre. Sus datos se quedan en sus sistemas; nosotros no los alojamos.",
       "Todo lo que construimos es suyo, incluyendo la documentación."
     ],
-    "example": {
-      "before": [
-        "Cuatro sucursales y 30 camionetas. Cerca de 25% de las llamadas entrantes perdidas en el pico del verano.",
-        "Seguimiento a presupuestos una sola vez, por quien tuviera tiempo."
-      ],
-      "after": [
-        "Cada llamada perdida recibe un texto en 30 segundos y una llamada de regreso en 10 minutos.",
-        "Seguimiento a presupuestos en el día 1, día 3 y día 7, automático.",
-        "Resultado ilustrativo: de 8 a 12 trabajos adicionales agendados por sucursal al mes, y 15% más presupuestos aprobados."
-      ]
-    },
     "cta": {
       "title": "Descubra cuántas llamadas está perdiendo.",
       "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Agente de rescate de llamadas perdidas",
+        "problem": "En el pico del verano, una cuarta parte de las llamadas no se contesta, y cada una le marca a la siguiente empresa.",
+        "build": "Un agente de voz que contesta el sobreflujo y las llamadas fuera de horario, agenda el trabajo y canaliza las emergencias al técnico de guardia.",
+        "roi": "Típico: de 8 a 12 trabajos adicionales agendados por sucursal al mes"
+      },
+      {
+        "title": "Secuencias de seguimiento a presupuestos",
+        "problem": "La mitad de sus presupuestos nunca recibe un segundo contacto.",
+        "build": "Seguimiento automático por texto y teléfono en el día 1, 3 y 7 hasta que el cliente responde, con el resultado en su CRM.",
+        "roi": "Típico: 15% más presupuestos aprobados"
+      },
+      {
+        "title": "Notas de despacho por voz",
+        "problem": "Los técnicos terminan el trabajo y las notas nunca llegan al sistema, así que la oficina los persigue.",
+        "build": "El técnico dicta el trabajo de camino al siguiente. Un agente lo convierte en un resumen con formato en ServiceTitan o Housecall Pro.",
+        "roi": "Típico: de 30 a 45 minutos al día recuperados por técnico"
+      },
+      {
+        "title": "Chatbot del sitio web que agenda",
+        "problem": "Los visitantes se van de su sitio en la noche porque no hay quien conteste una pregunta o dé una cita.",
+        "build": "Un chatbot que responde preguntas de servicio y precios y agenda directo en su tablero de despacho.",
+        "roi": "Típico: de 10 a 20 citas web adicionales al mes por sucursal"
+      },
+      {
+        "title": "Automatización de reseñas y reputación",
+        "problem": "Solo los clientes enojados dejan reseñas.",
+        "build": "Solicitudes de reseña automáticas en el momento correcto, con los clientes inconformes canalizados primero a un gerente.",
+        "roi": "Típico: de 3 a 5 veces más reseñas al mes"
+      },
+      {
+        "title": "Agente de reportes por sucursal",
+        "problem": "Se entera de cómo le fue a una sucursal al final del mes, no al final del día.",
+        "build": "Un agente que junta llamadas, citas, ingresos y reseñas de cada sucursal en un mensaje cada mañana.",
+        "roi": "Típico: de 3 a 5 horas a la semana recuperadas para el dueño"
+      }
+    ]
   },
   "dental": {
     "hero": {
@@ -388,26 +437,47 @@
       }
     ],
     "trust": [
-      "Trabajamos dentro de los requisitos de HIPAA y firmamos un acuerdo de socio comercial (BAA).",
+      "No tomamos custodia de datos de pacientes. Las automatizaciones corren dentro de su sistema de administración y su sistema telefónico, bajo los acuerdos que ya tiene con esos proveedores.",
+      "Todo corre en cuentas a su nombre. Su programa de cumplimiento sigue al mando; nosotros construimos dentro de él.",
       "Funciona con Dentrix, Open Dental, Eaglesoft y sistemas similares.",
-      "Los datos de los pacientes se almacenan y procesan en Estados Unidos.",
       "Bilingüe desde el inicio. Los pacientes escuchan español o inglés."
     ],
-    "example": {
-      "before": [
-        "Tres sucursales. Unas 35 llamadas fuera de horario a la semana que se iban al buzón.",
-        "Lista de 1,800 pacientes atrasados, trabajada cuando la recepción tenía un día tranquilo."
-      ],
-      "after": [
-        "Llamadas fuera de horario contestadas y agendadas en espacios libres la misma noche.",
-        "Seguimiento a pacientes pendientes cada semana, con las respuestas agendadas automáticamente.",
-        "Resultado ilustrativo: de 20 a 30 citas adicionales por sucursal al mes."
-      ]
-    },
     "cta": {
       "title": "Descubra cuántos pacientes está perdiendo fuera de horario.",
       "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Agente de citas fuera de horario",
+        "problem": "Los pacientes que llaman después de las 5 reciben el buzón y agendan en otro lado.",
+        "build": "Un agente de voz que agenda, reprograma y confirma directo en su sistema de administración del consultorio, a cualquier hora.",
+        "roi": "Típico: de 20 a 30 citas adicionales por sucursal al mes"
+      },
+      {
+        "title": "Verificación de seguro antes de la visita",
+        "problem": "La elegibilidad se revisa al llegar y la agenda se desbarata.",
+        "build": "Una automatización que verifica elegibilidad y beneficios el día anterior y avisa a su equipo de cualquier problema.",
+        "roi": "Típico: de 4 a 8 horas de recepción a la semana recuperadas por sucursal"
+      },
+      {
+        "title": "Agente de pacientes pendientes y reactivación",
+        "problem": "Miles de pacientes atrasados están en el sistema y nadie trabaja la lista.",
+        "build": "Un agente que envía textos y llama a los pacientes atrasados y los agenda, no solo les recuerda.",
+        "roi": "Típico: de 5% a 10% de la lista de atrasados reagendada en el primer trimestre"
+      },
+      {
+        "title": "Seguimiento a planes de tratamiento",
+        "problem": "Se presenta el plan y después, silencio.",
+        "build": "Seguimiento automático al tratamiento sin agendar, con las preguntas de financiamiento canalizadas a su coordinador.",
+        "roi": "Típico: de 10% a 15% más tratamiento aceptado"
+      },
+      {
+        "title": "Chatbot para pacientes nuevos",
+        "problem": "Los pacientes potenciales tienen preguntas a las 9 de la noche y su sitio no tiene respuestas.",
+        "build": "Un chatbot bilingüe que responde sobre servicios, seguros y horarios, y agenda la primera visita.",
+        "roi": "Típico: de 10 a 15 pacientes nuevos agendados al mes por sucursal"
+      }
+    ]
   },
   "auto": {
     "hero": {
@@ -445,24 +515,45 @@
     "trust": [
       "Funciona con Tekmetric, Shop-Ware, Mitchell 1 y sistemas de taller similares.",
       "Se conecta al sistema telefónico que ya tiene.",
-      "Los datos de sus clientes se quedan en Estados Unidos.",
+      "Corre en cuentas a su nombre. Sus datos se quedan en sus sistemas; nosotros no los alojamos.",
       "Todo lo que construimos es suyo, incluyendo la documentación."
     ],
-    "example": {
-      "before": [
-        "Dos sucursales. Presupuestos aprobados en un promedio de 2 días, y cerca de 30% nunca aprobados.",
-        "Asesores de servicio dedicando de 1 a 2 horas al día a llamadas de estatus."
-      ],
-      "after": [
-        "Presupuestos enviados por texto con seguimiento automático. Tiempo promedio de aprobación menor a 4 horas.",
-        "Clientes informados por texto en cada etapa. Llamadas de estatus reducidas a la mitad.",
-        "Resultado ilustrativo: de 10% a 15% más presupuestos aprobados y de 6 a 8 horas a la semana recuperadas por sucursal."
-      ]
-    },
     "cta": {
       "title": "Descubra cuánto trabajo sin aprobar está parado en su taller.",
       "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Agente de citas",
+        "problem": "El asesor de servicio está con un cliente y el teléfono suena sin que nadie conteste.",
+        "build": "Un agente de voz y texto que agenda, reprograma y confirma sin tocar el mostrador.",
+        "roi": "Típico: de 15 a 25 citas recuperadas por sucursal al mes"
+      },
+      {
+        "title": "Seguimiento a aprobación de presupuestos",
+        "problem": "Los presupuestos se quedan sin aprobar por días porque el cliente no contestó.",
+        "build": "Presupuestos enviados por texto con un botón claro para aprobar, con seguimiento automático hasta que el cliente responde.",
+        "roi": "Típico: aprobación en menos de 4 horas, de 10% a 15% más presupuestos aprobados"
+      },
+      {
+        "title": "Avisos de refacciones y estatus",
+        "problem": "Los clientes llaman tres veces para preguntar si ya llegó la refacción.",
+        "build": "Textos automáticos cuando llega la refacción o el trabajo cambia de etapa, tomados de su sistema de taller.",
+        "roi": "Típico: llamadas de estatus reducidas a la mitad, de 6 a 8 horas de asesor a la semana recuperadas"
+      },
+      {
+        "title": "Recordatorios de mantenimiento por millaje o fecha",
+        "problem": "Los clientes se olvidan, y la siguiente visita se la lleva quien les recuerde primero.",
+        "build": "Recordatorios según el vehículo y la última visita, con un enlace para agendar.",
+        "roi": "Típico: de 10% a 20% más visitas repetidas"
+      },
+      {
+        "title": "Chatbot del sitio para cotizar y agendar",
+        "problem": "Los visitantes quieren un precio aproximado y una cita, y se van cuando no consiguen ninguno.",
+        "build": "Un chatbot que responde preguntas comunes de servicio, da rangos de precio que usted define y agenda.",
+        "roi": "Típico: de 8 a 15 citas web adicionales al mes por sucursal"
+      }
+    ]
   },
   "gyms": {
     "hero": {
@@ -500,24 +591,45 @@
     "trust": [
       "Funciona con Mindbody, ABC Fitness, Club Automation y plataformas similares.",
       "Se conecta al sistema telefónico que ya tiene.",
-      "Los datos de sus miembros se quedan en Estados Unidos.",
+      "Corre en cuentas a su nombre. Sus datos se quedan en sus sistemas; nosotros no los alojamos.",
       "Todo lo que construimos es suyo, incluyendo la documentación."
     ],
-    "example": {
-      "before": [
-        "Tres sucursales. Prospectos de internet contactados en un promedio de 14 horas. Cerca de 40% nunca contactados.",
-        "Unas 60 cancelaciones al mes, ninguna rescatada."
-      ],
-      "after": [
-        "Prospectos con texto en menos de un minuto y llamada en la primera hora.",
-        "Cada solicitud de cancelación pasa por una conversación de rescate antes de cerrarse.",
-        "Resultado ilustrativo: 20% más prospectos contactados y de 10 a 15 membresías rescatadas al mes entre todas las sucursales."
-      ]
-    },
     "cta": {
       "title": "Descubra cuántos prospectos y miembros está perdiendo.",
       "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Agente de seguimiento a prospectos",
+        "problem": "Los prospectos llegan por internet en la noche y se les llama a la tarde siguiente, si acaso.",
+        "build": "Un agente que envía un texto en un minuto, llama en la primera hora y agenda un recorrido.",
+        "roi": "Típico: 20% más prospectos contactados, de 10% a 15% más recorridos agendados"
+      },
+      {
+        "title": "Rescate de cancelaciones de membresía",
+        "problem": "Los miembros cancelan por correo y nadie habla con ellos antes.",
+        "build": "Una solicitud de cancelación activa una conversación, una oferta de pausa o una llamada del gerente antes de cerrar la cuenta.",
+        "roi": "Típico: de 10 a 15 membresías rescatadas al mes entre todas las sucursales"
+      },
+      {
+        "title": "Chatbot de reservas de clases",
+        "problem": "La recepción pasa media mañana contestando preguntas de horarios.",
+        "build": "Un chatbot en su sitio y su línea de texto que responde horarios y disponibilidad y reserva la clase.",
+        "roi": "Típico: de 10 a 15 horas de recepción a la semana recuperadas por sucursal"
+      },
+      {
+        "title": "Reactivación de exmiembros",
+        "problem": "Los antiguos miembros son una hoja de cálculo que nadie ha abierto en meses.",
+        "build": "Una secuencia de contacto personal con una oferta, según cuándo se fue cada miembro.",
+        "roi": "Típico: de 3% a 6% de exmiembros que regresan por campaña"
+      },
+      {
+        "title": "Agente de reportes por sucursal",
+        "problem": "Prospectos, altas, bajas y rescates viven en cinco tableros distintos.",
+        "build": "Un mensaje cada mañana con los números de cada sucursal, tomados de su sistema de membresías.",
+        "roi": "Típico: de 3 a 5 horas a la semana recuperadas para el dueño"
+      }
+    ]
   },
   "pricing": {
     "title": "Precios",
@@ -541,10 +653,11 @@
       "tag": "Definido a partir de su auditoría",
       "title": "Construcción de procesos",
       "price": "De $15,000 a $25,000",
-      "desc": "Construimos los procesos de su auditoría que se pagan solos más rápido, conectados a los sistemas que ya usa.",
+      "desc": "Construimos las automatizaciones, chatbots y agentes de su auditoría que se pagan solos más rápido, conectados a los sistemas que ya usa.",
       "includes": [
-        "De dos a cuatro procesos del plan de su auditoría",
+        "De dos a cuatro automatizaciones, chatbots o agentes del plan de su auditoría",
         "Integración con su teléfono, CRM y sistema de agenda",
+        "Desplegados en servidores y cuentas a su nombre",
         "Pruebas con su equipo antes de salir en vivo",
         "Documentación que es suya"
       ],
@@ -567,7 +680,7 @@
         },
         {
           "q": "¿Qué pasa con HIPAA y los datos de mis clientes?",
-          "a": "Los datos de sus clientes se almacenan y procesan en Estados Unidos. Para grupos dentales y de ortodoncia trabajamos dentro de los requisitos de HIPAA y firmamos un acuerdo de socio comercial (BAA)."
+          "a": "No alojamos ni almacenamos datos de sus clientes o pacientes. Todo lo que construimos corre en servidores y cuentas a su nombre, conectado a los sistemas que ya usa, bajo los acuerdos que ya tiene con sus proveedores. Usted tiene las llaves. Para grupos dentales, eso significa que su proveedor de administración del consultorio y su programa de cumplimiento siguen al mando; nosotros construimos dentro de ellos."
         },
         {
           "q": "¿Cuánto tarda una auditoría?",
@@ -649,7 +762,7 @@
       "sections": [
         {
           "h": "Este sitio",
-          "p": "Este sitio describe los servicios de [COMPANY LEGAL NAME]. El contenido es solo informativo. Las cifras mostradas son típicas o ilustrativas y no son garantía de resultados para su negocio."
+          "p": "Este sitio describe los servicios de [COMPANY LEGAL NAME]. El contenido es solo informativo. Las cifras mostradas son rangos típicos y no son garantía de resultados para su negocio."
         },
         {
           "h": "Servicios",

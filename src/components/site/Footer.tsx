@@ -12,7 +12,7 @@ export function Footer() {
       <div className="container-site py-12">
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2 font-serif text-xl font-semibold text-primary">
+            <div className="flex items-center gap-2 text-xl font-semibold tracking-tight text-primary">
               <Logo />
               {t("siteName")}
             </div>

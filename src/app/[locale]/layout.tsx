@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -16,10 +16,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const sourceSerif = Source_Serif_4({
+const mono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["600"],
-  variable: "--font-source-serif",
+  weight: ["500", "600"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -58,7 +58,7 @@ export default async function LocaleLayout({
   const clientMessages = { common: all.common };
 
   return (
-    <html lang={locale} className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${mono.variable}`}>
       <body className="flex min-h-svh flex-col">
         <NextIntlClientProvider messages={clientMessages}>
           <a

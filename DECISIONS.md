@@ -48,6 +48,14 @@ Audit lowered to reduce first-call friction; retainer split so support obligatio
 - Spanish: product name changed to "Auditoría de Oportunidades de IA" (was "con IA") everywhere, tiers are "Monitoreo" and "Mejora Continua," credit line uses "se acreditan en su totalidad."
 - Spanish phrases flagged for native review from this change: "Soporte continuo" (Home step 3 title), "Mejora Continua" as a product name, "plan mensual" for "retainer" in the FAQ question, and "Para que nada de lo que construimos se quede sin atención."
 
+## Copy and design revision (2026-09-05, later the same day)
+
+- **Data and compliance language**: removed every claim that we work within HIPAA, sign business associate agreements, or hold customer data in the US. New framing everywhere: we build automations, chatbots, and agents that connect to the owner's existing systems; anything we build runs on servers and accounts in the client's name; we do not host or store customer or patient data; existing vendor agreements and compliance programs stay in charge. The FAQ keeps the question "What about HIPAA and customer data?" because owners ask it, and answers with that framing. Have counsel read the four trust bullets and the FAQ answer before selling to dental groups.
+- **Chatbots and agents**: named explicitly in the hero proof line, the automation section, the Build tier, and the use cases. AI is still not the headline hook.
+- **Use cases replace scenarios**: the "Example engagement" before/after block (labeled hypothetical) is gone from all five vertical pages. Each now has five or six use cases with The problem, What we build, and a "Typical impact" line, ordered by payback. All "hypothetical" and "illustrative" wording removed site-wide, including Terms.
+- **Design pass toward a more technical feel**: Inter headlines with tight tracking instead of serif, JetBrains Mono for eyebrows, prices, metrics, and section numbers, a faint engineering grid behind the hero and in dark bands, numbered sections, tighter radii. The palette is unchanged. A full brief for a deeper redesign is in DESIGN-PROMPT.md.
+- **Spanish phrases flagged for native review from this revision**: "Corre en sus propias cuentas," "No tomamos custodia de datos de pacientes," "Dónde está el dinero" (section title, intentionally blunt), "Impacto típico," and "sobreflujo" again in the home services use cases.
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."

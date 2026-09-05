@@ -12,12 +12,12 @@ export async function PricingTiers({ locale }: { locale: Locale }) {
     <div className="space-y-12">
       {/* Audit (dominant) and Build */}
       <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr]">
-        <div className="flex flex-col rounded-2xl border border-primary bg-card p-6 shadow-lg ring-2 ring-primary sm:p-9">
+        <div className="flex flex-col rounded-lg border border-primary bg-card p-6 shadow-lg ring-2 ring-primary sm:p-9">
           <span className="inline-flex w-fit rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
             {t("audit.badge")}
           </span>
           <h2 className="mt-4 text-3xl font-semibold">{t("audit.title")}</h2>
-          <p className="mt-2 font-serif text-5xl font-semibold text-primary">{t("audit.price")}</p>
+          <p className="mt-2 font-mono text-5xl font-semibold tracking-tight text-primary">{t("audit.price")}</p>
           <p className="mt-1 text-sm font-medium text-muted-foreground">{t("audit.duration")}</p>
           <p className="mt-4 text-base text-muted-foreground">{t("audit.desc")}</p>
           <ul className="mt-5 space-y-2.5">
@@ -36,12 +36,12 @@ export async function PricingTiers({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-2xl border border-border bg-card/60 p-6 sm:p-8">
+        <div className="flex flex-col rounded-lg border border-border bg-card/60 p-6 sm:p-8">
           <span className="inline-flex w-fit rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             {t("build.tag")}
           </span>
           <h2 className="mt-4 text-2xl font-semibold">{t("build.title")}</h2>
-          <p className="mt-2 font-serif text-2xl font-semibold text-primary">{t("build.price")}</p>
+          <p className="mt-2 font-mono text-2xl font-semibold tracking-tight text-primary">{t("build.price")}</p>
           <p className="mt-4 text-base text-muted-foreground">{t("build.desc")}</p>
           <ul className="mt-5 space-y-2.5">
             {includes("build").map((item) => (
@@ -61,12 +61,12 @@ export async function PricingTiers({ locale }: { locale: Locale }) {
         <p className="mt-2 text-base text-muted-foreground">{t("retainerIntro")}</p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {(["monitor", "improve"] as const).map((tier) => (
-            <div key={tier} className={cn("flex flex-col rounded-2xl border border-border bg-card/60 p-6 sm:p-8")}>
+            <div key={tier} className={cn("flex flex-col rounded-lg border border-border bg-card/60 p-6 sm:p-8")}>
               <span className="inline-flex w-fit rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 {t(`${tier}.tag`)}
               </span>
               <h3 className="mt-4 text-2xl font-semibold">{t(`${tier}.title`)}</h3>
-              <p className="mt-2 font-serif text-2xl font-semibold text-primary">{t(`${tier}.price`)}</p>
+              <p className="mt-2 font-mono text-2xl font-semibold tracking-tight text-primary">{t(`${tier}.price`)}</p>
               <p className="mt-3 text-base font-medium">{t(`${tier}.framing`)}</p>
               <ul className="mt-4 space-y-2.5">
                 {includes(tier).map((item) => (

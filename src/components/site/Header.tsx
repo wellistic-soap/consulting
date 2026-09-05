@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background">
       <div className="container-site flex h-16 items-center justify-between gap-3">
-        <Link href="/" className="flex items-center gap-2 font-serif text-xl font-semibold text-primary" aria-label={t("siteName")}>
+        <Link href="/" className="flex items-center gap-2 text-xl font-semibold tracking-tight text-primary" aria-label={t("siteName")}>
           <Logo />
           {t("siteName")}
         </Link>

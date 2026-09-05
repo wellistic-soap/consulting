@@ -19,8 +19,7 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
   const pains = t.raw("pains") as string[];
   const workflows = t.raw("workflows") as Workflow[];
   const trust = t.raw("trust") as string[];
-  const before = t.raw("example.before") as string[];
-  const after = t.raw("example.after") as string[];
+  const useCases = t.raw("useCases") as { title: string; problem: string; build: string; roi: string }[];
   const shareTitle = m(`${vertical}.title`);
 
   return (
@@ -43,7 +42,7 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
 
       {/* Pains */}
       <Section tone="muted">
-        <SectionHeading title={v("painsTitle")} />
+        <SectionHeading eyebrow="01" title={v("painsTitle")} />
         <ul className="grid gap-4 sm:grid-cols-2">
           {pains.map((p) => (
             <li key={p} className="flex gap-3 rounded-xl border border-border bg-card p-5">
@@ -56,12 +55,12 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
 
       {/* Workflows */}
       <Section>
-        <SectionHeading title={v("workflowsTitle")} />
+        <SectionHeading eyebrow="02" title={v("workflowsTitle")} />
         <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {workflows.map((w, i) => (
             <li key={w.title} className="rounded-xl border border-border bg-card p-6">
               <span className="font-mono text-xs font-semibold text-primary">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-2 font-sans text-lg font-semibold tracking-normal">{w.title}</h3>
+              <h3 className="mt-2 font-sans text-lg font-semibold tracking-tight">{w.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.desc}</p>
             </li>
           ))}
@@ -81,28 +80,31 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
         </ul>
       </Section>
 
-      {/* Example engagement */}
+      {/* Use cases, ranked by payback */}
       <Section>
-        <SectionHeading title={v("exampleTitle")} subtitle={v("exampleLabel")} />
-        <div className="grid gap-5 md:grid-cols-2">
-          <div className="rounded-xl border border-border bg-card p-6">
-            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-muted-foreground">{v("before")}</h3>
-            <ul className="mt-4 space-y-3">
-              {before.map((b) => (
-                <li key={b} className="border-l-2 border-border pl-4 text-base leading-relaxed">{b}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-xl border border-primary/30 bg-secondary p-6">
-            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-primary">{v("after")}</h3>
-            <ul className="mt-4 space-y-3">
-              {after.map((a) => (
-                <li key={a} className="border-l-2 border-primary/40 pl-4 text-base leading-relaxed">{a}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <p className="mt-4 text-sm text-muted-foreground">{v("exampleNote")}</p>
+        <SectionHeading eyebrow={`03 / ${v("roiLabel")}`} title={v("useCasesTitle")} subtitle={v("useCasesSubtitle")} />
+        <ol className="grid gap-5 md:grid-cols-2">
+          {useCases.map((u, i) => (
+            <li key={u.title} className="flex flex-col rounded-lg border border-border bg-card p-6">
+              <div className="flex items-baseline gap-3">
+                <span className="font-mono text-xs font-semibold text-primary">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="font-sans text-xl font-semibold tracking-tight">{u.title}</h3>
+              </div>
+              <dl className="mt-4 space-y-3 text-sm leading-relaxed">
+                <div>
+                  <dt className="font-mono text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{v("problemLabel")}</dt>
+                  <dd className="mt-1">{u.problem}</dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{v("buildLabel")}</dt>
+                  <dd className="mt-1">{u.build}</dd>
+                </div>
+              </dl>
+              <p className="mt-auto border-t border-border pt-3 font-mono text-xs font-semibold text-primary">{u.roi}</p>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-4 text-sm text-muted-foreground">{v("useCasesNote")}</p>
       </Section>
 
       {/* CTA */}

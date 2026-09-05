@@ -60,8 +60,8 @@ Nothing is attached yet. When the domain (`[DOMAIN]`) is ready:
 
 - Native Spanish review of the phrases listed in `DECISIONS.md`.
 - Confirm the integration names dropped in the trust blocks and FAQ (ServiceTitan, Housecall Pro, Jobber, Dentrix, Open Dental, Eaglesoft, Tekmetric, Shop-Ware, Mitchell 1, Mindbody, ABC Fitness, Club Automation). Remove any you would not want to be asked about.
-- Confirm the "typical" ranges in `home.automate.items` and each vertical's example engagement match what you are comfortable saying in a room.
-- Confirm the HIPAA / BAA statements with counsel before selling to dental groups.
+- Confirm the "Typical" ranges in `home.automate.items` and each vertical's `useCases` match what you are comfortable saying in a room.
+- Have counsel read the four trust bullets on Home, the dental trust bullets, and the FAQ answer on HIPAA and customer data. The wording says we hold no data and build inside the client's systems; make sure the contract matches.
 
 ## 8. Optional
 

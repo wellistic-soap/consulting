@@ -57,7 +57,7 @@
     },
     "dental": {
       "title": "AI operations for dental and orthodontic groups | Groundwork",
-      "description": "After-hours scheduling, insurance verified before the visit, recall outreach that brings patients back. HIPAA-aware."
+      "description": "After-hours scheduling, insurance verified before the visit, recall outreach that brings patients back. Runs inside your practice management system."
     },
     "auto": {
       "title": "AI operations for auto shops and service chains | Groundwork",
@@ -83,7 +83,7 @@
   "home": {
     "hero": {
       "headline": "Your phones answered. Your follow-ups done. Your team back to the work that pays.",
-      "proof": "We build and run the systems that handle calls, scheduling, and follow-up for established local businesses. You see the numbers before you spend a dollar on a build.",
+      "proof": "We build the automations, chatbots, and AI agents that handle calls, scheduling, and follow-up for established local businesses, connected to the systems you already use. You see the numbers before you spend a dollar on a build.",
       "cta": "Book a call with Cris",
       "secondary": "See how it works"
     },
@@ -115,11 +115,11 @@
     },
     "automate": {
       "title": "What we take off your plate",
-      "subtitle": "Six things that eat hours and lose money in most of the businesses we visit.",
+      "subtitle": "Six things that eat hours and lose money in most of the businesses we visit. Voice agents, chatbots, and plain automation, whichever fits.",
       "items": [
         {
           "title": "After-hours and overflow calls answered",
-          "desc": "Every call gets picked up, handled, and logged. Nights, weekends, and when the counter is slammed.",
+          "desc": "A voice agent picks up, handles the call, and logs it. Nights, weekends, and when the counter is slammed.",
           "metric": "Typical: 20 to 40 recovered calls per month, per location"
         },
         {
@@ -134,7 +134,7 @@
         },
         {
           "title": "Parts and inventory questions",
-          "desc": "Answered by phone or text from your own system, including stock at other locations.",
+          "desc": "A chatbot on your site and text line answers from your own system, including stock at other locations.",
           "metric": "Typical: answered in under 10 seconds instead of a callback"
         },
         {
@@ -197,15 +197,15 @@
       "items": [
         {
           "title": "Works with your systems",
-          "desc": "We connect to the dealer, CRM, scheduling, and phone systems you already use. No rip and replace."
+          "desc": "Automations, chatbots, and agents that connect to the dealer, CRM, scheduling, and phone systems you already use. No rip and replace."
         },
         {
-          "title": "Customer data stays in the US",
-          "desc": "Your customer data is stored and processed in the United States."
+          "title": "Runs in your accounts",
+          "desc": "Anything we build runs on servers and accounts set up in your name. You hold the keys. We only have the access you give us."
         },
         {
-          "title": "Compliance-aware",
-          "desc": "For dental and orthodontic groups we work within HIPAA requirements, including a signed business associate agreement where needed."
+          "title": "Your data stays in your systems",
+          "desc": "We do not host or store your customer or patient data. It stays in the systems and vendors you already have, under the agreements you already have with them."
         },
         {
           "title": "You own the work",
@@ -228,13 +228,14 @@
     "painsTitle": "Sound familiar?",
     "workflowsTitle": "What we build for you",
     "trustTitle": "What you should know",
-    "exampleTitle": "Example engagement",
-    "exampleLabel": "Hypothetical scenario",
-    "before": "Before",
-    "after": "After",
-    "exampleNote": "This scenario is illustrative, not a client result. Your audit measures your real numbers.",
     "auditPitch": "It starts with a $3,000 two-week audit, credited in full toward a build. You get the numbers and a plan, whether or not you build.",
-    "ctaButton": "Book a call with Cris"
+    "ctaButton": "Book a call with Cris",
+    "useCasesTitle": "Where the money is",
+    "useCasesSubtitle": "The use cases owners in this business ask for first, ordered by payback.",
+    "problemLabel": "The problem",
+    "buildLabel": "What we build",
+    "roiLabel": "Typical impact",
+    "useCasesNote": "Typical ranges from similar businesses, not guarantees. Your audit measures your real numbers."
   },
   "dealers": {
     "hero": {
@@ -280,24 +281,45 @@
     "trust": [
       "Works alongside your dealer management system and CRM.",
       "We do not touch pricing, financing, or manufacturer programs.",
-      "Your customer data stays in the United States.",
+      "Runs in accounts set up in your name. Your data stays in your systems; we do not host it.",
       "Cris spent 15 years at John Deere. He knows what a dealership looks like from the inside."
     ],
-    "example": {
-      "before": [
-        "Three locations, one parts line per store, roughly 60 missed or abandoned calls a week during peak season.",
-        "Quotes followed up when the salesperson remembered."
-      ],
-      "after": [
-        "Parts questions answered by phone and text from live inventory, around the clock.",
-        "Every quote followed up within one hour, then on day 3 and day 7.",
-        "Illustrative result: 40 to 50 calls recovered per week and roughly 12% more quotes closed in the first quarter."
-      ]
-    },
     "cta": {
       "title": "Find out what your phones are costing you.",
       "desc": "The audit takes two weeks and gives you a number you can act on."
-    }
+    },
+    "useCases": [
+      {
+        "title": "After-hours parts and service line",
+        "problem": "During planting and harvest, calls after 5 go to voicemail. Those are parts orders and breakdowns walking to the next dealer.",
+        "build": "A voice agent that answers every call, checks parts availability in your DMS, books service, and gets breakdowns to a person on call.",
+        "roi": "Typical: 20 to 40 recovered calls per store per month, most of them parts revenue"
+      },
+      {
+        "title": "Quote follow-up agent",
+        "problem": "Quotes go out and die because nobody has time to chase them.",
+        "build": "An agent that follows up by text and phone on every open quote, logs the answer in your CRM, and hands live ones to the salesperson.",
+        "roi": "Typical: 10% to 20% more quotes closed"
+      },
+      {
+        "title": "Parts counter chatbot, web and text",
+        "problem": "The counter is tied up answering \"do you have this\" for customers who could have checked themselves.",
+        "build": "A chatbot on your site and text line that answers part numbers, fitment, price, and stock across all your locations.",
+        "roi": "Typical: 5 to 10 counter hours a week freed per store"
+      },
+      {
+        "title": "Seasonal service campaigns",
+        "problem": "The shop is slow in the off-season and slammed in-season, and reminders go out late or not at all.",
+        "build": "An agent that reaches every customer with the right equipment before the season, books pre-season service, and confirms it.",
+        "roi": "Typical: 30 to 60 pre-season jobs booked per store"
+      },
+      {
+        "title": "Used equipment lead response",
+        "problem": "Online inquiries on used units get answered the next day, after the buyer has moved on.",
+        "build": "An instant reply with specs, hours, and photos, then a call booked with your salesperson.",
+        "roi": "Typical: first response under one minute, twice as many inquiries reaching a salesperson"
+      }
+    ]
   },
   "homeServices": {
     "hero": {
@@ -335,24 +357,51 @@
     "trust": [
       "Works with ServiceTitan, Housecall Pro, Jobber, and similar platforms.",
       "Connects to the phone system you already have.",
-      "Your customer data stays in the United States.",
+      "Runs in accounts set up in your name. Your data stays in your systems; we do not host it.",
       "You own everything we build, including the documentation."
     ],
-    "example": {
-      "before": [
-        "Four locations and 30 trucks. About 25% of inbound calls missed during summer peak.",
-        "Estimates followed up once, by whoever had time."
-      ],
-      "after": [
-        "Every missed call texted back within 30 seconds and called back within 10 minutes.",
-        "Estimates followed up on day 1, day 3, and day 7 automatically.",
-        "Illustrative result: 8 to 12 additional booked jobs per location per month, and 15% more estimates approved."
-      ]
-    },
     "cta": {
       "title": "Find out how many calls you are losing.",
       "desc": "The audit takes two weeks and gives you a number you can act on."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Missed-call rescue agent",
+        "problem": "In summer peak a quarter of inbound calls go unanswered, and each one calls the next company.",
+        "build": "A voice agent that answers overflow and after-hours calls, books the job, and routes emergencies to on-call.",
+        "roi": "Typical: 8 to 12 additional booked jobs per location per month"
+      },
+      {
+        "title": "Estimate follow-up sequences",
+        "problem": "Half of your estimates never get a second touch.",
+        "build": "Automated follow-up by text and phone on day 1, 3, and 7 until the customer answers, with the result in your CRM.",
+        "roi": "Typical: 15% more estimates approved"
+      },
+      {
+        "title": "Dispatch notes by voice",
+        "problem": "Techs finish jobs and the notes never make it into the system, so the office chases them.",
+        "build": "Techs talk through the job on the drive to the next one. An agent turns it into a formatted job summary in ServiceTitan or Housecall Pro.",
+        "roi": "Typical: 30 to 45 minutes a day back per tech"
+      },
+      {
+        "title": "Website chatbot that books",
+        "problem": "Visitors leave your site at night because nobody is there to answer a question or book a slot.",
+        "build": "A chatbot that answers service and pricing questions and books directly into your dispatch board.",
+        "roi": "Typical: 10 to 20 additional web bookings per month per location"
+      },
+      {
+        "title": "Review and reputation automation",
+        "problem": "Only the angry customers leave reviews.",
+        "build": "Automated review requests at the right moment, with unhappy customers routed to a manager first.",
+        "roi": "Typical: 3 to 5 times more reviews per month"
+      },
+      {
+        "title": "Multi-location reporting agent",
+        "problem": "You learn how a location did at month end, not day end.",
+        "build": "An agent that pulls calls, bookings, revenue, and reviews per location into one morning message.",
+        "roi": "Typical: 3 to 5 owner hours a week back"
+      }
+    ]
   },
   "dental": {
     "hero": {
@@ -388,26 +437,47 @@
       }
     ],
     "trust": [
-      "We work within HIPAA requirements and sign a business associate agreement.",
+      "We do not take custody of patient data. Automations run inside your practice management and phone systems, under your existing vendor agreements.",
+      "Everything runs in accounts set up in your name. Your compliance program stays in charge; we build inside it.",
       "Works with Dentrix, Open Dental, Eaglesoft, and similar systems.",
-      "Patient data is stored and processed in the United States.",
       "Bilingual by default. Patients hear English or Spanish."
     ],
-    "example": {
-      "before": [
-        "Three locations. Roughly 35 after-hours calls per week going to voicemail.",
-        "Recall list of 1,800 overdue patients, worked when the front desk had a slow day."
-      ],
-      "after": [
-        "After-hours calls answered and booked into open slots the same night.",
-        "Recall outreach running every week, with responses booked automatically.",
-        "Illustrative result: 20 to 30 additional appointments per location per month."
-      ]
-    },
     "cta": {
       "title": "Find out how many patients you are losing after hours.",
       "desc": "The audit takes two weeks and gives you a number you can act on."
-    }
+    },
+    "useCases": [
+      {
+        "title": "After-hours scheduling agent",
+        "problem": "Patients who call after 5 get voicemail and book somewhere else.",
+        "build": "A voice agent that books, reschedules, and confirms straight into your practice management system, any hour.",
+        "roi": "Typical: 20 to 30 additional appointments per location per month"
+      },
+      {
+        "title": "Insurance verification before the visit",
+        "problem": "Eligibility gets checked at check-in and the schedule falls apart.",
+        "build": "Automation that verifies eligibility and benefits the day before and flags problems to your team.",
+        "roi": "Typical: 4 to 8 front desk hours a week back per location"
+      },
+      {
+        "title": "Recall and reactivation agent",
+        "problem": "Thousands of overdue patients sit in the system and nobody works the list.",
+        "build": "An agent that texts and calls overdue patients and books them, not just reminds them.",
+        "roi": "Typical: 5% to 10% of the overdue list rebooked in the first quarter"
+      },
+      {
+        "title": "Treatment plan follow-up",
+        "problem": "Plans get presented and then go quiet.",
+        "build": "Automated follow-up on unscheduled treatment, with financing questions routed to your coordinator.",
+        "roi": "Typical: 10% to 15% more accepted treatment"
+      },
+      {
+        "title": "New patient chatbot",
+        "problem": "Prospective patients have questions at 9 pm and your site has no answers.",
+        "build": "A bilingual chatbot that answers services, insurance, and hours questions and books a first visit.",
+        "roi": "Typical: 10 to 15 new patient bookings per month per location"
+      }
+    ]
   },
   "auto": {
     "hero": {
@@ -445,24 +515,45 @@
     "trust": [
       "Works with Tekmetric, Shop-Ware, Mitchell 1, and similar shop systems.",
       "Connects to the phone system you already have.",
-      "Your customer data stays in the United States.",
+      "Runs in accounts set up in your name. Your data stays in your systems; we do not host it.",
       "You own everything we build, including the documentation."
     ],
-    "example": {
-      "before": [
-        "Two locations. Estimates approved in an average of 2 days, with about 30% never approved.",
-        "Service writers spending 1 to 2 hours a day on status calls."
-      ],
-      "after": [
-        "Estimates sent by text and followed up automatically. Average approval time under 4 hours.",
-        "Customers updated by text at every stage. Status calls down by half.",
-        "Illustrative result: 10% to 15% more estimates approved and 6 to 8 hours a week back per location."
-      ]
-    },
     "cta": {
       "title": "Find out how much unapproved work is sitting in your shop.",
       "desc": "The audit takes two weeks and gives you a number you can act on."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Appointment agent",
+        "problem": "The service writer is with a customer and the phone rings out.",
+        "build": "A voice and text agent that books, reschedules, and confirms without touching the front counter.",
+        "roi": "Typical: 15 to 25 recovered bookings per location per month"
+      },
+      {
+        "title": "Estimate approval follow-up",
+        "problem": "Estimates sit unapproved for days because the customer did not pick up.",
+        "build": "Estimates sent by text with a clear approve button, followed up automatically until the customer answers.",
+        "roi": "Typical: approval time under 4 hours, 10% to 15% more estimates approved"
+      },
+      {
+        "title": "Parts and status updates",
+        "problem": "Customers call three times to ask if the part came in.",
+        "build": "Automatic texts when the part arrives or the job moves stage, pulled from your shop system.",
+        "roi": "Typical: status calls cut in half, 6 to 8 writer hours a week back"
+      },
+      {
+        "title": "Maintenance reminders by mileage or date",
+        "problem": "Customers forget, and the next visit goes to whoever reminds them first.",
+        "build": "Reminders based on the vehicle and the last visit, with a link to book.",
+        "roi": "Typical: 10% to 20% more repeat visits"
+      },
+      {
+        "title": "Website chatbot for quotes and booking",
+        "problem": "Visitors want a rough price and a slot, and leave when they cannot get either.",
+        "build": "A chatbot that answers common service questions, gives price ranges you set, and books.",
+        "roi": "Typical: 8 to 15 additional web bookings per month per location"
+      }
+    ]
   },
   "gyms": {
     "hero": {
@@ -500,24 +591,45 @@
     "trust": [
       "Works with Mindbody, ABC Fitness, Club Automation, and similar platforms.",
       "Connects to the phone system you already have.",
-      "Your member data stays in the United States.",
+      "Runs in accounts set up in your name. Your data stays in your systems; we do not host it.",
       "You own everything we build, including the documentation."
     ],
-    "example": {
-      "before": [
-        "Three locations. Web leads contacted in an average of 14 hours. About 40% never reached.",
-        "Roughly 60 cancellations a month, none of them saved."
-      ],
-      "after": [
-        "Leads texted in under a minute and called within the hour.",
-        "Every cancellation request routed through a save conversation before it closes.",
-        "Illustrative result: 20% more leads reached and 10 to 15 memberships saved per month across locations."
-      ]
-    },
     "cta": {
       "title": "Find out how many leads and members you are losing.",
       "desc": "The audit takes two weeks and gives you a number you can act on."
-    }
+    },
+    "useCases": [
+      {
+        "title": "Lead follow-up agent",
+        "problem": "Web leads come in overnight and get called the next afternoon, if at all.",
+        "build": "An agent that texts within a minute, calls within the hour, and books a tour.",
+        "roi": "Typical: 20% more leads reached, 10% to 15% more tours booked"
+      },
+      {
+        "title": "Membership cancellation save flow",
+        "problem": "Members cancel by email and nobody talks to them first.",
+        "build": "A cancellation request triggers a conversation, a pause offer, or a manager call before the account closes.",
+        "roi": "Typical: 10 to 15 memberships saved per month across locations"
+      },
+      {
+        "title": "Class booking chatbot",
+        "problem": "The front desk spends half the morning on schedule questions.",
+        "build": "A chatbot on your site and text line that answers schedule and availability questions and books the class.",
+        "roi": "Typical: 10 to 15 front desk hours a week back per location"
+      },
+      {
+        "title": "Past-member reactivation",
+        "problem": "Former members are a spreadsheet nobody has opened in months.",
+        "build": "A personal outreach sequence with an offer, timed to when each member left.",
+        "roi": "Typical: 3% to 6% of past members rejoining per campaign"
+      },
+      {
+        "title": "Multi-location reporting agent",
+        "problem": "Leads, joins, cancels, and saves live in five dashboards.",
+        "build": "One morning message per day with every location's numbers, pulled from your membership system.",
+        "roi": "Typical: 3 to 5 owner hours a week back"
+      }
+    ]
   },
   "pricing": {
     "title": "Pricing",
@@ -541,10 +653,11 @@
       "tag": "Scoped from your audit",
       "title": "Workflow Build",
       "price": "$15,000 to $25,000",
-      "desc": "We build the workflows from your audit that pay back fastest, connected to the systems you already use.",
+      "desc": "We build the automations, chatbots, and agents from your audit that pay back fastest, connected to the systems you already use.",
       "includes": [
-        "Two to four workflows from your audit plan",
+        "Two to four automations, chatbots, or agents from your audit plan",
         "Integration with your phone, CRM, and scheduling systems",
+        "Deployed on servers and accounts in your name",
         "Testing with your team before go-live",
         "Documentation you own"
       ],
@@ -567,7 +680,7 @@
         },
         {
           "q": "What about HIPAA and customer data?",
-          "a": "Customer data is stored and processed in the United States. For dental and orthodontic groups we work within HIPAA requirements and sign a business associate agreement."
+          "a": "We do not host or store your customer or patient data. Everything we build runs on servers and accounts set up in your name, connected to the systems you already use, under the vendor agreements you already have. You hold the keys. For dental groups that means your practice management vendor and your existing compliance program stay in charge; we build inside them."
         },
         {
           "q": "How long does an audit take?",
@@ -649,7 +762,7 @@
       "sections": [
         {
           "h": "This website",
-          "p": "This website describes the services of [COMPANY LEGAL NAME]. Content is provided for information only. Figures shown are typical or illustrative and are not guarantees of results for your business."
+          "p": "This website describes the services of [COMPANY LEGAL NAME]. Content is provided for information only. Figures shown are typical ranges and are not guarantees of results for your business."
         },
         {
           "h": "Services",
