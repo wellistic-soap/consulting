@@ -11,12 +11,12 @@
       "auto": "Talleres automotrices",
       "gyms": "Gimnasios",
       "pricing": "Precios",
-      "callback": "Pedir una llamada",
+      "callback": "Agendar llamada",
       "menu": "Abrir menú",
       "close": "Cerrar menú"
     },
     "cta": {
-      "primary": "Que Cris le llame",
+      "primary": "Agende una llamada con Cris",
       "pricing": "Ver precios",
       "learnMore": "Más información"
     },
@@ -46,7 +46,7 @@
   "meta": {
     "home": {
       "title": "Groundwork | Teléfonos contestados, seguimientos hechos, horas recuperadas",
-      "description": "Construimos y operamos los sistemas que contestan llamadas, agendan servicio y dan seguimiento a cotizaciones para distribuidores de equipo, servicios para el hogar, grupos dentales, talleres y gimnasios. Empiece con una auditoría de $5,000 y dos semanas."
+      "description": "Construimos y operamos los sistemas que contestan llamadas, agendan servicio y dan seguimiento a cotizaciones para distribuidores de equipo, servicios para el hogar, grupos dentales, talleres y gimnasios. Empiece con una auditoría de $5,000 y dos semanas. Agende una llamada con Cris."
     },
     "dealers": {
       "title": "Operaciones con IA para distribuidores de equipo | Groundwork",
@@ -72,10 +72,6 @@
       "title": "Precios | Groundwork",
       "description": "La Auditoría de Oportunidades con IA cuesta $5,000 y toma dos semanas. La construcción y el plan mensual se definen a partir de su auditoría. Sin sorpresas."
     },
-    "callback": {
-      "title": "Que Cris le llame | Groundwork",
-      "description": "Déjenos lo básico y Cris le llamará en un día hábil, en español o en inglés."
-    },
     "privacy": {
       "title": "Política de privacidad | Groundwork",
       "description": "Cómo Groundwork maneja la información que usted comparte con nosotros."
@@ -89,7 +85,7 @@
     "hero": {
       "headline": "Sus teléfonos contestados. Sus seguimientos hechos. Su equipo de vuelta al trabajo que sí paga.",
       "proof": "Construimos y operamos los sistemas que manejan llamadas, citas y seguimientos para negocios locales establecidos. Usted ve los números antes de gastar un dólar en construir algo.",
-      "cta": "Que Cris le llame",
+      "cta": "Agende una llamada con Cris",
       "secondary": "Vea cómo funciona"
     },
     "verticals": {
@@ -165,7 +161,7 @@
         "duration": "Dos semanas",
         "desc": "Pasamos dos semanas en su operación. Mapeamos sus cinco procesos principales, cuantificamos las horas y los dólares que está perdiendo, y le entregamos un plan de construcción priorizado.",
         "credit": "El costo de la auditoría se acredita a una construcción.",
-        "cta": "Que Cris le llame"
+        "cta": "Agende una llamada con Cris"
       },
       "build": {
         "step": "Paso 2",
@@ -224,9 +220,9 @@
       "cta": "Ver precios"
     },
     "finalCta": {
-      "title": "Sin formularios complicados. Sin presentaciones de ventas. Cris le llama.",
-      "desc": "Déjenos lo básico y Cris le llamará en un día hábil, en español o en inglés.",
-      "cta": "Que Cris le llame"
+      "title": "Sin formularios. Sin presentaciones de ventas. Elija una hora y Cris le llama.",
+      "desc": "Escoja el horario que le convenga, en español o en inglés. Cris le llama a esa hora, desde un teléfono de verdad.",
+      "cta": "Agende una llamada con Cris"
     }
   },
   "vertical": {
@@ -239,7 +235,7 @@
     "after": "Después",
     "exampleNote": "Este escenario es ilustrativo, no el resultado de un cliente. Su auditoría mide sus números reales.",
     "auditPitch": "Empieza con una auditoría de $5,000 y dos semanas. Usted recibe los números y un plan, construya o no.",
-    "ctaButton": "Que Cris le llame"
+    "ctaButton": "Agende una llamada con Cris"
   },
   "dealers": {
     "hero": {
@@ -540,7 +536,7 @@
         "Un reporte escrito que usted se queda, construya o no"
       ],
       "credit": "Los $5,000 se acreditan a una construcción.",
-      "cta": "Que Cris le llame"
+      "cta": "Agende una llamada con Cris"
     },
     "build": {
       "tag": "Definido a partir de su auditoría",
@@ -595,74 +591,8 @@
     },
     "cta": {
       "title": "¿Listo para ver sus números?",
-      "desc": "Déjenos lo básico y Cris le llamará en un día hábil."
+      "desc": "Elija una hora que le convenga y Cris le llama. En español o en inglés."
     }
-  },
-  "callback": {
-    "title": "Que Cris le llame",
-    "intro": "Llene lo básico. Cris le llamará en un día hábil, en español o en inglés.",
-    "fields": {
-      "name": "Su nombre",
-      "business": "Nombre del negocio",
-      "vertical": "Tipo de negocio",
-      "locations": "Número de sucursales",
-      "revenue": "Ventas anuales",
-      "phone": "Teléfono",
-      "language": "Idioma preferido",
-      "bestTime": "Mejor hora para llamar",
-      "message": "¿Algo más? (opcional)",
-      "messagePlaceholder": "¿Qué es lo que más tiempo le está quitando ahora?",
-      "select": "Seleccione una opción"
-    },
-    "options": {
-      "vertical": {
-        "dealers": "Distribuidor de equipo",
-        "homeServices": "Servicios para el hogar (HVAC, plomería, plagas)",
-        "dental": "Grupo dental o de ortodoncia",
-        "auto": "Taller o cadena de servicio automotriz",
-        "gyms": "Gimnasio o cadena de fitness",
-        "other": "Otro"
-      },
-      "locations": {
-        "1": "1",
-        "2-3": "2 a 3",
-        "4-10": "4 a 10",
-        "10+": "Más de 10"
-      },
-      "revenue": {
-        "under2m": "Menos de $2M",
-        "2m-5m": "$2M a $5M",
-        "5m-20m": "$5M a $20M",
-        "20m+": "Más de $20M"
-      },
-      "language": {
-        "en": "English",
-        "es": "Español"
-      },
-      "bestTime": {
-        "morning": "Mañana (8 a 11)",
-        "midday": "Mediodía (11 a 2)",
-        "afternoon": "Tarde (2 a 5)",
-        "evening": "Noche (5 a 7)",
-        "any": "Cualquier hora"
-      }
-    },
-    "submit": "Pedir una llamada",
-    "sending": "Enviando...",
-    "success": {
-      "title": "Listo. Cris le llamará en un día hábil.",
-      "desc": "Si es urgente, indíquelo en el mensaje la próxima vez y nos movemos más rápido.",
-      "home": "Volver al inicio"
-    },
-    "errors": {
-      "generic": "Algo salió mal. Intente de nuevo o llámenos directamente.",
-      "rateLimited": "Demasiadas solicitudes. Espere unos minutos e intente de nuevo.",
-      "required": "Este campo es obligatorio.",
-      "phone": "Ingrese un número de teléfono válido.",
-      "name": "Ingrese su nombre.",
-      "business": "Ingrese el nombre de su negocio."
-    },
-    "privacyNote": "Usamos esta información solo para llamarle. No se comparte ni se vende."
   },
   "legal": {
     "privacy": {
@@ -671,11 +601,11 @@
       "sections": [
         {
           "h": "Qué recopilamos",
-          "p": "Cuando pide una llamada, recopilamos su nombre, el nombre de su negocio, su teléfono y los datos que ingresa en el formulario. También recopilamos estadísticas anónimas y estándar del sitio, como páginas vistas y tipo de dispositivo."
+          "p": "Cuando agenda una llamada, Calendly recopila su nombre, correo, teléfono y los datos que usted ingresa. A ese formulario aplica la política de privacidad de Calendly. En este sitio solo recopilamos estadísticas anónimas y estándar, como páginas vistas y tipo de dispositivo."
         },
         {
           "h": "Cómo la usamos",
-          "p": "Usamos su información para llamarle y hablar de nuestros servicios. No vendemos ni rentamos su información. No la compartimos con terceros, salvo con los proveedores que entregan nuestras notificaciones (correo y SMS) y alojan este sitio."
+          "p": "Usamos la información que ingresa al agendar para realizar esa llamada y hablar de nuestros servicios. No vendemos ni rentamos su información. No la compartimos con terceros, salvo con los proveedores de agenda y alojamiento que operan este sitio."
         },
         {
           "h": "Dónde se almacena",
@@ -683,7 +613,7 @@
         },
         {
           "h": "Cuánto tiempo la guardamos",
-          "p": "Guardamos las solicitudes de llamada el tiempo necesario para dar seguimiento, y las eliminamos si usted lo pide."
+          "p": "Guardamos los datos de la cita el tiempo necesario para dar seguimiento, y los eliminamos si usted lo pide."
         },
         {
           "h": "Sus opciones",
@@ -708,8 +638,8 @@
           "p": "Nuestros servicios se rigen por un contrato escrito firmado por ambas partes. Nada en este sitio crea un contrato. La Auditoría de Oportunidades con IA es el único servicio que se compra directamente; los proyectos de construcción y el plan mensual se definen por escrito después de una auditoría."
         },
         {
-          "h": "Solicitudes de llamada",
-          "p": "Al enviar una solicitud de llamada, acepta que le contactemos por teléfono, texto o correo sobre nuestros servicios. Puede darse de baja en cualquier momento con solo decirnos."
+          "h": "Agendar una llamada",
+          "p": "Al agendar una llamada, acepta que le contactemos por teléfono, texto o correo sobre nuestros servicios. Puede darse de baja en cualquier momento con solo decirnos."
         },
         {
           "h": "Limitación de responsabilidad",
@@ -728,7 +658,7 @@
   },
   "notFound": {
     "title": "Esa página no existe.",
-    "desc": "Pruebe la página de inicio, o pida que Cris le llame.",
+    "desc": "Pruebe la página de inicio, o agende una llamada con Cris.",
     "home": "Ir al inicio"
   }
 }

@@ -55,7 +55,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: "common" });
   // Only client components need messages in the browser: keep the payload small.
   const all = await getMessages({ locale });
-  const clientMessages = { common: all.common, callback: all.callback };
+  const clientMessages = { common: all.common };
 
   return (
     <html lang={locale} className={`${inter.variable} ${sourceSerif.variable}`}>

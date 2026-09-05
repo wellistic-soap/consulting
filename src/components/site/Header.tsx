@@ -1,12 +1,13 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { VERTICALS } from "@/lib/site";
+import { bookingHref, VERTICALS } from "@/lib/site";
 import { LanguageToggle } from "./LanguageToggle";
 import { MobileNav } from "./MobileNav";
 import { Logo } from "./Logo";
 
 export function Header() {
   const t = useTranslations("common");
+  const locale = useLocale();
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background">
       <div className="container-site flex h-16 items-center justify-between gap-3">
@@ -28,12 +29,14 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <LanguageToggle />
-          <Link
-            href="/callback"
+          <a
+            href={bookingHref({ locale })}
+            target="_blank"
+            rel="noopener"
             className="hidden h-10 items-center rounded-md bg-accent px-4 text-sm font-semibold text-accent-foreground hover:bg-accent-hover md:inline-flex"
           >
             {t("nav.callback")}
-          </Link>
+          </a>
           <MobileNav />
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import type { VerticalKey } from "@/lib/site";
+import { bookingHref, type VerticalKey } from "@/lib/site";
 
 type Props = {
   children: React.ReactNode;
@@ -13,12 +13,18 @@ type Props = {
   arrow?: boolean;
 };
 
+/** Primary CTA: opens Cris's Calendly booking page. */
 export function CtaLink({ children, vertical, size = "lg", variant = "accent", className, arrow = true }: Props) {
-  const href = vertical ? { pathname: "/callback", query: { vertical } } : "/callback";
+  const locale = useLocale();
   return (
-    <Link href={href} className={cn(buttonVariants({ variant, size }), className)}>
+    <a
+      href={bookingHref({ vertical, locale })}
+      target="_blank"
+      rel="noopener"
+      className={cn(buttonVariants({ variant, size }), className)}
+    >
       {children}
       {arrow && <ArrowRight aria-hidden="true" />}
-    </Link>
+    </a>
   );
 }

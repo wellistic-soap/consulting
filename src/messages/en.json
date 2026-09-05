@@ -11,12 +11,12 @@
       "auto": "Auto service",
       "gyms": "Gyms and fitness",
       "pricing": "Pricing",
-      "callback": "Request a call",
+      "callback": "Book a call",
       "menu": "Open menu",
       "close": "Close menu"
     },
     "cta": {
-      "primary": "Have Cris call you",
+      "primary": "Book a call with Cris",
       "pricing": "See pricing",
       "learnMore": "Learn more"
     },
@@ -46,7 +46,7 @@
   "meta": {
     "home": {
       "title": "Groundwork | Phones answered, follow-ups done, hours back",
-      "description": "We build and run the systems that answer calls, book service, and follow up on quotes for equipment dealers, home services, dental groups, auto shops, and gyms. Start with a $5,000 two-week audit."
+      "description": "We build and run the systems that answer calls, book service, and follow up on quotes for equipment dealers, home services, dental groups, auto shops, and gyms. Start with a $5,000 two-week audit. Book a call with Cris."
     },
     "dealers": {
       "title": "AI operations for equipment dealers | Groundwork",
@@ -72,10 +72,6 @@
       "title": "Pricing | Groundwork",
       "description": "The AI Opportunity Audit is $5,000 and takes two weeks. Build and retainer are scoped from your audit. No surprises."
     },
-    "callback": {
-      "title": "Have Cris call you | Groundwork",
-      "description": "Tell us the basics and Cris will call you within one business day, in English or Spanish."
-    },
     "privacy": {
       "title": "Privacy policy | Groundwork",
       "description": "How Groundwork handles the information you share with us."
@@ -89,7 +85,7 @@
     "hero": {
       "headline": "Your phones answered. Your follow-ups done. Your team back to the work that pays.",
       "proof": "We build and run the systems that handle calls, scheduling, and follow-up for established local businesses. You see the numbers before you spend a dollar on a build.",
-      "cta": "Have Cris call you",
+      "cta": "Book a call with Cris",
       "secondary": "See how it works"
     },
     "verticals": {
@@ -165,7 +161,7 @@
         "duration": "Two weeks",
         "desc": "We spend two weeks in your operation. We map your top five workflows, quantify the hours and dollars you are losing, and deliver a prioritized build plan.",
         "credit": "The audit fee credits toward a build.",
-        "cta": "Have Cris call you"
+        "cta": "Book a call with Cris"
       },
       "build": {
         "step": "Step 2",
@@ -224,9 +220,9 @@
       "cta": "See pricing"
     },
     "finalCta": {
-      "title": "No forms to figure out. No sales deck. Cris calls you.",
-      "desc": "Tell us the basics and Cris will call within one business day, in English or Spanish.",
-      "cta": "Have Cris call you"
+      "title": "No forms. No sales deck. Pick a time and Cris calls you.",
+      "desc": "Choose a slot that works for you, in English or Spanish. Cris calls at that time, from a real phone.",
+      "cta": "Book a call with Cris"
     }
   },
   "vertical": {
@@ -239,7 +235,7 @@
     "after": "After",
     "exampleNote": "This scenario is illustrative, not a client result. Your audit measures your real numbers.",
     "auditPitch": "It starts with a $5,000 two-week audit. You get the numbers and a plan, whether or not you build.",
-    "ctaButton": "Have Cris call you"
+    "ctaButton": "Book a call with Cris"
   },
   "dealers": {
     "hero": {
@@ -540,7 +536,7 @@
         "A written report you keep, whether or not you build"
       ],
       "credit": "The $5,000 credits toward a build.",
-      "cta": "Have Cris call you"
+      "cta": "Book a call with Cris"
     },
     "build": {
       "tag": "Scoped from your audit",
@@ -595,74 +591,8 @@
     },
     "cta": {
       "title": "Ready to see your numbers?",
-      "desc": "Tell us the basics and Cris will call within one business day."
+      "desc": "Pick a time that works and Cris calls you. English or Spanish."
     }
-  },
-  "callback": {
-    "title": "Have Cris call you",
-    "intro": "Fill in the basics. Cris will call within one business day, in English or Spanish.",
-    "fields": {
-      "name": "Your name",
-      "business": "Business name",
-      "vertical": "Type of business",
-      "locations": "Number of locations",
-      "revenue": "Annual revenue",
-      "phone": "Phone number",
-      "language": "Preferred language",
-      "bestTime": "Best time to call",
-      "message": "Anything else? (optional)",
-      "messagePlaceholder": "What is eating the most time right now?",
-      "select": "Select one"
-    },
-    "options": {
-      "vertical": {
-        "dealers": "Equipment dealer",
-        "homeServices": "Home services (HVAC, plumbing, pest)",
-        "dental": "Dental or orthodontic group",
-        "auto": "Auto shop or service chain",
-        "gyms": "Gym or fitness chain",
-        "other": "Other"
-      },
-      "locations": {
-        "1": "1",
-        "2-3": "2 to 3",
-        "4-10": "4 to 10",
-        "10+": "More than 10"
-      },
-      "revenue": {
-        "under2m": "Under $2M",
-        "2m-5m": "$2M to $5M",
-        "5m-20m": "$5M to $20M",
-        "20m+": "$20M+"
-      },
-      "language": {
-        "en": "English",
-        "es": "Español"
-      },
-      "bestTime": {
-        "morning": "Morning (8 to 11)",
-        "midday": "Midday (11 to 2)",
-        "afternoon": "Afternoon (2 to 5)",
-        "evening": "Evening (5 to 7)",
-        "any": "Any time"
-      }
-    },
-    "submit": "Request a call",
-    "sending": "Sending...",
-    "success": {
-      "title": "Got it. Cris will call you within one business day.",
-      "desc": "If it is urgent, mention it in the message next time and we will move faster.",
-      "home": "Back to home"
-    },
-    "errors": {
-      "generic": "Something went wrong. Please try again, or call us directly.",
-      "rateLimited": "Too many requests. Please wait a few minutes and try again.",
-      "required": "This field is required.",
-      "phone": "Please enter a valid phone number.",
-      "name": "Please enter your name.",
-      "business": "Please enter your business name."
-    },
-    "privacyNote": "We use this information only to call you back. Nothing is shared or sold."
   },
   "legal": {
     "privacy": {
@@ -671,11 +601,11 @@
       "sections": [
         {
           "h": "What we collect",
-          "p": "When you request a callback we collect your name, business name, phone number, and the details you enter in the form. We also collect standard, anonymous website analytics such as page views and device type."
+          "p": "When you book a call, Calendly collects your name, email, phone number, and any details you enter. Calendly's own privacy policy applies to that form. On this website we collect only standard, anonymous analytics such as page views and device type."
         },
         {
           "h": "How we use it",
-          "p": "We use your information to call you back and to discuss our services. We do not sell or rent your information. We do not share it with third parties except the service providers that deliver our notifications (email and SMS) and host this website."
+          "p": "We use the information you enter when booking a call to hold that call and discuss our services. We do not sell or rent your information. We do not share it with third parties except the scheduling and hosting providers that run this website."
         },
         {
           "h": "Where it is stored",
@@ -683,7 +613,7 @@
         },
         {
           "h": "How long we keep it",
-          "p": "We keep callback requests for as long as needed to follow up, and delete them on request."
+          "p": "We keep booking details for as long as needed to follow up, and delete them on request."
         },
         {
           "h": "Your choices",
@@ -708,8 +638,8 @@
           "p": "Our services are governed by a written agreement signed by both parties. Nothing on this website creates a contract. The AI Opportunity Audit is the only service purchased directly; build and retainer engagements are scoped in writing after an audit."
         },
         {
-          "h": "Callback requests",
-          "p": "By submitting a callback request you agree to be contacted by phone, text, or email about our services. You can opt out at any time by telling us."
+          "h": "Booking a call",
+          "p": "By booking a call you agree to be contacted by phone, text, or email about our services. You can opt out at any time by telling us."
         },
         {
           "h": "Limitation of liability",
@@ -728,7 +658,7 @@
   },
   "notFound": {
     "title": "That page does not exist.",
-    "desc": "Try the home page, or have Cris call you.",
+    "desc": "Try the home page, or book a call with Cris.",
     "home": "Go to home"
   }
 }

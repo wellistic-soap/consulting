@@ -1,10 +1,11 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { VERTICALS } from "@/lib/site";
+import { bookingHref, VERTICALS } from "@/lib/site";
 import { Logo } from "./Logo";
 
 export function Footer() {
   const t = useTranslations("common");
+  const locale = useLocale();
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-border bg-muted/50">
@@ -36,7 +37,7 @@ export function Footer() {
                 <Link href="/pricing" className="hover:text-primary">{t("nav.pricing")}</Link>
               </li>
               <li>
-                <Link href="/callback" className="hover:text-primary">{t("nav.callback")}</Link>
+                <a href={bookingHref({ locale })} target="_blank" rel="noopener" className="hover:text-primary">{t("nav.callback")}</a>
               </li>
               <li>
                 <Link href="/privacy" className="hover:text-primary">{t("footer.privacy")}</Link>

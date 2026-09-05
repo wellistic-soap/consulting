@@ -27,7 +27,6 @@ type MetaKey =
   | "auto"
   | "gyms"
   | "pricing"
-  | "callback"
   | "privacy"
   | "terms";
 

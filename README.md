@@ -10,7 +10,7 @@ See `DECISIONS.md` for design and copy decisions and `TODO.md` for every placeho
 
 ## Stack
 
-Next.js 15 (App Router, static generation), TypeScript, Tailwind CSS v4, shadcn/ui primitives, next-intl for routing and messages, zod for form validation, Resend for email, Twilio REST API for SMS, Vercel Analytics.
+Next.js 15 (App Router, static generation), TypeScript, Tailwind CSS v4, shadcn/ui primitives, next-intl for routing and messages, Vercel Analytics. Every CTA opens Cris's Calendly page; there is no form or backend.
 
 ## Local setup
 
@@ -33,26 +33,21 @@ npm run lint
 | Variable | Purpose |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Public URL, no trailing slash. Used for canonical, hreflang, sitemap, OG images. |
-| `RESEND_API_KEY` | Resend API key for the callback email. |
-| `LEAD_EMAIL` | Address that receives callback requests. |
-| `LEAD_FROM` | Optional. Sender for the email, e.g. `Groundwork <leads@yourdomain.com>`. Defaults to Resend's onboarding sender, which only delivers to the Resend account owner. |
-| `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM` | Twilio credentials and sending number for the SMS. |
-| `CRIS_PHONE` | Cris's mobile number in E.164 format, e.g. `+15555550199`. |
+| `NEXT_PUBLIC_CALENDLY_URL` | Cris's Calendly booking link. Every CTA on the site opens it in a new tab, tagged with `utm_source=site`, `utm_campaign=<vertical>`, and `utm_content=<locale>` so Calendly shows where the booking came from. |
 
-If any Twilio variable is missing the site logs a warning and sends email only. If neither channel is configured the form returns an error to the visitor.
+Both are build-time public variables: change them in Vercel and redeploy.
 
 ## Project layout
 
 ```
-src/app/[locale]/           pages (home, five verticals, pricing, callback, privacy, terms)
-src/app/api/callback/       form handler: zod validation, honeypot, IP rate limit, email + SMS
+src/app/[locale]/           pages (home, five verticals, pricing, privacy, terms)
 src/app/api/og/             locale-aware Open Graph image
 src/app/sitemap.ts          locale-aware sitemap with hreflang alternates
-src/components/site/        header, footer, mobile CTA bar, share button, form, page templates
+src/components/site/        header, footer, mobile CTA bar, share button, page templates
 src/messages/en.json        all English copy
 src/messages/es.json        all Spanish copy
 src/i18n/                   next-intl routing, navigation, request config
-src/lib/                    site config, SEO helpers, form schema, notifications, rate limiter
+src/lib/                    site config (incl. Calendly link builder), SEO helpers
 ```
 
 All copy lives in the two message files. Do not hardcode strings in components.
@@ -65,19 +60,4 @@ The Vercel project is imported from GitHub, so pushes to `main` deploy to produc
 npx vercel --prod
 ```
 
-Environment variables live in the Vercel project (Production and Preview). Update them with `npx vercel env add NAME production` or in the dashboard. See `TODO.md` for the full list and values to replace.
-
-## Testing the callback form
-
-1. Set real `RESEND_API_KEY` and `LEAD_EMAIL` in `.env.local` (Twilio optional).
-2. `npm run dev`, open `/callback`, submit the form.
-3. Check the terminal for `[callback]` warnings and your inbox for the email.
-
-The API can also be exercised directly:
-
-```bash
-curl -X POST http://localhost:3000/api/callback -H 'Content-Type: application/json' \
-  -d '{"name":"Test Owner","business":"Test Dealer","vertical":"dealers","locations":"2-3","revenue":"5m-20m","phone":"5551234567","language":"en","bestTime":"morning","locale":"en"}'
-```
-
-Rate limit is 5 requests per IP per 10 minutes, in memory per serverless instance.
+Set the two environment variables in the Vercel project (Production and Preview) and redeploy.

@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { VERTICALS } from "@/lib/site";
+import { bookingHref, VERTICALS } from "@/lib/site";
 
 export function MobileNav() {
   const t = useTranslations("common");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -57,12 +58,14 @@ export function MobileNav() {
             <Link href="/pricing" className="rounded-md px-2 py-3 text-lg font-medium hover:bg-secondary">
               {t("nav.pricing")}
             </Link>
-            <Link
-              href="/callback"
+            <a
+              href={bookingHref({ locale })}
+              target="_blank"
+              rel="noopener"
               className="mt-4 inline-flex h-13 items-center justify-center rounded-lg bg-accent px-6 text-base font-semibold text-accent-foreground hover:bg-accent-hover"
             >
               {t("cta.primary")}
-            </Link>
+            </a>
           </div>
         </nav>
       )}

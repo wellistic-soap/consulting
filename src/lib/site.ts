@@ -3,6 +3,10 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 ).replace(/\/$/, "");
 
+/** Cris's Calendly booking link. Every CTA on the site points here. */
+export const CALENDLY_URL =
+  process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/REPLACE_ME"; // TODO: set in Vercel
+
 export type VerticalKey = "dealers" | "homeServices" | "dental" | "auto" | "gyms";
 
 export const VERTICALS: { key: VerticalKey; path: string }[] = [
@@ -13,11 +17,13 @@ export const VERTICALS: { key: VerticalKey; path: string }[] = [
   { key: "gyms", path: "/gyms" },
 ];
 
-export const PAGE_PATHS = [
-  "/",
-  ...VERTICALS.map((v) => v.path),
-  "/pricing",
-  "/callback",
-  "/privacy",
-  "/terms",
-] as const;
+export const PAGE_PATHS = ["/", ...VERTICALS.map((v) => v.path), "/pricing", "/privacy", "/terms"] as const;
+
+/** Calendly link tagged with where the click came from, visible in Calendly's UTM fields. */
+export function bookingHref(opts: { vertical?: VerticalKey | string; locale?: string } = {}) {
+  const url = new URL(CALENDLY_URL);
+  url.searchParams.set("utm_source", "site");
+  if (opts.vertical) url.searchParams.set("utm_campaign", opts.vertical);
+  if (opts.locale) url.searchParams.set("utm_content", opts.locale);
+  return url.toString();
+}
