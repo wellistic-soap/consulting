@@ -1,0 +1,734 @@
+{
+  "common": {
+    "siteName": "Groundwork",
+    "tagline": "Teléfonos contestados. Seguimientos hechos. Horas recuperadas.",
+    "skipToContent": "Ir al contenido",
+    "nav": {
+      "verticals": "Con quién trabajamos",
+      "dealers": "Distribuidores de equipo",
+      "homeServices": "Servicios para el hogar",
+      "dental": "Grupos dentales",
+      "auto": "Talleres automotrices",
+      "gyms": "Gimnasios",
+      "pricing": "Precios",
+      "callback": "Pedir una llamada",
+      "menu": "Abrir menú",
+      "close": "Cerrar menú"
+    },
+    "cta": {
+      "primary": "Que Cris le llame",
+      "pricing": "Ver precios",
+      "learnMore": "Más información"
+    },
+    "langToggle": {
+      "label": "English",
+      "aria": "View this page in English"
+    },
+    "qualifier": "Diseñado para negocios con más de $2M en ventas anuales.",
+    "typicalNote": "Las cifras son rangos típicos de negocios similares, no garantías. Su auditoría mide sus números reales.",
+    "footer": {
+      "credit": "Socio de ingeniería: Futureproof",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "rights": "Todos los derechos reservados."
+    },
+    "share": {
+      "button": "Compartir esta página",
+      "copied": "Enlace copiado",
+      "aria": "Compartir esta página con el dueño del negocio"
+    },
+    "steps": {
+      "audit": "Auditoría",
+      "build": "Construcción",
+      "run": "Operación"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Groundwork | Teléfonos contestados, seguimientos hechos, horas recuperadas",
+      "description": "Construimos y operamos los sistemas que contestan llamadas, agendan servicio y dan seguimiento a cotizaciones para distribuidores de equipo, servicios para el hogar, grupos dentales, talleres y gimnasios. Empiece con una auditoría de $5,000 y dos semanas."
+    },
+    "dealers": {
+      "title": "Operaciones con IA para distribuidores de equipo | Groundwork",
+      "description": "Preguntas de refacciones contestadas por teléfono y texto, servicio agendado, cada llamada de temporada de cosecha capturada. Para John Deere y otros distribuidores autorizados."
+    },
+    "homeServices": {
+      "title": "Operaciones con IA para HVAC, plomería y control de plagas | Groundwork",
+      "description": "Llamadas perdidas contestadas, presupuestos con seguimiento, notas de trabajo listas. Para empresas de servicios para el hogar con varias sucursales."
+    },
+    "dental": {
+      "title": "Operaciones con IA para grupos dentales y de ortodoncia | Groundwork",
+      "description": "Citas fuera de horario, seguro verificado antes de la visita, pacientes que regresan. Cumplimiento con HIPAA."
+    },
+    "auto": {
+      "title": "Operaciones con IA para talleres automotrices | Groundwork",
+      "description": "Citas agendadas, presupuestos aprobados más rápido, clientes informados sobre sus refacciones. Para talleres con varias sucursales."
+    },
+    "gyms": {
+      "title": "Operaciones con IA para gimnasios | Groundwork",
+      "description": "Prospectos contactados en minutos, cancelaciones rescatadas, exmiembros que regresan. Para gimnasios con varias sucursales."
+    },
+    "pricing": {
+      "title": "Precios | Groundwork",
+      "description": "La Auditoría de Oportunidades con IA cuesta $5,000 y toma dos semanas. La construcción y el plan mensual se definen a partir de su auditoría. Sin sorpresas."
+    },
+    "callback": {
+      "title": "Que Cris le llame | Groundwork",
+      "description": "Déjenos lo básico y Cris le llamará en un día hábil, en español o en inglés."
+    },
+    "privacy": {
+      "title": "Política de privacidad | Groundwork",
+      "description": "Cómo Groundwork maneja la información que usted comparte con nosotros."
+    },
+    "terms": {
+      "title": "Términos de servicio | Groundwork",
+      "description": "Los términos que aplican a este sitio y a nuestros servicios."
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "Sus teléfonos contestados. Sus seguimientos hechos. Su equipo de vuelta al trabajo que sí paga.",
+      "proof": "Construimos y operamos los sistemas que manejan llamadas, citas y seguimientos para negocios locales establecidos. Usted ve los números antes de gastar un dólar en construir algo.",
+      "cta": "Que Cris le llame",
+      "secondary": "Vea cómo funciona"
+    },
+    "verticals": {
+      "title": "Con quién trabajamos",
+      "subtitle": "Negocios establecidos, con volumen real de llamadas y más de una cosa pasando a la vez.",
+      "items": {
+        "dealers": {
+          "title": "Distribuidores de equipo",
+          "desc": "John Deere y otros distribuidores autorizados. Refacciones, servicio, cotizaciones y llamadas de temporada."
+        },
+        "homeServices": {
+          "title": "Servicios para el hogar",
+          "desc": "HVAC, plomería y control de plagas con 3 o más sucursales o 20 o más camionetas."
+        },
+        "dental": {
+          "title": "Grupos dentales y de ortodoncia",
+          "desc": "Consultorios con 2 o más sucursales. Citas fuera de horario, seguros, pacientes que regresan."
+        },
+        "auto": {
+          "title": "Talleres y cadenas de servicio automotriz",
+          "desc": "2 o más sucursales. Citas, aprobación de presupuestos, avisos de refacciones."
+        },
+        "gyms": {
+          "title": "Gimnasios y cadenas de fitness",
+          "desc": "2 o más sucursales. Seguimiento a prospectos, rescate de cancelaciones, reactivación."
+        }
+      }
+    },
+    "automate": {
+      "title": "Lo que le quitamos de encima",
+      "subtitle": "Seis cosas que se comen horas y pierden dinero en casi todos los negocios que visitamos.",
+      "items": [
+        {
+          "title": "Llamadas fuera de horario y de sobreflujo, contestadas",
+          "desc": "Cada llamada se contesta, se atiende y se registra. Noches, fines de semana y cuando el mostrador está a reventar.",
+          "metric": "Típico: de 20 a 40 llamadas recuperadas al mes, por sucursal"
+        },
+        {
+          "title": "Seguimiento a cotizaciones y presupuestos",
+          "desc": "Cada cotización abierta recibe seguimiento por texto y por teléfono hasta que el cliente responde.",
+          "metric": "Típico: de 10% a 20% más cotizaciones cerradas"
+        },
+        {
+          "title": "Citas y recordatorios",
+          "desc": "Se agenda por teléfono o texto, se confirma y se recuerda. Su recepción se queda con el cliente que tiene enfrente.",
+          "metric": "Típico: de 6 a 12 horas a la semana recuperadas, por sucursal"
+        },
+        {
+          "title": "Preguntas de refacciones e inventario",
+          "desc": "Contestadas por teléfono o texto desde su propio sistema, incluyendo existencias en otras sucursales.",
+          "metric": "Típico: respuesta en menos de 10 segundos en lugar de una llamada de regreso"
+        },
+        {
+          "title": "Registro y papeleo antes de la visita",
+          "desc": "Formularios, seguro, datos del vehículo o del equipo, recopilados antes de que el cliente llegue.",
+          "metric": "Típico: de 5 a 10 horas a la semana recuperadas"
+        },
+        {
+          "title": "Números diarios de cada sucursal",
+          "desc": "Llamadas, citas, cotizaciones abiertas y reseñas de cada sucursal, en un solo mensaje por la mañana.",
+          "metric": "Típico: de 3 a 5 horas a la semana recuperadas para el dueño"
+        }
+      ]
+    },
+    "how": {
+      "title": "Cómo funciona",
+      "subtitle": "Una sola cosa que comprar. Todo lo demás se define a partir de lo que encontramos.",
+      "audit": {
+        "step": "Paso 1",
+        "badge": "Empiece aquí",
+        "title": "Auditoría de Oportunidades con IA",
+        "price": "$5,000",
+        "duration": "Dos semanas",
+        "desc": "Pasamos dos semanas en su operación. Mapeamos sus cinco procesos principales, cuantificamos las horas y los dólares que está perdiendo, y le entregamos un plan de construcción priorizado.",
+        "credit": "El costo de la auditoría se acredita a una construcción.",
+        "cta": "Que Cris le llame"
+      },
+      "build": {
+        "step": "Paso 2",
+        "title": "Construcción de procesos",
+        "price": "De $15,000 a $25,000",
+        "tag": "Definido a partir de su auditoría",
+        "desc": "Construimos los procesos que se pagan solos más rápido, conectados a los sistemas que ya usa."
+      },
+      "run": {
+        "step": "Paso 3",
+        "title": "Plan mensual de operación",
+        "price": "Desde $3,000 al mes",
+        "tag": "Después de una construcción",
+        "desc": "Operamos, monitoreamos y mejoramos lo que construimos. Usted tiene un solo número al cual llamar."
+      }
+    },
+    "who": {
+      "title": "Quiénes somos",
+      "subtitle": "Dos personas. Uno lo construye, el otro se presenta en su negocio.",
+      "oz": {
+        "name": "Oz Merchant",
+        "role": "Dirige la ingeniería",
+        "bio": "Más de 25 años construyendo empresas de software. Seis startups, cuatro ventas exitosas. Oz dirige la ingeniería detrás de cada proceso que entregamos."
+      },
+      "cris": {
+        "name": "Cris [APELLIDO]",
+        "role": "Dirige la relación con clientes",
+        "bio": "15 años en John Deere y dueño de su propio negocio. Cris sabe cómo funciona de verdad una distribuidora y un taller. Habla español."
+      },
+      "photoPlaceholder": "Foto"
+    },
+    "trust": {
+      "title": "Hecho para encajar con la forma en que ya trabaja",
+      "items": [
+        {
+          "title": "Funciona con sus sistemas",
+          "desc": "Nos conectamos al sistema de distribuidor, CRM, agenda y teléfono que ya usa. No hay que cambiar nada."
+        },
+        {
+          "title": "Los datos de sus clientes se quedan en EE. UU.",
+          "desc": "Los datos de sus clientes se almacenan y procesan en Estados Unidos."
+        },
+        {
+          "title": "Cumplimiento en mente",
+          "desc": "Para grupos dentales y de ortodoncia trabajamos dentro de los requisitos de HIPAA, incluyendo un acuerdo de socio comercial (BAA) firmado cuando se requiere."
+        },
+        {
+          "title": "El trabajo es suyo",
+          "desc": "Todo lo que construimos para usted le pertenece, incluyendo la documentación."
+        }
+      ]
+    },
+    "pricingTeaser": {
+      "title": "Un solo precio para empezar. Sin sorpresas.",
+      "desc": "La Auditoría de Oportunidades con IA cuesta $5,000 y toma dos semanas. Es lo único que se compra en este sitio. Los precios de construcción y del plan mensual son fijos y están publicados.",
+      "cta": "Ver precios"
+    },
+    "finalCta": {
+      "title": "Sin formularios complicados. Sin presentaciones de ventas. Cris le llama.",
+      "desc": "Déjenos lo básico y Cris le llamará en un día hábil, en español o en inglés.",
+      "cta": "Que Cris le llame"
+    }
+  },
+  "vertical": {
+    "painsTitle": "¿Le suena conocido?",
+    "workflowsTitle": "Lo que construimos para usted",
+    "trustTitle": "Lo que debe saber",
+    "exampleTitle": "Ejemplo de un proyecto",
+    "exampleLabel": "Escenario hipotético",
+    "before": "Antes",
+    "after": "Después",
+    "exampleNote": "Este escenario es ilustrativo, no el resultado de un cliente. Su auditoría mide sus números reales.",
+    "auditPitch": "Empieza con una auditoría de $5,000 y dos semanas. Usted recibe los números y un plan, construya o no.",
+    "ctaButton": "Que Cris le llame"
+  },
+  "dealers": {
+    "hero": {
+      "headline": "Preguntas de refacciones contestadas. Servicio agendado. Cada llamada de temporada de cosecha capturada.",
+      "sub": "Para John Deere y otros distribuidores autorizados de equipo con una o más sucursales."
+    },
+    "pains": [
+      "El mostrador de refacciones está a reventar y el teléfono no deja de sonar.",
+      "Las cotizaciones salen y nadie tiene tiempo de darles seguimiento.",
+      "Un cliente en una sucursal pregunta por una unidad que está en otra.",
+      "En siembra y cosecha, las llamadas fuera de horario se van al buzón y nunca regresan."
+    ],
+    "workflows": [
+      {
+        "title": "Consultas de refacciones por teléfono y texto",
+        "desc": "El cliente pregunta por un número de parte, compatibilidad o precio. Recibe respuesta desde su propio inventario en segundos, por teléfono o texto."
+      },
+      {
+        "title": "Agenda de servicio",
+        "desc": "Citas de servicio agendadas y confirmadas sin sacar a un técnico o al asesor de servicio del piso."
+      },
+      {
+        "title": "Secuencias de seguimiento a cotizaciones",
+        "desc": "Cada cotización abierta recibe seguimiento por texto y llamada hasta que el cliente responde, y entonces pasa a su vendedor."
+      },
+      {
+        "title": "Preguntas de inventario entre sucursales",
+        "desc": "Un cliente en una sucursal pregunta por una unidad en otra. Recibe la respuesta, y su equipo recibe el prospecto."
+      },
+      {
+        "title": "Recordatorios de mantenimiento por temporada",
+        "desc": "Recordatorios de servicio de pretemporada para cada cliente con el equipo correcto, en la fecha que usted define."
+      },
+      {
+        "title": "Respuesta a consultas de equipo usado",
+        "desc": "Las consultas sobre equipo usado reciben respuesta en el mismo minuto con especificaciones y horas, y una llamada agendada con su vendedor."
+      },
+      {
+        "title": "Captura de llamadas fuera de horario en temporada",
+        "desc": "En siembra y cosecha, cada llamada fuera de horario se contesta, se clasifica y se canaliza. Las descomposturas llegan a una persona."
+      }
+    ],
+    "trust": [
+      "Funciona junto con su sistema de administración de distribuidor (DMS) y su CRM.",
+      "No tocamos precios, financiamiento ni programas del fabricante.",
+      "Los datos de sus clientes se quedan en Estados Unidos.",
+      "Cris pasó 15 años en John Deere. Conoce una distribuidora por dentro."
+    ],
+    "example": {
+      "before": [
+        "Tres sucursales, una línea de refacciones por tienda, unas 60 llamadas perdidas o abandonadas a la semana en temporada alta.",
+        "Seguimiento a cotizaciones cuando el vendedor se acordaba."
+      ],
+      "after": [
+        "Preguntas de refacciones contestadas por teléfono y texto desde inventario en vivo, a toda hora.",
+        "Cada cotización con seguimiento en la primera hora, y de nuevo al día 3 y al día 7.",
+        "Resultado ilustrativo: de 40 a 50 llamadas recuperadas por semana y cerca de 12% más cotizaciones cerradas en el primer trimestre."
+      ]
+    },
+    "cta": {
+      "title": "Descubra cuánto le están costando sus teléfonos.",
+      "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
+    }
+  },
+  "homeServices": {
+    "hero": {
+      "headline": "Cada llamada perdida, contestada. Cada presupuesto, con seguimiento. Cada camioneta, en control.",
+      "sub": "Para empresas de HVAC, plomería y control de plagas con 3 o más sucursales o 20 o más camionetas."
+    },
+    "pains": [
+      "Las llamadas no se contestan cuando la oficina está saturada, y esos clientes le llaman a la siguiente empresa de la lista.",
+      "Los presupuestos salen y la mitad nunca recibe un segundo contacto.",
+      "Los técnicos terminan el trabajo y las notas nunca llegan al sistema.",
+      "Usted se entera de cómo le fue a una sucursal al final del mes, no al final del día."
+    ],
+    "workflows": [
+      {
+        "title": "Captura de llamadas perdidas y llamada de regreso",
+        "desc": "Cada llamada perdida recibe un texto en segundos y una llamada de regreso en minutos. Las emergencias se canalizan al técnico de guardia."
+      },
+      {
+        "title": "Secuencias de seguimiento a presupuestos",
+        "desc": "Los presupuestos abiertos reciben seguimiento por texto y teléfono con el calendario que usted define, hasta que el cliente dice sí o no."
+      },
+      {
+        "title": "Notas de despacho y resúmenes de trabajo",
+        "desc": "El técnico dicta el trabajo de camino al siguiente. El resumen llega a su sistema, ya con formato."
+      },
+      {
+        "title": "Manejo de reseñas",
+        "desc": "A los clientes contentos se les pide una reseña en el momento correcto. Los inconformes pasan primero con un gerente."
+      },
+      {
+        "title": "Reportes de desempeño por sucursal",
+        "desc": "Llamadas, citas, ingresos y reseñas de cada sucursal, en un mensaje cada mañana."
+      }
+    ],
+    "trust": [
+      "Funciona con ServiceTitan, Housecall Pro, Jobber y plataformas similares.",
+      "Se conecta al sistema telefónico que ya tiene.",
+      "Los datos de sus clientes se quedan en Estados Unidos.",
+      "Todo lo que construimos es suyo, incluyendo la documentación."
+    ],
+    "example": {
+      "before": [
+        "Cuatro sucursales y 30 camionetas. Cerca de 25% de las llamadas entrantes perdidas en el pico del verano.",
+        "Seguimiento a presupuestos una sola vez, por quien tuviera tiempo."
+      ],
+      "after": [
+        "Cada llamada perdida recibe un texto en 30 segundos y una llamada de regreso en 10 minutos.",
+        "Seguimiento a presupuestos en el día 1, día 3 y día 7, automático.",
+        "Resultado ilustrativo: de 8 a 12 trabajos adicionales agendados por sucursal al mes, y 15% más presupuestos aprobados."
+      ]
+    },
+    "cta": {
+      "title": "Descubra cuántas llamadas está perdiendo.",
+      "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
+    }
+  },
+  "dental": {
+    "hero": {
+      "headline": "Citas fuera de horario. Seguro verificado antes del sillón. Pacientes que regresan.",
+      "sub": "Para grupos dentales y de ortodoncia con dos o más sucursales."
+    },
+    "pains": [
+      "Los pacientes llaman después de las 5, les contesta el buzón, y agendan en otro lado.",
+      "El seguro se verifica al llegar y la agenda se desbarata.",
+      "Las listas de pacientes pendientes se quedan en el sistema y nadie las trabaja.",
+      "Se presenta el plan de tratamiento y después, silencio."
+    ],
+    "workflows": [
+      {
+        "title": "Agenda de citas fuera de horario",
+        "desc": "Los pacientes agendan, reprograman y confirman por teléfono o texto a cualquier hora, directo en su agenda."
+      },
+      {
+        "title": "Verificación de seguro antes de la visita",
+        "desc": "Elegibilidad y beneficios verificados antes de la cita. Los problemas se avisan a su equipo el día anterior."
+      },
+      {
+        "title": "Seguimiento a pacientes pendientes y reactivación",
+        "desc": "Los pacientes atrasados reciben una secuencia amable de textos y llamadas que los agenda, no solo les recuerda."
+      },
+      {
+        "title": "Solicitud de reseñas",
+        "desc": "Se les pide reseña a los pacientes en el momento correcto, en el idioma que prefieren."
+      },
+      {
+        "title": "Seguimiento a planes de tratamiento",
+        "desc": "El tratamiento sin agendar recibe seguimiento con el paciente, y las preguntas de financiamiento pasan a su coordinador."
+      }
+    ],
+    "trust": [
+      "Trabajamos dentro de los requisitos de HIPAA y firmamos un acuerdo de socio comercial (BAA).",
+      "Funciona con Dentrix, Open Dental, Eaglesoft y sistemas similares.",
+      "Los datos de los pacientes se almacenan y procesan en Estados Unidos.",
+      "Bilingüe desde el inicio. Los pacientes escuchan español o inglés."
+    ],
+    "example": {
+      "before": [
+        "Tres sucursales. Unas 35 llamadas fuera de horario a la semana que se iban al buzón.",
+        "Lista de 1,800 pacientes atrasados, trabajada cuando la recepción tenía un día tranquilo."
+      ],
+      "after": [
+        "Llamadas fuera de horario contestadas y agendadas en espacios libres la misma noche.",
+        "Seguimiento a pacientes pendientes cada semana, con las respuestas agendadas automáticamente.",
+        "Resultado ilustrativo: de 20 a 30 citas adicionales por sucursal al mes."
+      ]
+    },
+    "cta": {
+      "title": "Descubra cuántos pacientes está perdiendo fuera de horario.",
+      "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
+    }
+  },
+  "auto": {
+    "hero": {
+      "headline": "Citas agendadas. Presupuestos aprobados más rápido. Clientes que saben dónde está su carro.",
+      "sub": "Para talleres mecánicos y cadenas de servicio automotriz con dos o más sucursales."
+    },
+    "pains": [
+      "El asesor de servicio está con un cliente y el teléfono suena sin que nadie conteste.",
+      "Los presupuestos se quedan sin aprobar porque el cliente no contestó.",
+      "Los clientes llaman tres veces para preguntar si ya llegó la refacción.",
+      "Nadie pide la reseña, así que el único que la deja es el cliente enojado."
+    ],
+    "workflows": [
+      {
+        "title": "Agenda de citas",
+        "desc": "Los clientes agendan, reprograman y confirman por teléfono o texto sin ocupar el mostrador."
+      },
+      {
+        "title": "Seguimiento a aprobación de presupuestos",
+        "desc": "Los presupuestos se envían por texto con un botón claro para aprobar, y reciben seguimiento hasta que el cliente responde."
+      },
+      {
+        "title": "Avisos de refacciones al cliente",
+        "desc": "Cuando llega la refacción o avanza el trabajo, el cliente recibe un texto. Menos llamadas, menos interrupciones."
+      },
+      {
+        "title": "Solicitud de reseñas",
+        "desc": "A los clientes contentos se les pide al recoger. Los inconformes pasan primero con un gerente."
+      },
+      {
+        "title": "Recordatorios de mantenimiento por millaje o fecha",
+        "desc": "Los recordatorios salen según el vehículo y la última visita, con un enlace para agendar."
+      }
+    ],
+    "trust": [
+      "Funciona con Tekmetric, Shop-Ware, Mitchell 1 y sistemas de taller similares.",
+      "Se conecta al sistema telefónico que ya tiene.",
+      "Los datos de sus clientes se quedan en Estados Unidos.",
+      "Todo lo que construimos es suyo, incluyendo la documentación."
+    ],
+    "example": {
+      "before": [
+        "Dos sucursales. Presupuestos aprobados en un promedio de 2 días, y cerca de 30% nunca aprobados.",
+        "Asesores de servicio dedicando de 1 a 2 horas al día a llamadas de estatus."
+      ],
+      "after": [
+        "Presupuestos enviados por texto con seguimiento automático. Tiempo promedio de aprobación menor a 4 horas.",
+        "Clientes informados por texto en cada etapa. Llamadas de estatus reducidas a la mitad.",
+        "Resultado ilustrativo: de 10% a 15% más presupuestos aprobados y de 6 a 8 horas a la semana recuperadas por sucursal."
+      ]
+    },
+    "cta": {
+      "title": "Descubra cuánto trabajo sin aprobar está parado en su taller.",
+      "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
+    }
+  },
+  "gyms": {
+    "hero": {
+      "headline": "Prospectos contactados en minutos. Cancelaciones rescatadas. Miembros que regresan.",
+      "sub": "Para gimnasios y cadenas de fitness con dos o más sucursales."
+    },
+    "pains": [
+      "Los prospectos llegan por internet en la noche y se les llama a la tarde siguiente, si acaso.",
+      "Los miembros cancelan por correo y nadie habla con ellos antes.",
+      "La recepción pasa media mañana contestando preguntas sobre el horario de clases.",
+      "Los exmiembros son una hoja de cálculo que nadie ha abierto en meses."
+    ],
+    "workflows": [
+      {
+        "title": "Seguimiento a prospectos de internet y de visita",
+        "desc": "Cada prospecto recibe un texto en un minuto y una llamada en la primera hora, y después un recorrido agendado."
+      },
+      {
+        "title": "Rescate de cancelaciones de membresía",
+        "desc": "Una solicitud de cancelación activa una conversación, una oferta de pausa o una llamada del gerente antes de cerrar la cuenta."
+      },
+      {
+        "title": "Preguntas sobre reservas de clases",
+        "desc": "Horarios, disponibilidad y reservas atendidas por texto o teléfono, a cualquier hora."
+      },
+      {
+        "title": "Reactivación de exmiembros",
+        "desc": "Los antiguos miembros reciben una secuencia de contacto personal con una oferta, según cuándo se fueron."
+      },
+      {
+        "title": "Reportes por sucursal",
+        "desc": "Prospectos, altas, bajas y rescates de cada sucursal, en un mensaje cada mañana."
+      }
+    ],
+    "trust": [
+      "Funciona con Mindbody, ABC Fitness, Club Automation y plataformas similares.",
+      "Se conecta al sistema telefónico que ya tiene.",
+      "Los datos de sus miembros se quedan en Estados Unidos.",
+      "Todo lo que construimos es suyo, incluyendo la documentación."
+    ],
+    "example": {
+      "before": [
+        "Tres sucursales. Prospectos de internet contactados en un promedio de 14 horas. Cerca de 40% nunca contactados.",
+        "Unas 60 cancelaciones al mes, ninguna rescatada."
+      ],
+      "after": [
+        "Prospectos con texto en menos de un minuto y llamada en la primera hora.",
+        "Cada solicitud de cancelación pasa por una conversación de rescate antes de cerrarse.",
+        "Resultado ilustrativo: 20% más prospectos contactados y de 10 a 15 membresías rescatadas al mes entre todas las sucursales."
+      ]
+    },
+    "cta": {
+      "title": "Descubra cuántos prospectos y miembros está perdiendo.",
+      "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
+    }
+  },
+  "pricing": {
+    "title": "Precios",
+    "intro": "Una sola cosa que comprar. Precios fijos para todo lo demás. Sin cobro por hora.",
+    "audit": {
+      "badge": "Empiece aquí",
+      "title": "Auditoría de Oportunidades con IA",
+      "price": "$5,000",
+      "duration": "Dos semanas",
+      "desc": "Lo único que se compra en este sitio. Vamos a su operación, encontramos el dinero y le entregamos un plan.",
+      "includes": [
+        "Sus cinco procesos principales mapeados de principio a fin",
+        "Horas y dólares perdidos, cuantificados por proceso",
+        "Un plan de construcción priorizado con precios fijos",
+        "Un reporte escrito que usted se queda, construya o no"
+      ],
+      "credit": "Los $5,000 se acreditan a una construcción.",
+      "cta": "Que Cris le llame"
+    },
+    "build": {
+      "tag": "Definido a partir de su auditoría",
+      "title": "Construcción de procesos",
+      "price": "De $15,000 a $25,000",
+      "desc": "Construimos los procesos de su auditoría que se pagan solos más rápido, conectados a los sistemas que ya usa.",
+      "includes": [
+        "De dos a cuatro procesos del plan de su auditoría",
+        "Integración con su teléfono, CRM y sistema de agenda",
+        "Pruebas con su equipo antes de salir en vivo",
+        "Documentación que es suya"
+      ],
+      "note": "No se vende por separado. Se cotiza en el reporte de su auditoría."
+    },
+    "retainer": {
+      "tag": "Después de una construcción",
+      "title": "Plan mensual de operación",
+      "price": "Desde $3,000 al mes",
+      "desc": "Operamos, monitoreamos y mejoramos lo que construimos. Usted tiene un solo número al cual llamar.",
+      "includes": [
+        "Monitoreo y correcciones",
+        "Reporte mensual de desempeño",
+        "Mejoras conforme cambia su negocio",
+        "Respuesta prioritaria"
+      ],
+      "note": "No se vende por separado. Se ofrece después de una construcción."
+    },
+    "faq": {
+      "title": "Preguntas que hacen los dueños",
+      "items": [
+        {
+          "q": "¿Con qué sistemas se integran?",
+          "a": "Con su sistema telefónico, su CRM y su software de agenda o administración. Eso incluye sistemas de distribuidor (DMS), ServiceTitan, Housecall Pro, Dentrix, Open Dental, Tekmetric, Mindbody y la mayoría de los demás. Si un sistema no tiene forma de conectarse, se lo decimos en la auditoría."
+        },
+        {
+          "q": "¿De quién es el trabajo?",
+          "a": "Suyo. Todo lo que construimos para usted, incluyendo la documentación, le pertenece a su negocio. Si se va, se lo lleva."
+        },
+        {
+          "q": "¿Qué pasa con HIPAA y los datos de mis clientes?",
+          "a": "Los datos de sus clientes se almacenan y procesan en Estados Unidos. Para grupos dentales y de ortodoncia trabajamos dentro de los requisitos de HIPAA y firmamos un acuerdo de socio comercial (BAA)."
+        },
+        {
+          "q": "¿Cuánto tarda una auditoría?",
+          "a": "Dos semanas desde el arranque hasta su reporte. Necesitamos unas cuantas horas del tiempo de su equipo en esas dos semanas, sobre todo para escuchar cómo funcionan las cosas hoy."
+        },
+        {
+          "q": "¿Y si no encuentran nada que valga la pena automatizar?",
+          "a": "Se lo decimos, y usted se queda con el reporte. Es una revisión de $5,000 de su operación, con números. Nadie está obligado a construir nada."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para ver sus números?",
+      "desc": "Déjenos lo básico y Cris le llamará en un día hábil."
+    }
+  },
+  "callback": {
+    "title": "Que Cris le llame",
+    "intro": "Llene lo básico. Cris le llamará en un día hábil, en español o en inglés.",
+    "fields": {
+      "name": "Su nombre",
+      "business": "Nombre del negocio",
+      "vertical": "Tipo de negocio",
+      "locations": "Número de sucursales",
+      "revenue": "Ventas anuales",
+      "phone": "Teléfono",
+      "language": "Idioma preferido",
+      "bestTime": "Mejor hora para llamar",
+      "message": "¿Algo más? (opcional)",
+      "messagePlaceholder": "¿Qué es lo que más tiempo le está quitando ahora?",
+      "select": "Seleccione una opción"
+    },
+    "options": {
+      "vertical": {
+        "dealers": "Distribuidor de equipo",
+        "homeServices": "Servicios para el hogar (HVAC, plomería, plagas)",
+        "dental": "Grupo dental o de ortodoncia",
+        "auto": "Taller o cadena de servicio automotriz",
+        "gyms": "Gimnasio o cadena de fitness",
+        "other": "Otro"
+      },
+      "locations": {
+        "1": "1",
+        "2-3": "2 a 3",
+        "4-10": "4 a 10",
+        "10+": "Más de 10"
+      },
+      "revenue": {
+        "under2m": "Menos de $2M",
+        "2m-5m": "$2M a $5M",
+        "5m-20m": "$5M a $20M",
+        "20m+": "Más de $20M"
+      },
+      "language": {
+        "en": "English",
+        "es": "Español"
+      },
+      "bestTime": {
+        "morning": "Mañana (8 a 11)",
+        "midday": "Mediodía (11 a 2)",
+        "afternoon": "Tarde (2 a 5)",
+        "evening": "Noche (5 a 7)",
+        "any": "Cualquier hora"
+      }
+    },
+    "submit": "Pedir una llamada",
+    "sending": "Enviando...",
+    "success": {
+      "title": "Listo. Cris le llamará en un día hábil.",
+      "desc": "Si es urgente, indíquelo en el mensaje la próxima vez y nos movemos más rápido.",
+      "home": "Volver al inicio"
+    },
+    "errors": {
+      "generic": "Algo salió mal. Intente de nuevo o llámenos directamente.",
+      "rateLimited": "Demasiadas solicitudes. Espere unos minutos e intente de nuevo.",
+      "required": "Este campo es obligatorio.",
+      "phone": "Ingrese un número de teléfono válido.",
+      "name": "Ingrese su nombre.",
+      "business": "Ingrese el nombre de su negocio."
+    },
+    "privacyNote": "Usamos esta información solo para llamarle. No se comparte ni se vende."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de privacidad",
+      "updated": "Última actualización: [FECHA]",
+      "sections": [
+        {
+          "h": "Qué recopilamos",
+          "p": "Cuando pide una llamada, recopilamos su nombre, el nombre de su negocio, su teléfono y los datos que ingresa en el formulario. También recopilamos estadísticas anónimas y estándar del sitio, como páginas vistas y tipo de dispositivo."
+        },
+        {
+          "h": "Cómo la usamos",
+          "p": "Usamos su información para llamarle y hablar de nuestros servicios. No vendemos ni rentamos su información. No la compartimos con terceros, salvo con los proveedores que entregan nuestras notificaciones (correo y SMS) y alojan este sitio."
+        },
+        {
+          "h": "Dónde se almacena",
+          "p": "Su información se almacena y procesa en Estados Unidos."
+        },
+        {
+          "h": "Cuánto tiempo la guardamos",
+          "p": "Guardamos las solicitudes de llamada el tiempo necesario para dar seguimiento, y las eliminamos si usted lo pide."
+        },
+        {
+          "h": "Sus opciones",
+          "p": "Puede pedirnos que eliminemos su información en cualquier momento escribiendo a [CONTACT EMAIL]."
+        },
+        {
+          "h": "Contacto",
+          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Correo: [CONTACT EMAIL]."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Términos de servicio",
+      "updated": "Última actualización: [FECHA]",
+      "sections": [
+        {
+          "h": "Este sitio",
+          "p": "Este sitio describe los servicios de [COMPANY LEGAL NAME]. El contenido es solo informativo. Las cifras mostradas son típicas o ilustrativas y no son garantía de resultados para su negocio."
+        },
+        {
+          "h": "Servicios",
+          "p": "Nuestros servicios se rigen por un contrato escrito firmado por ambas partes. Nada en este sitio crea un contrato. La Auditoría de Oportunidades con IA es el único servicio que se compra directamente; los proyectos de construcción y el plan mensual se definen por escrito después de una auditoría."
+        },
+        {
+          "h": "Solicitudes de llamada",
+          "p": "Al enviar una solicitud de llamada, acepta que le contactemos por teléfono, texto o correo sobre nuestros servicios. Puede darse de baja en cualquier momento con solo decirnos."
+        },
+        {
+          "h": "Limitación de responsabilidad",
+          "p": "En la medida que lo permita la ley, [COMPANY LEGAL NAME] no es responsable de ninguna pérdida derivada del uso de este sitio."
+        },
+        {
+          "h": "Ley aplicable",
+          "p": "Estos términos se rigen por las leyes del Estado de [STATE], Estados Unidos."
+        },
+        {
+          "h": "Contacto",
+          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Correo: [CONTACT EMAIL]."
+        }
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Esa página no existe.",
+    "desc": "Pruebe la página de inicio, o pida que Cris le llame.",
+    "home": "Ir al inicio"
+  }
+}

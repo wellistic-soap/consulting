@@ -1,0 +1,734 @@
+{
+  "common": {
+    "siteName": "Groundwork",
+    "tagline": "Phones answered. Follow-ups done. Hours back.",
+    "skipToContent": "Skip to content",
+    "nav": {
+      "verticals": "Who we work with",
+      "dealers": "Equipment dealers",
+      "homeServices": "Home services",
+      "dental": "Dental groups",
+      "auto": "Auto service",
+      "gyms": "Gyms and fitness",
+      "pricing": "Pricing",
+      "callback": "Request a call",
+      "menu": "Open menu",
+      "close": "Close menu"
+    },
+    "cta": {
+      "primary": "Have Cris call you",
+      "pricing": "See pricing",
+      "learnMore": "Learn more"
+    },
+    "langToggle": {
+      "label": "Español",
+      "aria": "Ver esta página en español"
+    },
+    "qualifier": "Designed for businesses doing $2M+ in annual revenue.",
+    "typicalNote": "Figures shown are typical ranges from similar businesses, not guarantees. Your audit measures your real numbers.",
+    "footer": {
+      "credit": "Engineering partner: Futureproof",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "rights": "All rights reserved."
+    },
+    "share": {
+      "button": "Share this page",
+      "copied": "Link copied",
+      "aria": "Share this page with the business owner"
+    },
+    "steps": {
+      "audit": "Audit",
+      "build": "Build",
+      "run": "Run"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Groundwork | Phones answered, follow-ups done, hours back",
+      "description": "We build and run the systems that answer calls, book service, and follow up on quotes for equipment dealers, home services, dental groups, auto shops, and gyms. Start with a $5,000 two-week audit."
+    },
+    "dealers": {
+      "title": "AI operations for equipment dealers | Groundwork",
+      "description": "Parts questions answered by phone and text, service booked, every harvest-season call captured. For John Deere and other authorized dealers."
+    },
+    "homeServices": {
+      "title": "AI operations for HVAC, plumbing, and pest control | Groundwork",
+      "description": "Missed calls answered, estimates followed up, job notes done. For multi-location home services companies."
+    },
+    "dental": {
+      "title": "AI operations for dental and orthodontic groups | Groundwork",
+      "description": "After-hours scheduling, insurance verified before the visit, recall outreach that brings patients back. HIPAA-aware."
+    },
+    "auto": {
+      "title": "AI operations for auto shops and service chains | Groundwork",
+      "description": "Appointments booked, estimates approved faster, customers updated on parts. For multi-location auto service."
+    },
+    "gyms": {
+      "title": "AI operations for gyms and fitness chains | Groundwork",
+      "description": "Leads followed up in minutes, cancellations saved, past members brought back. For multi-location gyms."
+    },
+    "pricing": {
+      "title": "Pricing | Groundwork",
+      "description": "The AI Opportunity Audit is $5,000 and takes two weeks. Build and retainer are scoped from your audit. No surprises."
+    },
+    "callback": {
+      "title": "Have Cris call you | Groundwork",
+      "description": "Tell us the basics and Cris will call you within one business day, in English or Spanish."
+    },
+    "privacy": {
+      "title": "Privacy policy | Groundwork",
+      "description": "How Groundwork handles the information you share with us."
+    },
+    "terms": {
+      "title": "Terms of service | Groundwork",
+      "description": "The terms that apply to this website and our services."
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "Your phones answered. Your follow-ups done. Your team back to the work that pays.",
+      "proof": "We build and run the systems that handle calls, scheduling, and follow-up for established local businesses. You see the numbers before you spend a dollar on a build.",
+      "cta": "Have Cris call you",
+      "secondary": "See how it works"
+    },
+    "verticals": {
+      "title": "Who we work with",
+      "subtitle": "Established businesses with real call volume and more than one thing going on at once.",
+      "items": {
+        "dealers": {
+          "title": "Equipment dealers",
+          "desc": "John Deere and other authorized dealers. Parts, service, quotes, and seasonal call volume."
+        },
+        "homeServices": {
+          "title": "Home services",
+          "desc": "HVAC, plumbing, and pest control with 3+ locations or 20+ trucks."
+        },
+        "dental": {
+          "title": "Dental and orthodontic groups",
+          "desc": "Practices with 2+ locations. After-hours scheduling, insurance, recall."
+        },
+        "auto": {
+          "title": "Auto shops and service chains",
+          "desc": "2+ locations. Appointments, estimate approvals, parts updates."
+        },
+        "gyms": {
+          "title": "Gyms and fitness chains",
+          "desc": "2+ locations. Lead follow-up, cancellation saves, reactivation."
+        }
+      }
+    },
+    "automate": {
+      "title": "What we take off your plate",
+      "subtitle": "Six things that eat hours and lose money in most of the businesses we visit.",
+      "items": [
+        {
+          "title": "After-hours and overflow calls answered",
+          "desc": "Every call gets picked up, handled, and logged. Nights, weekends, and when the counter is slammed.",
+          "metric": "Typical: 20 to 40 recovered calls per month, per location"
+        },
+        {
+          "title": "Quote and estimate follow-up",
+          "desc": "Every open quote gets a follow-up by text and phone until the customer answers.",
+          "metric": "Typical: 10% to 20% more quotes closed"
+        },
+        {
+          "title": "Scheduling and reminders",
+          "desc": "Booked by phone or text, confirmed, and reminded. Your front desk stays on the customer in front of them.",
+          "metric": "Typical: 6 to 12 hours a week back, per location"
+        },
+        {
+          "title": "Parts and inventory questions",
+          "desc": "Answered by phone or text from your own system, including stock at other locations.",
+          "metric": "Typical: answered in under 10 seconds instead of a callback"
+        },
+        {
+          "title": "Intake and paperwork before the visit",
+          "desc": "Forms, insurance, vehicle and equipment details collected before the customer walks in.",
+          "metric": "Typical: 5 to 10 hours a week back"
+        },
+        {
+          "title": "Daily numbers from every location",
+          "desc": "Calls, bookings, open quotes, and reviews from each location in one morning message.",
+          "metric": "Typical: 3 to 5 hours a week back for the owner"
+        }
+      ]
+    },
+    "how": {
+      "title": "How it works",
+      "subtitle": "One thing to buy. Everything after that is scoped from what we find.",
+      "audit": {
+        "step": "Step 1",
+        "badge": "Start here",
+        "title": "AI Opportunity Audit",
+        "price": "$5,000",
+        "duration": "Two weeks",
+        "desc": "We spend two weeks in your operation. We map your top five workflows, quantify the hours and dollars you are losing, and deliver a prioritized build plan.",
+        "credit": "The audit fee credits toward a build.",
+        "cta": "Have Cris call you"
+      },
+      "build": {
+        "step": "Step 2",
+        "title": "Workflow Build",
+        "price": "$15,000 to $25,000",
+        "tag": "Scoped from your audit",
+        "desc": "We build the workflows that pay back fastest, connected to the systems you already use."
+      },
+      "run": {
+        "step": "Step 3",
+        "title": "Operations Retainer",
+        "price": "From $3,000 per month",
+        "tag": "After a build",
+        "desc": "We run, monitor, and improve what we built. You get one number to call."
+      }
+    },
+    "who": {
+      "title": "Who we are",
+      "subtitle": "Two people. One builds it, one shows up.",
+      "oz": {
+        "name": "Oz Merchant",
+        "role": "Builds the engineering",
+        "bio": "25+ years building software companies. Six startups, four exits. Oz leads the engineering behind every workflow we ship."
+      },
+      "cris": {
+        "name": "Cris [LAST NAME]",
+        "role": "Leads client relationships",
+        "bio": "15 years at John Deere and a small business owner himself. Cris knows how a dealership and a service shop actually run. Fluent in Spanish."
+      },
+      "photoPlaceholder": "Photo"
+    },
+    "trust": {
+      "title": "Built to fit how you already work",
+      "items": [
+        {
+          "title": "Works with your systems",
+          "desc": "We connect to the dealer, CRM, scheduling, and phone systems you already use. No rip and replace."
+        },
+        {
+          "title": "Customer data stays in the US",
+          "desc": "Your customer data is stored and processed in the United States."
+        },
+        {
+          "title": "Compliance-aware",
+          "desc": "For dental and orthodontic groups we work within HIPAA requirements, including a signed business associate agreement where needed."
+        },
+        {
+          "title": "You own the work",
+          "desc": "Everything we build for you belongs to you, including the documentation."
+        }
+      ]
+    },
+    "pricingTeaser": {
+      "title": "One price to start. No surprises.",
+      "desc": "The AI Opportunity Audit is $5,000 and takes two weeks. It is the only thing you buy from this site. Build and retainer pricing is fixed and published.",
+      "cta": "See pricing"
+    },
+    "finalCta": {
+      "title": "No forms to figure out. No sales deck. Cris calls you.",
+      "desc": "Tell us the basics and Cris will call within one business day, in English or Spanish.",
+      "cta": "Have Cris call you"
+    }
+  },
+  "vertical": {
+    "painsTitle": "Sound familiar?",
+    "workflowsTitle": "What we build for you",
+    "trustTitle": "What you should know",
+    "exampleTitle": "Example engagement",
+    "exampleLabel": "Hypothetical scenario",
+    "before": "Before",
+    "after": "After",
+    "exampleNote": "This scenario is illustrative, not a client result. Your audit measures your real numbers.",
+    "auditPitch": "It starts with a $5,000 two-week audit. You get the numbers and a plan, whether or not you build.",
+    "ctaButton": "Have Cris call you"
+  },
+  "dealers": {
+    "hero": {
+      "headline": "Parts questions answered. Service booked. Every harvest-season call captured.",
+      "sub": "For John Deere and other authorized equipment dealers with one or more locations."
+    },
+    "pains": [
+      "The parts counter is slammed and the phone keeps ringing.",
+      "Quotes go out and nobody has time to follow up.",
+      "A customer at one store asks about a unit sitting at another store.",
+      "During planting and harvest, after-hours calls go to voicemail and never come back."
+    ],
+    "workflows": [
+      {
+        "title": "Parts inquiry by phone and text",
+        "desc": "Customers ask for a part number, a fitment, or a price. They get an answer from your own inventory in seconds, by phone or text."
+      },
+      {
+        "title": "Service scheduling",
+        "desc": "Service appointments booked and confirmed without pulling a tech or the service writer off the floor."
+      },
+      {
+        "title": "Quote follow-up sequences",
+        "desc": "Every open quote gets a follow-up by text and call until the customer answers, then it lands with your salesperson."
+      },
+      {
+        "title": "Cross-location inventory questions",
+        "desc": "A customer at one store asks about a unit at another. They get the answer, and your team gets the lead."
+      },
+      {
+        "title": "Seasonal maintenance reminders",
+        "desc": "Pre-season service reminders go to every customer with the right equipment, timed to your calendar."
+      },
+      {
+        "title": "Used equipment inquiry response",
+        "desc": "Inquiries on used listings get a same-minute reply with specs and hours, and a call scheduled with your salesperson."
+      },
+      {
+        "title": "After-hours call capture in season",
+        "desc": "During planting and harvest, every after-hours call is answered, triaged, and routed. Breakdowns reach a human."
+      }
+    ],
+    "trust": [
+      "Works alongside your dealer management system and CRM.",
+      "We do not touch pricing, financing, or manufacturer programs.",
+      "Your customer data stays in the United States.",
+      "Cris spent 15 years at John Deere. He knows what a dealership looks like from the inside."
+    ],
+    "example": {
+      "before": [
+        "Three locations, one parts line per store, roughly 60 missed or abandoned calls a week during peak season.",
+        "Quotes followed up when the salesperson remembered."
+      ],
+      "after": [
+        "Parts questions answered by phone and text from live inventory, around the clock.",
+        "Every quote followed up within one hour, then on day 3 and day 7.",
+        "Illustrative result: 40 to 50 calls recovered per week and roughly 12% more quotes closed in the first quarter."
+      ]
+    },
+    "cta": {
+      "title": "Find out what your phones are costing you.",
+      "desc": "The audit takes two weeks and gives you a number you can act on."
+    }
+  },
+  "homeServices": {
+    "hero": {
+      "headline": "Every missed call answered. Every estimate followed up. Every truck accounted for.",
+      "sub": "For HVAC, plumbing, and pest control companies with 3+ locations or 20+ trucks."
+    },
+    "pains": [
+      "Calls go unanswered when the office is slammed, and those customers call the next company on the list.",
+      "Estimates go out and half of them never get a second touch.",
+      "Techs finish jobs and the notes never make it into the system.",
+      "You find out how a location did at the end of the month, not the end of the day."
+    ],
+    "workflows": [
+      {
+        "title": "Missed-call capture and callback",
+        "desc": "Every missed call gets a text within seconds and a callback within minutes. Emergencies are routed to on-call."
+      },
+      {
+        "title": "Estimate follow-up sequences",
+        "desc": "Open estimates get followed up by text and phone on a schedule you set, until the customer says yes or no."
+      },
+      {
+        "title": "Dispatch notes and job summaries",
+        "desc": "Techs talk through the job on the way to the next one. The summary lands in your system, formatted."
+      },
+      {
+        "title": "Review management",
+        "desc": "Happy customers get asked for a review at the right moment. Unhappy ones get routed to a manager first."
+      },
+      {
+        "title": "Multi-location performance reporting",
+        "desc": "Calls, bookings, revenue, and reviews for every location, in one message each morning."
+      }
+    ],
+    "trust": [
+      "Works with ServiceTitan, Housecall Pro, Jobber, and similar platforms.",
+      "Connects to the phone system you already have.",
+      "Your customer data stays in the United States.",
+      "You own everything we build, including the documentation."
+    ],
+    "example": {
+      "before": [
+        "Four locations and 30 trucks. About 25% of inbound calls missed during summer peak.",
+        "Estimates followed up once, by whoever had time."
+      ],
+      "after": [
+        "Every missed call texted back within 30 seconds and called back within 10 minutes.",
+        "Estimates followed up on day 1, day 3, and day 7 automatically.",
+        "Illustrative result: 8 to 12 additional booked jobs per location per month, and 15% more estimates approved."
+      ]
+    },
+    "cta": {
+      "title": "Find out how many calls you are losing.",
+      "desc": "The audit takes two weeks and gives you a number you can act on."
+    }
+  },
+  "dental": {
+    "hero": {
+      "headline": "After-hours scheduling. Insurance verified before the chair. Patients who come back.",
+      "sub": "For dental and orthodontic groups with two or more locations."
+    },
+    "pains": [
+      "Patients call after 5 and get voicemail, then book somewhere else.",
+      "Insurance gets verified at check-in and the schedule falls apart.",
+      "Recall lists sit in the practice management system and nobody works them.",
+      "Treatment plans get presented and then go quiet."
+    ],
+    "workflows": [
+      {
+        "title": "After-hours appointment scheduling",
+        "desc": "Patients book, reschedule, and confirm by phone or text at any hour, straight into your schedule."
+      },
+      {
+        "title": "Insurance verification before the visit",
+        "desc": "Eligibility and benefits checked ahead of the appointment. Problems flagged to your team the day before."
+      },
+      {
+        "title": "Recall and reactivation outreach",
+        "desc": "Overdue patients get a friendly text and call sequence that books them, not just reminds them."
+      },
+      {
+        "title": "Review requests",
+        "desc": "Patients get asked for a review at the right moment, in the language they prefer."
+      },
+      {
+        "title": "Treatment plan follow-up",
+        "desc": "Unscheduled treatment gets followed up with the patient, with financing questions routed to your coordinator."
+      }
+    ],
+    "trust": [
+      "We work within HIPAA requirements and sign a business associate agreement.",
+      "Works with Dentrix, Open Dental, Eaglesoft, and similar systems.",
+      "Patient data is stored and processed in the United States.",
+      "Bilingual by default. Patients hear English or Spanish."
+    ],
+    "example": {
+      "before": [
+        "Three locations. Roughly 35 after-hours calls per week going to voicemail.",
+        "Recall list of 1,800 overdue patients, worked when the front desk had a slow day."
+      ],
+      "after": [
+        "After-hours calls answered and booked into open slots the same night.",
+        "Recall outreach running every week, with responses booked automatically.",
+        "Illustrative result: 20 to 30 additional appointments per location per month."
+      ]
+    },
+    "cta": {
+      "title": "Find out how many patients you are losing after hours.",
+      "desc": "The audit takes two weeks and gives you a number you can act on."
+    }
+  },
+  "auto": {
+    "hero": {
+      "headline": "Appointments booked. Estimates approved faster. Customers who know where their car is.",
+      "sub": "For auto repair shops and service chains with two or more locations."
+    },
+    "pains": [
+      "The service writer is with a customer and the phone rings out.",
+      "Estimates sit unapproved because the customer did not pick up.",
+      "Customers call three times to ask if the part came in.",
+      "Nobody asks for the review, so the one-star customer is the only one who leaves one."
+    ],
+    "workflows": [
+      {
+        "title": "Appointment scheduling",
+        "desc": "Customers book, reschedule, and confirm by phone or text without tying up the front counter."
+      },
+      {
+        "title": "Estimate approval follow-up",
+        "desc": "Estimates get sent by text with a clear approve button, and followed up until the customer answers."
+      },
+      {
+        "title": "Parts status updates to customers",
+        "desc": "When the part arrives or the job moves, the customer gets a text. Fewer calls, fewer interruptions."
+      },
+      {
+        "title": "Review requests",
+        "desc": "Happy customers get asked at pickup. Unhappy ones get routed to a manager first."
+      },
+      {
+        "title": "Maintenance reminders by mileage or date",
+        "desc": "Reminders go out based on the vehicle and the last visit, with a link to book."
+      }
+    ],
+    "trust": [
+      "Works with Tekmetric, Shop-Ware, Mitchell 1, and similar shop systems.",
+      "Connects to the phone system you already have.",
+      "Your customer data stays in the United States.",
+      "You own everything we build, including the documentation."
+    ],
+    "example": {
+      "before": [
+        "Two locations. Estimates approved in an average of 2 days, with about 30% never approved.",
+        "Service writers spending 1 to 2 hours a day on status calls."
+      ],
+      "after": [
+        "Estimates sent by text and followed up automatically. Average approval time under 4 hours.",
+        "Customers updated by text at every stage. Status calls down by half.",
+        "Illustrative result: 10% to 15% more estimates approved and 6 to 8 hours a week back per location."
+      ]
+    },
+    "cta": {
+      "title": "Find out how much unapproved work is sitting in your shop.",
+      "desc": "The audit takes two weeks and gives you a number you can act on."
+    }
+  },
+  "gyms": {
+    "hero": {
+      "headline": "Leads followed up in minutes. Cancellations saved. Members who come back.",
+      "sub": "For gyms and fitness chains with two or more locations."
+    },
+    "pains": [
+      "Web leads come in overnight and get called the next afternoon, if at all.",
+      "Members cancel by email and nobody talks to them first.",
+      "The front desk spends half the morning answering class schedule questions.",
+      "Past members are a spreadsheet nobody has opened in months."
+    ],
+    "workflows": [
+      {
+        "title": "Lead follow-up from web and walk-ins",
+        "desc": "Every lead gets a text within a minute and a call within the hour, then a tour booked."
+      },
+      {
+        "title": "Membership cancellation save flow",
+        "desc": "Cancellation requests trigger a conversation, a pause offer, or a manager call before the account closes."
+      },
+      {
+        "title": "Class booking questions",
+        "desc": "Schedule, availability, and booking handled by text or phone, at any hour."
+      },
+      {
+        "title": "Past-member reactivation",
+        "desc": "Former members get a personal outreach sequence with an offer, timed to when they left."
+      },
+      {
+        "title": "Multi-location reporting",
+        "desc": "Leads, joins, cancels, and saves for every location, in one message each morning."
+      }
+    ],
+    "trust": [
+      "Works with Mindbody, ABC Fitness, Club Automation, and similar platforms.",
+      "Connects to the phone system you already have.",
+      "Your member data stays in the United States.",
+      "You own everything we build, including the documentation."
+    ],
+    "example": {
+      "before": [
+        "Three locations. Web leads contacted in an average of 14 hours. About 40% never reached.",
+        "Roughly 60 cancellations a month, none of them saved."
+      ],
+      "after": [
+        "Leads texted in under a minute and called within the hour.",
+        "Every cancellation request routed through a save conversation before it closes.",
+        "Illustrative result: 20% more leads reached and 10 to 15 memberships saved per month across locations."
+      ]
+    },
+    "cta": {
+      "title": "Find out how many leads and members you are losing.",
+      "desc": "The audit takes two weeks and gives you a number you can act on."
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "intro": "One thing to buy. Fixed prices for everything after it. No hourly billing.",
+    "audit": {
+      "badge": "Start here",
+      "title": "AI Opportunity Audit",
+      "price": "$5,000",
+      "duration": "Two weeks",
+      "desc": "The only thing you buy from this site. We come to your operation, find the money, and hand you a plan.",
+      "includes": [
+        "Your top five workflows mapped, end to end",
+        "Hours and dollars lost, quantified per workflow",
+        "A prioritized build plan with fixed pricing",
+        "A written report you keep, whether or not you build"
+      ],
+      "credit": "The $5,000 credits toward a build.",
+      "cta": "Have Cris call you"
+    },
+    "build": {
+      "tag": "Scoped from your audit",
+      "title": "Workflow Build",
+      "price": "$15,000 to $25,000",
+      "desc": "We build the workflows from your audit that pay back fastest, connected to the systems you already use.",
+      "includes": [
+        "Two to four workflows from your audit plan",
+        "Integration with your phone, CRM, and scheduling systems",
+        "Testing with your team before go-live",
+        "Documentation you own"
+      ],
+      "note": "Not sold directly. Priced in your audit report."
+    },
+    "retainer": {
+      "tag": "After a build",
+      "title": "Operations Retainer",
+      "price": "From $3,000 per month",
+      "desc": "We run, monitor, and improve what we built. You get one number to call.",
+      "includes": [
+        "Monitoring and fixes",
+        "Monthly performance report",
+        "Improvements as your business changes",
+        "Priority response"
+      ],
+      "note": "Not sold directly. Offered after a build."
+    },
+    "faq": {
+      "title": "Questions owners ask",
+      "items": [
+        {
+          "q": "What systems do you integrate with?",
+          "a": "Your phone system, your CRM, and your scheduling or management software. That includes dealer management systems, ServiceTitan, Housecall Pro, Dentrix, Open Dental, Tekmetric, Mindbody, and most others. If a system has no way to connect, we tell you in the audit."
+        },
+        {
+          "q": "Who owns the work?",
+          "a": "You do. Everything we build for you, including the documentation, belongs to your business. If you leave, it goes with you."
+        },
+        {
+          "q": "What about HIPAA and customer data?",
+          "a": "Customer data is stored and processed in the United States. For dental and orthodontic groups we work within HIPAA requirements and sign a business associate agreement."
+        },
+        {
+          "q": "How long does an audit take?",
+          "a": "Two weeks from kickoff to your report. We need a few hours of your team's time across those two weeks, mostly listening to how things work today."
+        },
+        {
+          "q": "What if you find nothing worth automating?",
+          "a": "We tell you, and you keep the report. It is a $5,000 look at your operation with numbers attached. Nobody is obligated to build anything."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to see your numbers?",
+      "desc": "Tell us the basics and Cris will call within one business day."
+    }
+  },
+  "callback": {
+    "title": "Have Cris call you",
+    "intro": "Fill in the basics. Cris will call within one business day, in English or Spanish.",
+    "fields": {
+      "name": "Your name",
+      "business": "Business name",
+      "vertical": "Type of business",
+      "locations": "Number of locations",
+      "revenue": "Annual revenue",
+      "phone": "Phone number",
+      "language": "Preferred language",
+      "bestTime": "Best time to call",
+      "message": "Anything else? (optional)",
+      "messagePlaceholder": "What is eating the most time right now?",
+      "select": "Select one"
+    },
+    "options": {
+      "vertical": {
+        "dealers": "Equipment dealer",
+        "homeServices": "Home services (HVAC, plumbing, pest)",
+        "dental": "Dental or orthodontic group",
+        "auto": "Auto shop or service chain",
+        "gyms": "Gym or fitness chain",
+        "other": "Other"
+      },
+      "locations": {
+        "1": "1",
+        "2-3": "2 to 3",
+        "4-10": "4 to 10",
+        "10+": "More than 10"
+      },
+      "revenue": {
+        "under2m": "Under $2M",
+        "2m-5m": "$2M to $5M",
+        "5m-20m": "$5M to $20M",
+        "20m+": "$20M+"
+      },
+      "language": {
+        "en": "English",
+        "es": "Español"
+      },
+      "bestTime": {
+        "morning": "Morning (8 to 11)",
+        "midday": "Midday (11 to 2)",
+        "afternoon": "Afternoon (2 to 5)",
+        "evening": "Evening (5 to 7)",
+        "any": "Any time"
+      }
+    },
+    "submit": "Request a call",
+    "sending": "Sending...",
+    "success": {
+      "title": "Got it. Cris will call you within one business day.",
+      "desc": "If it is urgent, mention it in the message next time and we will move faster.",
+      "home": "Back to home"
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again, or call us directly.",
+      "rateLimited": "Too many requests. Please wait a few minutes and try again.",
+      "required": "This field is required.",
+      "phone": "Please enter a valid phone number.",
+      "name": "Please enter your name.",
+      "business": "Please enter your business name."
+    },
+    "privacyNote": "We use this information only to call you back. Nothing is shared or sold."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy policy",
+      "updated": "Last updated: [DATE]",
+      "sections": [
+        {
+          "h": "What we collect",
+          "p": "When you request a callback we collect your name, business name, phone number, and the details you enter in the form. We also collect standard, anonymous website analytics such as page views and device type."
+        },
+        {
+          "h": "How we use it",
+          "p": "We use your information to call you back and to discuss our services. We do not sell or rent your information. We do not share it with third parties except the service providers that deliver our notifications (email and SMS) and host this website."
+        },
+        {
+          "h": "Where it is stored",
+          "p": "Your information is stored and processed in the United States."
+        },
+        {
+          "h": "How long we keep it",
+          "p": "We keep callback requests for as long as needed to follow up, and delete them on request."
+        },
+        {
+          "h": "Your choices",
+          "p": "You can ask us to delete your information at any time by contacting us at [CONTACT EMAIL]."
+        },
+        {
+          "h": "Contact",
+          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Email: [CONTACT EMAIL]."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of service",
+      "updated": "Last updated: [DATE]",
+      "sections": [
+        {
+          "h": "This website",
+          "p": "This website describes the services of [COMPANY LEGAL NAME]. Content is provided for information only. Figures shown are typical or illustrative and are not guarantees of results for your business."
+        },
+        {
+          "h": "Services",
+          "p": "Our services are governed by a written agreement signed by both parties. Nothing on this website creates a contract. The AI Opportunity Audit is the only service purchased directly; build and retainer engagements are scoped in writing after an audit."
+        },
+        {
+          "h": "Callback requests",
+          "p": "By submitting a callback request you agree to be contacted by phone, text, or email about our services. You can opt out at any time by telling us."
+        },
+        {
+          "h": "Limitation of liability",
+          "p": "To the extent permitted by law, [COMPANY LEGAL NAME] is not liable for any loss arising from use of this website."
+        },
+        {
+          "h": "Governing law",
+          "p": "These terms are governed by the laws of the State of [STATE], United States."
+        },
+        {
+          "h": "Contact",
+          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Email: [CONTACT EMAIL]."
+        }
+      ]
+    }
+  },
+  "notFound": {
+    "title": "That page does not exist.",
+    "desc": "Try the home page, or have Cris call you.",
+    "home": "Go to home"
+  }
+}

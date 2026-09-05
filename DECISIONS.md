@@ -1,0 +1,72 @@
+# Decisions
+
+Decisions made while building the site without stopping to ask. Change any of them; they are recorded so nothing is hidden.
+
+## Setup
+
+- **Company name**: the brief left it as `[COMPANY NAME]`. The working name is **Groundwork** (constant in `src/lib/site.ts`, plus `common.siteName` in both message files). It reads well for equipment and trades and does not say "AI." Replace it once the real name is chosen (see TODO.md).
+- **GitHub repo**: `ozmerchant/groundwork-site`, private. The `gh` CLI was authenticated as `ozmerchant`, the only account available.
+- **Vercel scope**: the CLI is logged in as `runfutureproof` and the only scope available is the Futureproof team (`runfutureproof-02949075`). A brand new project `groundwork-site` was created in that team. No existing project was linked or touched. If the site should live under a separate Vercel account, transfer the project from the dashboard.
+- **Vercel CLI**: a global `npm i -g vercel` failed on a permissions error, so the CLI is a dev dependency and runs via `npx vercel`. Nothing about the project depends on this.
+- **Environment variables**: all seven from the brief were added to Production and Preview with obvious placeholder values. An optional `LEAD_FROM` was added because Resend's default onboarding sender only delivers to the Resend account owner.
+
+## Tech
+
+- **i18n**: next-intl with `localePrefix: "as-needed"`, so English is at the root and Spanish at `/es/...`. The language toggle keeps the current path and query string (so `/callback?vertical=dental` toggles to `/es/callback?vertical=dental`).
+- **Static generation**: every page under `[locale]` is prerendered for both locales. The only dynamic routes are the two API routes.
+- **Client bundle**: shadcn's Radix-based button, label, and select were replaced with plain elements. The Radix umbrella package added roughly 75 KB to every page. The form uses native `<select>` on purpose: iOS renders a picker that is far easier one-handed than a custom dropdown.
+- **Messages sent to the browser**: only the `common` and `callback` namespaces are passed to the client provider. Everything else renders on the server.
+- **SMS**: Twilio is called through its REST API with `fetch` rather than the SDK, which keeps the serverless function small. Behavior is identical.
+- **Rate limiting**: in-memory sliding window, 5 requests per IP per 10 minutes. It is per serverless instance, which is fine for a lead form at this volume. Swap for Upstash or Vercel KV if abuse ever becomes real.
+- **Honeypot**: a hidden `website` field. If filled, the API returns success and does nothing.
+- **OG images**: one edge route (`/api/og?locale=&page=`) renders a text card per page and locale, so no image files are needed.
+- **Fonts**: Inter (body) and Source Serif 4 (headlines only, weight 600), both self-hosted through `next/font`. The serif adds gravitas to the outcome headlines without looking like a law firm.
+
+## Design
+
+- **Palette**: deep green primary `#1f4d3a`, warm off-white background `#faf7f2`, near-black text `#1c1a17`, rust orange accent `#c2410c` for CTAs only. Muted text `#5b564f`. White on the accent is 4.9:1 and white on the primary is 9.8:1, both WCAG AA.
+- **Green over navy**: the lead vertical is equipment dealers. Green reads as familiar to that audience without imitating any manufacturer's brand.
+- **Mobile CTA bar**: on phones, every page except the callback form has a fixed bottom bar with the primary CTA. Vertical pages add the Share button beside it. This is the "thumb reach" requirement made literal.
+- **Share button**: uses the Web Share API when available (iOS and Android), otherwise copies the link and shows "Link copied."
+- **Placeholder imagery**: a neutral block component (`Placeholder.tsx`) with a `data-image-slot` attribute at each slot. No stock photos. The portrait slots are circles; the vertical hero slots only show at tablet width and up to keep phones text-first.
+- **Audit dominance**: on Home and Pricing the audit card is larger, bordered in the primary color, carries the only CTA, and the "Start here" badge. Build and Retainer cards have no CTA and carry "Scoped from your audit" and "After a build" tags.
+- **No About page, no blog, no scheduler**: as briefed. Founder bios sit in the "Who we are" block on Home.
+
+## Copy
+
+- **Register**: second person, outcome first, short sentences. AI is named only in the product name and the "how it works" layer.
+- **Figures**: every number is prefixed with "Typical:" or "Illustrative result:" and each block carries a "not guarantees" note. The example engagements are labeled hypothetical twice (subtitle and footnote).
+- **Spanish**: written for a Spanish-speaking business owner in the US. Formal "usted" throughout, since the reader is often a 50-year-old owner meeting Cris for the first time. Vocabulary leans Mexican and US-border Spanish (refacciones, camionetas, sucursales, presupuesto). English product names stay in English where owners would say them that way (HVAC, CRM, HIPAA, BAA).
+- **No em dashes** in either language. Verified with grep across `src/`.
+
+## Headline alternates
+
+Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."
+Chosen (ES): "Sus teléfonos contestados. Sus seguimientos hechos. Su equipo de vuelta al trabajo que sí paga."
+
+Alternate 1 (EN): "Every call answered. Every quote followed up. Nobody hired to do it."
+Alternate 1 (ES): "Cada llamada contestada. Cada cotización con seguimiento. Sin contratar a nadie."
+
+Alternate 2 (EN): "Get the hours back. Keep the customers you are losing on hold."
+Alternate 2 (ES): "Recupere las horas. Quédese con los clientes que hoy pierde en espera."
+
+## Spanish phrases flagged for native review
+
+- "Que Cris le llame" (primary CTA). Natural and short, but a reviewer may prefer "Pida que Cris le llame" for extra clarity on a button.
+- "Su equipo de vuelta al trabajo que sí paga" (hero). "Que sí paga" is colloquial on purpose. Confirm it lands with the audience.
+- "refacciones" vs "repuestos" vs "partes". Chose "refacciones" (Mexican usage). If dealers serve a Central American or Caribbean base, "repuestos" may fit better.
+- "camionetas" for trucks in the home services line. Some owners say "trocas" or "unidades." Confirm with Cris.
+- "Plan mensual de operación" for "Operations Retainer." "Retainer" has no clean equivalent; "iguala" is used in Mexico but is unfamiliar elsewhere.
+- "Rescate de cancelaciones" for "cancellation save flow." Confirm "rescatar" reads naturally in this context.
+- "Auditoría de Oportunidades con IA" for the product name. Confirm whether the brand wants it translated or kept in English.
+- "sobreflujo" (overflow calls). Understandable but not idiomatic. "llamadas que no alcanza a contestar" is a longer plain alternative.
+- Dental: "sillón" for "the chair." Fine in Mexico; confirm for other markets.
+- Time-of-day options "Mañana (8 a 11)" etc. Confirm whether Cris wants 12-hour labels with a.m. / p.m.
+
+## Verification done
+
+- `npm run build` passes with zero errors and zero warnings from our code.
+- Lighthouse (mobile, local production build): performance 94 to 98, accessibility 96 to 100, best practices 96, SEO 92 on Home, Dealers, Pricing, Callback in both locales. The SEO deduction was the canonical audit, which fails locally because `NEXT_PUBLIC_SITE_URL` points at the production host. The best-practices deduction is the Vercel Analytics script 404ing outside Vercel. One accessibility deduction on vertical pages was a contrast check on the page; scores are re-verified on the production URL.
+- Total byte weight per vertical page: about 290 KB (Lighthouse `total-byte-weight`), under the 500 KB cap.
+- Viewports checked: iPhone 13 emulation (390 px) with zero horizontal overflow, and 1440 px desktop.
+- Callback API tested end to end locally: valid submission, honeypot (silent success), validation errors per field, rate limit (6th request in 10 minutes returns 429), graceful degradation when Twilio or Resend env vars are missing. Real delivery needs the real keys (see TODO.md).
