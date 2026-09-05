@@ -5,10 +5,10 @@ Decisions made while building the site without stopping to ask. Change any of th
 ## Setup
 
 - **Company name**: the brief left it as `[COMPANY NAME]`. The working name is **Groundwork** (constant in `src/lib/site.ts`, plus `common.siteName` in both message files). It reads well for equipment and trades and does not say "AI." Replace it once the real name is chosen (see TODO.md).
-- **GitHub repo**: `ozmerchant/groundwork-site`, private. The `gh` CLI was authenticated as `ozmerchant`, the only account available.
-- **Vercel scope**: the CLI is logged in as `runfutureproof` and the only scope available is the Futureproof team (`runfutureproof-02949075`). A brand new project `groundwork-site` was created in that team. Its production alias is `https://groundwork-site-pi.vercel.app`, because `groundwork-site.vercel.app` was already taken by an unrelated Vercel user. No existing project was linked or touched. If the site should live under a separate Vercel account, transfer the project from the dashboard.
-- **Vercel CLI**: a global `npm i -g vercel` failed on a permissions error, so the CLI is a dev dependency and runs via `npx vercel`. Nothing about the project depends on this.
-- **Environment variables**: all seven from the brief were added to Production and Preview with obvious placeholder values. An optional `LEAD_FROM` was added because Resend's default onboarding sender only delivers to the Resend account owner.
+- **GitHub repo**: first created under `ozmerchant` by mistake, then moved to `wellistic-soap/consulting` (public) on 2026-09-05 at Oz's request.
+- **Vercel**: first deployed to a `groundwork-site` project in the Futureproof team by mistake. The site now lives in the `consulting` project under the wellistic-soap Vercel account, imported from the GitHub repo. The Futureproof project and the `ozmerchant` repo are to be deleted once the new deploy is confirmed.
+- **Vercel CLI**: runs as a dev dependency via `npx vercel`. The CLI on this machine is logged into the Futureproof account, so CLI deploys to the wellistic-soap project require `npx vercel login` first.
+- **Environment variables**: the seven from the brief plus an optional `LEAD_FROM` (Resend's default onboarding sender only delivers to the Resend account owner). They must be entered in the wellistic-soap Vercel project; see TODO.md.
 
 ## Tech
 
@@ -66,6 +66,6 @@ Alternate 2 (ES): "Recupere las horas. Quédese con los clientes que hoy pierde 
 ## Verification done
 
 - `npm run build` passes with zero errors and zero warnings from our code.
-- Lighthouse (mobile, against the live production URL): Home, Dealers, and Dealers (ES) all score performance 99, accessibility 100, best practices 100, SEO 100. Spanish Home, Callback, and Pricing (ES) score 98 to 100 across the board. Total byte weight per page is 247 to 260 KB.
+- Lighthouse (mobile, against the first production deploy on Vercel): Home, Dealers, and Dealers (ES) all score performance 99, accessibility 100, best practices 100, SEO 100. Spanish Home, Callback, and Pricing (ES) score 98 to 100 across the board. Total byte weight per page is 247 to 260 KB.
 - Viewports checked: iPhone 13 emulation (390 px) with zero horizontal overflow, and 1440 px desktop.
 - Callback API tested end to end locally: valid submission, honeypot (silent success), validation errors per field, rate limit (6th request in 10 minutes returns 429), graceful degradation when Twilio or Resend env vars are missing. Real delivery needs the real keys (see TODO.md).

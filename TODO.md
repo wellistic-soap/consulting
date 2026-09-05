@@ -24,7 +24,19 @@ Every placeholder still to fill, in rough priority order.
 
 ## 4. Environment variables (real values)
 
-Set in Vercel for Production and Preview (`npx vercel env add NAME production` / `preview`, or the dashboard), and in `.env.local` for local testing:
+Add these in the wellistic-soap Vercel project (`consulting`), Settings, Environment Variables, for Production and Preview. You can paste the block below straight into the "Environment Variables" panel on the import screen or in settings, then edit values:
+
+```
+NEXT_PUBLIC_SITE_URL=https://consulting.vercel.app
+RESEND_API_KEY=REPLACE_ME_resend_api_key
+LEAD_EMAIL=replace-me@example.com
+TWILIO_ACCOUNT_SID=REPLACE_ME_twilio_sid
+TWILIO_AUTH_TOKEN=REPLACE_ME_twilio_token
+TWILIO_FROM=+15555550100
+CRIS_PHONE=+15555550199
+```
+
+Set `NEXT_PUBLIC_SITE_URL` to whatever `.vercel.app` URL Vercel assigns the project, then to the custom domain later. Values to replace:
 
 | Variable | Current value | Replace with |
 | --- | --- | --- |
@@ -35,25 +47,24 @@ Set in Vercel for Production and Preview (`npx vercel env add NAME production` /
 | `TWILIO_AUTH_TOKEN` | `REPLACE_ME_twilio_token` | Twilio auth token |
 | `TWILIO_FROM` | `+15555550100` | Twilio sending number (E.164) |
 | `CRIS_PHONE` | `+15555550199` | Cris's mobile (E.164) |
-| `NEXT_PUBLIC_SITE_URL` | `https://groundwork-site-pi.vercel.app` | Final domain once attached, e.g. `https://yourdomain.com` |
+| `NEXT_PUBLIC_SITE_URL` | not set yet | The project's `.vercel.app` URL now, the custom domain later |
 
-After updating, redeploy (`npx vercel --prod` or push to `main`) and submit the form once to confirm both the SMS and the email arrive.
+After updating, redeploy (push to `main`, or Redeploy in the Vercel dashboard) and submit the form once to confirm both the SMS and the email arrive.
 
 Note: the current placeholder Twilio values are syntactically valid, so the API will attempt an SMS and log a Twilio error until real values are set. Email will fail the same way until the Resend key is real. Until then the form shows the generic error to visitors.
 
-## 5. Connect GitHub to Vercel (one click, needs the dashboard)
+## 5. Clean up the first deploy
 
-`vercel git connect` failed because the Vercel GitHub app on the Futureproof team cannot see the private repo under the `ozmerchant` account. Until this is done, deploys happen only through `npx vercel --prod` from a laptop.
+The site was first pushed to `ozmerchant/groundwork-site` and deployed to a `groundwork-site` project in the Futureproof Vercel team. Once the wellistic-soap deploy is confirmed, delete both so nothing stale stays live:
 
-1. Vercel dashboard, Futureproof team, project `groundwork-site`, Settings, Git, "Connect Git Repository," choose GitHub.
-2. If `ozmerchant/groundwork-site` is not listed, click "Adjust GitHub App Permissions" and grant the Vercel app access to that repository (or to the `ozmerchant` account).
-3. Select the repo. Production branch: `main`. After that, pushes to `main` deploy to production and pull requests get preview URLs automatically.
+- Vercel: Futureproof team, project `groundwork-site`, Settings, Delete Project.
+- GitHub: `ozmerchant/groundwork-site`, Settings, Delete this repository.
 
-## 6. Custom domain
+## 6. Custom domain## 6. Custom domain
 
-Nothing is attached yet. The production alias is `https://groundwork-site-pi.vercel.app` (the plain `groundwork-site.vercel.app` hostname belongs to an unrelated Vercel user). When the domain (`[DOMAIN]`) is ready:
+Nothing is attached yet. When the domain (`[DOMAIN]`) is ready:
 
-1. Vercel dashboard: Futureproof team, project `groundwork-site`, Settings, Domains, Add. Enter `[DOMAIN]` and also `www.[DOMAIN]`. Choose to redirect `www` to the apex (or the reverse).
+1. Vercel dashboard: wellistic-soap's projects, project `consulting`, Settings, Domains, Add. Enter `[DOMAIN]` and also `www.[DOMAIN]`. Choose to redirect `www` to the apex (or the reverse).
 2. At the DNS provider, add:
    - `A` record, host `@`, value `76.76.21.21`
    - `CNAME` record, host `www`, value `cname.vercel-dns.com`

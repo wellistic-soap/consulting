@@ -2,9 +2,9 @@
 
 Bilingual (English / Spanish) marketing site for Groundwork, an AI operations consultancy for established local and regional businesses. Built for one use case: Cris pulls it up on his phone in a lobby and hands it to an owner.
 
-- Production: https://groundwork-site-pi.vercel.app (English) and https://groundwork-site-pi.vercel.app/es (Spanish)
-- GitHub: https://github.com/ozmerchant/groundwork-site
-- Vercel project: `groundwork-site` (Futureproof team)
+- Production: the `consulting` project in the wellistic-soap Vercel account (URL assigned on first deploy; set it in `NEXT_PUBLIC_SITE_URL`)
+- GitHub: https://github.com/wellistic-soap/consulting
+- Vercel project: `consulting` (wellistic-soap's projects)
 
 See `DECISIONS.md` for design and copy decisions and `TODO.md` for every placeholder still to fill.
 
@@ -59,13 +59,13 @@ All copy lives in the two message files. Do not hardcode strings in components.
 
 ## Deploy
 
-Once the GitHub repo is connected in the Vercel dashboard (see `TODO.md`), pushes to `main` deploy to production and pull requests get preview URLs. Until then, deploy manually:
+The Vercel project is imported from GitHub, so pushes to `main` deploy to production and pull requests get preview URLs. Manual deploy (after `npx vercel login` as wellistic-soap and `npx vercel link`):
 
 ```bash
 npx vercel --prod
 ```
 
-Environment variables live in the Vercel project (Production and Preview). Update them with `npx vercel env add NAME production` or in the dashboard. Placeholder values were set during setup; see `TODO.md`.
+Environment variables live in the Vercel project (Production and Preview). Update them with `npx vercel env add NAME production` or in the dashboard. See `TODO.md` for the full list and values to replace.
 
 ## Testing the callback form
 
