@@ -37,6 +37,17 @@ Decisions made while building the site without stopping to ask. Change any of th
 - **Spanish**: written for a Spanish-speaking business owner in the US. Formal "usted" throughout, since the reader is often a 50-year-old owner meeting Cris for the first time. Vocabulary leans Mexican and US-border Spanish (refacciones, camionetas, sucursales, presupuesto). English product names stay in English where owners would say them that way (HVAC, CRM, HIPAA, BAA).
 - **No em dashes** in either language. Verified with grep across `src/`.
 
+## Pricing update (2026-09-05)
+
+Audit lowered to reduce first-call friction; retainer split so support obligations are always funded.
+
+- Audit: $5,000 to $3,000, two weeks, deliverables unchanged. The credit line is now framed as a deposit ("Your $3,000 is credited in full when you move to a build") and shown in a highlighted box directly above the CTA.
+- Build: unchanged, $15,000 to $25,000, "Scoped from your audit," no CTA.
+- Retainer: the single "Operations Retainer from $3,000/month" became two tiers, Monitor ($750/month) and Improve ($2,500/month), neither with a CTA, plus the note that no retainer is required. On Home, step 3 is now "Ongoing support" naming both tiers.
+- FAQ: added "What does the retainer cover?" as the third question, six questions total.
+- Spanish: product name changed to "Auditoría de Oportunidades de IA" (was "con IA") everywhere, tiers are "Monitoreo" and "Mejora Continua," credit line uses "se acreditan en su totalidad."
+- Spanish phrases flagged for native review from this change: "Soporte continuo" (Home step 3 title), "Mejora Continua" as a product name, "plan mensual" for "retainer" in the FAQ question, and "Para que nada de lo que construimos se quede sin atención."
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."

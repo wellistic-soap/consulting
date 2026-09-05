@@ -45,7 +45,7 @@
   "meta": {
     "home": {
       "title": "Groundwork | Phones answered, follow-ups done, hours back",
-      "description": "We build and run the systems that answer calls, book service, and follow up on quotes for equipment dealers, home services, dental groups, auto shops, and gyms. Start with a $5,000 two-week audit. Book a call with Cris."
+      "description": "We build and run the systems that answer calls, book service, and follow up on quotes for equipment dealers, home services, dental groups, auto shops, and gyms. Start with a $3,000 two-week audit. Book a call with Cris."
     },
     "dealers": {
       "title": "AI operations for equipment dealers | Groundwork",
@@ -69,7 +69,7 @@
     },
     "pricing": {
       "title": "Pricing | Groundwork",
-      "description": "The AI Opportunity Audit is $5,000 and takes two weeks. Build and retainer are scoped from your audit. No surprises."
+      "description": "The AI Opportunity Audit is $3,000 and takes two weeks, credited in full toward a build. Build is $15,000 to $25,000. Ongoing support from $750 a month. No surprises."
     },
     "privacy": {
       "title": "Privacy policy | Groundwork",
@@ -156,10 +156,10 @@
         "step": "Step 1",
         "badge": "Start here",
         "title": "AI Opportunity Audit",
-        "price": "$5,000",
+        "price": "$3,000",
         "duration": "Two weeks",
         "desc": "We spend two weeks in your operation. We map your top five workflows, quantify the hours and dollars you are losing, and deliver a prioritized build plan.",
-        "credit": "The audit fee credits toward a build.",
+        "credit": "Your $3,000 is credited in full when you move to a build.",
         "cta": "Book a call with Cris"
       },
       "build": {
@@ -171,10 +171,10 @@
       },
       "run": {
         "step": "Step 3",
-        "title": "Operations Retainer",
-        "price": "From $3,000 per month",
+        "title": "Ongoing support",
+        "price": "$750 or $2,500 per month",
         "tag": "After a build",
-        "desc": "We run, monitor, and improve what we built. You get one number to call."
+        "desc": "Monitor keeps what we built watched and fixed. Improve adds a new workflow or improvement every month. Or run it yourself. You own it either way."
       }
     },
     "who": {
@@ -215,7 +215,7 @@
     },
     "pricingTeaser": {
       "title": "One price to start. No surprises.",
-      "desc": "The AI Opportunity Audit is $5,000 and takes two weeks. It is the only thing you buy from this site. Build and retainer pricing is fixed and published.",
+      "desc": "The AI Opportunity Audit is $3,000 and takes two weeks. It is the only thing you buy from this site, and it is credited in full toward a build. Build and support pricing is fixed and published.",
       "cta": "See pricing"
     },
     "finalCta": {
@@ -233,7 +233,7 @@
     "before": "Before",
     "after": "After",
     "exampleNote": "This scenario is illustrative, not a client result. Your audit measures your real numbers.",
-    "auditPitch": "It starts with a $5,000 two-week audit. You get the numbers and a plan, whether or not you build.",
+    "auditPitch": "It starts with a $3,000 two-week audit, credited in full toward a build. You get the numbers and a plan, whether or not you build.",
     "ctaButton": "Book a call with Cris"
   },
   "dealers": {
@@ -525,7 +525,7 @@
     "audit": {
       "badge": "Start here",
       "title": "AI Opportunity Audit",
-      "price": "$5,000",
+      "price": "$3,000",
       "duration": "Two weeks",
       "desc": "The only thing you buy from this site. We come to your operation, find the money, and hand you a plan.",
       "includes": [
@@ -534,7 +534,7 @@
         "A prioritized build plan with fixed pricing",
         "A written report you keep, whether or not you build"
       ],
-      "credit": "The $5,000 credits toward a build.",
+      "credit": "Your $3,000 is credited in full when you move to a build.",
       "cta": "Book a call with Cris"
     },
     "build": {
@@ -550,19 +550,6 @@
       ],
       "note": "Not sold directly. Priced in your audit report."
     },
-    "retainer": {
-      "tag": "After a build",
-      "title": "Operations Retainer",
-      "price": "From $3,000 per month",
-      "desc": "We run, monitor, and improve what we built. You get one number to call.",
-      "includes": [
-        "Monitoring and fixes",
-        "Monthly performance report",
-        "Improvements as your business changes",
-        "Priority response"
-      ],
-      "note": "Not sold directly. Offered after a build."
-    },
     "faq": {
       "title": "Questions owners ask",
       "items": [
@@ -575,6 +562,10 @@
           "a": "You do. Everything we build for you, including the documentation, belongs to your business. If you leave, it goes with you."
         },
         {
+          "q": "What does the retainer cover?",
+          "a": "Monitor ($750 a month) watches everything we built, alerts us when something breaks, and includes one fix a month. Improve ($2,500 a month) adds a new workflow or meaningful improvement every month, priority support, and a quarterly review."
+        },
+        {
           "q": "What about HIPAA and customer data?",
           "a": "Customer data is stored and processed in the United States. For dental and orthodontic groups we work within HIPAA requirements and sign a business associate agreement."
         },
@@ -584,14 +575,42 @@
         },
         {
           "q": "What if you find nothing worth automating?",
-          "a": "We tell you, and you keep the report. It is a $5,000 look at your operation with numbers attached. Nobody is obligated to build anything."
+          "a": "We tell you, and you keep the report. It is a $3,000 look at your operation with numbers attached. Nobody is obligated to build anything."
         }
       ]
     },
     "cta": {
       "title": "Ready to see your numbers?",
       "desc": "Pick a time that works and Cris calls you. English or Spanish."
-    }
+    },
+    "retainerTitle": "After a build: two ways to keep it running",
+    "retainerIntro": "Both are optional. Neither is sold on its own.",
+    "monitor": {
+      "tag": "After a build",
+      "title": "Monitor",
+      "price": "$750 per month",
+      "framing": "So nothing you built is ever left unattended.",
+      "includes": [
+        "Uptime monitoring and alerts",
+        "One fix or adjustment per month",
+        "Email support"
+      ],
+      "note": "No new workflows. Not sold directly."
+    },
+    "improve": {
+      "tag": "After a build",
+      "title": "Improve",
+      "price": "$2,500 per month",
+      "framing": "For owners who want the system to keep getting smarter.",
+      "includes": [
+        "Everything in Monitor",
+        "One new workflow or meaningful improvement per month",
+        "Priority support",
+        "Quarterly review call"
+      ],
+      "note": "Not sold directly. Offered after a build."
+    },
+    "retainerNote": "Prefer to run it yourself? You own everything we build. No retainer required."
   },
   "legal": {
     "privacy": {

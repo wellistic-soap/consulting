@@ -43,7 +43,7 @@ export async function GET(req: NextRequest) {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 10, fontSize: 24, color: "#5b564f" }}>
           <div>{m.common.qualifier}</div>
-          <div style={{ color: "#c2410c", fontWeight: 700 }}>{`${m.home.how.audit.title}: $5,000`}</div>
+          <div style={{ color: "#c2410c", fontWeight: 700 }}>{`${m.home.how.audit.title}: $3,000`}</div>
         </div>
       </div>
     ),
