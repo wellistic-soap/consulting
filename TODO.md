@@ -35,15 +35,23 @@ Set in Vercel for Production and Preview (`npx vercel env add NAME production` /
 | `TWILIO_AUTH_TOKEN` | `REPLACE_ME_twilio_token` | Twilio auth token |
 | `TWILIO_FROM` | `+15555550100` | Twilio sending number (E.164) |
 | `CRIS_PHONE` | `+15555550199` | Cris's mobile (E.164) |
-| `NEXT_PUBLIC_SITE_URL` | `https://groundwork-site.vercel.app` | Final domain once attached, e.g. `https://yourdomain.com` |
+| `NEXT_PUBLIC_SITE_URL` | `https://groundwork-site-pi.vercel.app` | Final domain once attached, e.g. `https://yourdomain.com` |
 
 After updating, redeploy (`npx vercel --prod` or push to `main`) and submit the form once to confirm both the SMS and the email arrive.
 
 Note: the current placeholder Twilio values are syntactically valid, so the API will attempt an SMS and log a Twilio error until real values are set. Email will fail the same way until the Resend key is real. Until then the form shows the generic error to visitors.
 
-## 5. Custom domain
+## 5. Connect GitHub to Vercel (one click, needs the dashboard)
 
-Nothing is attached yet. When the domain (`[DOMAIN]`) is ready:
+`vercel git connect` failed because the Vercel GitHub app on the Futureproof team cannot see the private repo under the `ozmerchant` account. Until this is done, deploys happen only through `npx vercel --prod` from a laptop.
+
+1. Vercel dashboard, Futureproof team, project `groundwork-site`, Settings, Git, "Connect Git Repository," choose GitHub.
+2. If `ozmerchant/groundwork-site` is not listed, click "Adjust GitHub App Permissions" and grant the Vercel app access to that repository (or to the `ozmerchant` account).
+3. Select the repo. Production branch: `main`. After that, pushes to `main` deploy to production and pull requests get preview URLs automatically.
+
+## 6. Custom domain
+
+Nothing is attached yet. The production alias is `https://groundwork-site-pi.vercel.app` (the plain `groundwork-site.vercel.app` hostname belongs to an unrelated Vercel user). When the domain (`[DOMAIN]`) is ready:
 
 1. Vercel dashboard: Futureproof team, project `groundwork-site`, Settings, Domains, Add. Enter `[DOMAIN]` and also `www.[DOMAIN]`. Choose to redirect `www` to the apex (or the reverse).
 2. At the DNS provider, add:
@@ -54,14 +62,14 @@ Nothing is attached yet. When the domain (`[DOMAIN]`) is ready:
 4. Update `NEXT_PUBLIC_SITE_URL` in Vercel (Production) to `https://[DOMAIN]` and redeploy so canonical, hreflang, sitemap, and OG URLs use the real domain.
 5. Optional: in Resend, verify `[DOMAIN]` and set `LEAD_FROM` to an address on it.
 
-## 6. Content review
+## 7. Content review
 
 - Native Spanish review of the phrases listed in `DECISIONS.md`.
 - Confirm the integration names dropped in the trust blocks and FAQ (ServiceTitan, Housecall Pro, Jobber, Dentrix, Open Dental, Eaglesoft, Tekmetric, Shop-Ware, Mitchell 1, Mindbody, ABC Fitness, Club Automation). Remove any you would not want to be asked about.
 - Confirm the "typical" ranges in `home.automate.items` and each vertical's example engagement match what you are comfortable saying in a room.
 - Confirm the HIPAA / BAA statements with counsel before selling to dental groups.
 
-## 7. Optional
+## 8. Optional
 
 - Replace the in-memory rate limiter with Upstash or Vercel KV if the form ever sees abuse.
 - Add a Google Business Profile / LocalBusiness schema once the legal name and address are final.

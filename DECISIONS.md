@@ -6,7 +6,7 @@ Decisions made while building the site without stopping to ask. Change any of th
 
 - **Company name**: the brief left it as `[COMPANY NAME]`. The working name is **Groundwork** (constant in `src/lib/site.ts`, plus `common.siteName` in both message files). It reads well for equipment and trades and does not say "AI." Replace it once the real name is chosen (see TODO.md).
 - **GitHub repo**: `ozmerchant/groundwork-site`, private. The `gh` CLI was authenticated as `ozmerchant`, the only account available.
-- **Vercel scope**: the CLI is logged in as `runfutureproof` and the only scope available is the Futureproof team (`runfutureproof-02949075`). A brand new project `groundwork-site` was created in that team. No existing project was linked or touched. If the site should live under a separate Vercel account, transfer the project from the dashboard.
+- **Vercel scope**: the CLI is logged in as `runfutureproof` and the only scope available is the Futureproof team (`runfutureproof-02949075`). A brand new project `groundwork-site` was created in that team. Its production alias is `https://groundwork-site-pi.vercel.app`, because `groundwork-site.vercel.app` was already taken by an unrelated Vercel user. No existing project was linked or touched. If the site should live under a separate Vercel account, transfer the project from the dashboard.
 - **Vercel CLI**: a global `npm i -g vercel` failed on a permissions error, so the CLI is a dev dependency and runs via `npx vercel`. Nothing about the project depends on this.
 - **Environment variables**: all seven from the brief were added to Production and Preview with obvious placeholder values. An optional `LEAD_FROM` was added because Resend's default onboarding sender only delivers to the Resend account owner.
 

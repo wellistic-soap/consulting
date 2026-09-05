@@ -2,7 +2,7 @@
 
 Bilingual (English / Spanish) marketing site for Groundwork, an AI operations consultancy for established local and regional businesses. Built for one use case: Cris pulls it up on his phone in a lobby and hands it to an owner.
 
-- Production: https://groundwork-site.vercel.app (English) and https://groundwork-site.vercel.app/es (Spanish)
+- Production: https://groundwork-site-pi.vercel.app (English) and https://groundwork-site-pi.vercel.app/es (Spanish)
 - GitHub: https://github.com/ozmerchant/groundwork-site
 - Vercel project: `groundwork-site` (Futureproof team)
 
@@ -59,7 +59,7 @@ All copy lives in the two message files. Do not hardcode strings in components.
 
 ## Deploy
 
-Pushes to `main` deploy to production. Pull requests get preview URLs. Manual deploy:
+Once the GitHub repo is connected in the Vercel dashboard (see `TODO.md`), pushes to `main` deploy to production and pull requests get preview URLs. Until then, deploy manually:
 
 ```bash
 npx vercel --prod
