@@ -37,10 +37,12 @@ Optional: in Calendly, turn on UTM tracking so each booking shows `utm_campaign`
 
 ## 5. Clean up the first deploy
 
-The site was first pushed to `ozmerchant/groundwork-site` and deployed to a `groundwork-site` project in the Futureproof Vercel team. Once the wellistic-soap deploy is confirmed, delete both so nothing stale stays live:
+The mistaken Vercel project has been deleted. The GitHub repo `ozmerchant/groundwork-site` still exists because the `gh` CLI lacks the delete scope. Delete it at github.com/ozmerchant/groundwork-site, Settings, Delete this repository, or run:
 
-- Vercel: Futureproof team, project `groundwork-site`, Settings, Delete Project.
-- GitHub: `ozmerchant/groundwork-site`, Settings, Delete this repository.
+```
+gh auth refresh -h github.com -s delete_repo
+gh repo delete ozmerchant/groundwork-site --yes
+```
 
 ## 6. Custom domain## 6. Custom domain
 

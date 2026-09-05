@@ -48,15 +48,9 @@ export function Footer() {
             </ul>
           </nav>
         </div>
-        <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:justify-between">
+        <div className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
           <p>
             &copy; {year} {t("siteName")}. {t("footer.rights")}
-          </p>
-          <p>
-            {t("footer.credit")}:{" "}
-            <a href="https://runfutureproof.com" rel="noopener" className="underline underline-offset-2 hover:text-primary">
-              runfutureproof.com
-            </a>
           </p>
         </div>
       </div>

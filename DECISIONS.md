@@ -6,8 +6,8 @@ Decisions made while building the site without stopping to ask. Change any of th
 
 - **Company name**: the brief left it as `[COMPANY NAME]`. The working name is **Groundwork** (constant in `src/lib/site.ts`, plus `common.siteName` in both message files). It reads well for equipment and trades and does not say "AI." Replace it once the real name is chosen (see TODO.md).
 - **GitHub repo**: first created under `ozmerchant` by mistake, then moved to `wellistic-soap/consulting` (public) on 2026-09-05 at Oz's request.
-- **Vercel**: first deployed to a `groundwork-site` project in the Futureproof team by mistake. The site now lives in the `consulting` project under the wellistic-soap Vercel account, imported from the GitHub repo. The Futureproof project and the `ozmerchant` repo are to be deleted once the new deploy is confirmed.
-- **Vercel CLI**: runs as a dev dependency via `npx vercel`. The CLI on this machine is logged into the Futureproof account, so CLI deploys to the wellistic-soap project require `npx vercel login` first.
+- **Vercel**: first deployed to a `groundwork-site` project in the wrong Vercel team by mistake. The site now lives in the `consulting` project under the wellistic-soap Vercel account, imported from the GitHub repo. Both mistaken copies have been deleted.
+- **Vercel CLI**: runs as a dev dependency via `npx vercel`. The CLI on this machine is logged into a different account, so CLI deploys to the wellistic-soap project require `npx vercel login` first.
 - **Calendly instead of a form**: Oz decided on 2026-09-05 that Cris will run a Calendly account, so the callback form, the API route, Resend, Twilio, zod, and the rate limiter were removed. Every CTA is an external link to `NEXT_PUBLIC_CALENDLY_URL`, opened in a new tab and tagged with UTM parameters (source, vertical, locale). The only configuration left is that URL and the site URL.
 
 ## Tech
@@ -27,6 +27,7 @@ Decisions made while building the site without stopping to ask. Change any of th
 - **Share button**: uses the Web Share API when available (iOS and Android), otherwise copies the link and shows "Link copied."
 - **Placeholder imagery**: a neutral block component (`Placeholder.tsx`) with a `data-image-slot` attribute at each slot. No stock photos. The portrait slots are circles; the vertical hero slots only show at tablet width and up to keep phones text-first.
 - **Audit dominance**: on Home and Pricing the audit card is larger, bordered in the primary color, carries the only CTA, and the "Start here" badge. Build and Retainer cards have no CTA and carry "Scoped from your audit" and "After a build" tags.
+- **No engineering-partner credit**: the footer credit line was removed on 2026-09-05 at Oz's request. The site carries no third-party names.
 - **No About page, no blog**: as briefed. Founder bios sit in the "Who we are" block on Home. The brief said no scheduler embed; the Calendly link is a plain link, nothing is embedded.
 
 ## Copy
