@@ -82,7 +82,7 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
 
       {/* Use cases, ranked by payback */}
       <Section>
-        <SectionHeading eyebrow={`03 / ${v("roiLabel")}`} title={v("useCasesTitle")} subtitle={v("useCasesSubtitle")} />
+        <SectionHeading eyebrow="03" title={v("useCasesTitle")} subtitle={v("useCasesSubtitle")} />
         <ol className="grid gap-5 md:grid-cols-2">
           {useCases.map((u, i) => (
             <li key={u.title} className="flex flex-col card p-6">
@@ -92,15 +92,18 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
               </div>
               <dl className="mt-4 space-y-3 text-sm leading-relaxed">
                 <div>
-                  <dt className="font-mono text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{v("problemLabel")}</dt>
+                  <dt className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-foreground">{v("problemLabel")}</dt>
                   <dd className="mt-1">{u.problem}</dd>
                 </div>
                 <div>
-                  <dt className="font-mono text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{v("buildLabel")}</dt>
+                  <dt className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-foreground">{v("buildLabel")}</dt>
                   <dd className="mt-1">{u.build}</dd>
                 </div>
               </dl>
-              <p className="mt-auto border-t border-border pt-3 font-mono text-xs font-semibold text-primary">{u.roi}</p>
+              <div className="mt-auto border-t border-border pt-3">
+                <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-foreground">{v("roiLabel")}</p>
+                <p className="mt-0.5 font-mono text-[15px] font-semibold leading-snug text-primary">{u.roi}</p>
+              </div>
             </li>
           ))}
         </ol>
