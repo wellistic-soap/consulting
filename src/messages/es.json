@@ -11,7 +11,7 @@
       "auto": "Talleres automotrices",
       "gyms": "Gimnasios",
       "pricing": "Precios",
-      "callback": "Agendar llamada",
+      "callback": "Agendar",
       "menu": "Abrir menú",
       "close": "Cerrar menú"
     },
@@ -40,6 +40,15 @@
       "audit": "Auditoría",
       "build": "Construcción",
       "run": "Operación"
+    },
+    "typical": "Típico",
+    "navShort": {
+      "dealers": "Distribuidores",
+      "homeServices": "Hogar",
+      "dental": "Dental",
+      "auto": "Automotriz",
+      "gyms": "Gimnasios",
+      "pricing": "Precios"
     }
   },
   "meta": {
@@ -83,9 +92,10 @@
   "home": {
     "hero": {
       "headline": "Sus teléfonos contestados. Sus seguimientos hechos. Su equipo de vuelta al trabajo que sí paga.",
-      "proof": "Construimos las automatizaciones, chatbots y agentes de IA que manejan llamadas, citas y seguimientos para negocios locales establecidos, conectados a los sistemas que ya usa. Usted ve los números antes de gastar un dólar en construir algo.",
+      "proof": "Construimos los sistemas que manejan llamadas, citas y seguimientos, conectados al software que ya usa. Usted ve los números antes de gastar un dólar en construir algo.",
       "cta": "Agende una llamada con Cris",
-      "secondary": "Vea cómo funciona"
+      "secondary": "Vea cómo funciona",
+      "eyebrow": "Automatizaciones, chatbots y agentes de IA para negocios locales"
     },
     "verticals": {
       "title": "Con quién trabajamos",
@@ -120,32 +130,32 @@
         {
           "title": "Llamadas fuera de horario y de sobreflujo, contestadas",
           "desc": "Un agente de voz contesta, atiende la llamada y la registra. Noches, fines de semana y cuando el mostrador está a reventar.",
-          "metric": "Típico: de 20 a 40 llamadas recuperadas al mes, por sucursal"
+          "metric": "De 20 a 40 llamadas recuperadas al mes, por sucursal"
         },
         {
           "title": "Seguimiento a cotizaciones y presupuestos",
           "desc": "Cada cotización abierta recibe seguimiento por texto y por teléfono hasta que el cliente responde.",
-          "metric": "Típico: de 10% a 20% más cotizaciones cerradas"
+          "metric": "De 10% a 20% más cotizaciones cerradas"
         },
         {
           "title": "Citas y recordatorios",
           "desc": "Se agenda por teléfono o texto, se confirma y se recuerda. Su recepción se queda con el cliente que tiene enfrente.",
-          "metric": "Típico: de 6 a 12 horas a la semana recuperadas, por sucursal"
+          "metric": "De 6 a 12 horas a la semana recuperadas, por sucursal"
         },
         {
           "title": "Preguntas de refacciones e inventario",
           "desc": "Un chatbot en su sitio y su línea de texto responde desde su propio sistema, incluyendo existencias en otras sucursales.",
-          "metric": "Típico: respuesta en menos de 10 segundos en lugar de una llamada de regreso"
+          "metric": "Respuesta en menos de 10 segundos en lugar de una llamada de regreso"
         },
         {
           "title": "Registro y papeleo antes de la visita",
           "desc": "Formularios, seguro, datos del vehículo o del equipo, recopilados antes de que el cliente llegue.",
-          "metric": "Típico: de 5 a 10 horas a la semana recuperadas"
+          "metric": "De 5 a 10 horas a la semana recuperadas"
         },
         {
           "title": "Números diarios de cada sucursal",
           "desc": "Llamadas, citas, cotizaciones abiertas y reseñas de cada sucursal, en un solo mensaje por la mañana.",
-          "metric": "Típico: de 3 a 5 horas a la semana recuperadas para el dueño"
+          "metric": "De 3 a 5 horas a la semana recuperadas para el dueño"
         }
       ]
     },
@@ -175,7 +185,8 @@
         "price": "$750 o $2,500 al mes",
         "tag": "Después de una construcción",
         "desc": "Monitoreo vigila y corrige lo que construimos. Mejora Continua agrega un proceso o una mejora cada mes. O usted lo opera por su cuenta. De cualquier forma, es suyo."
-      }
+      },
+      "noRetainer": "No se requiere contrato mensual. La construcción y el soporte nunca se venden desde este sitio."
     },
     "who": {
       "title": "Quiénes somos",
@@ -221,8 +232,25 @@
     "finalCta": {
       "title": "Sin formularios. Sin presentaciones de ventas. Elija una hora y Cris le llama.",
       "desc": "Escoja el horario que le convenga, en español o en inglés. Cris le llama a esa hora, desde un teléfono de verdad.",
-      "cta": "Agende una llamada con Cris"
-    }
+      "cta": "Agende una llamada con Cris",
+      "talkTo": "Hable con Cris",
+      "talkToSub": "Una persona. Sin equipo de ventas.",
+      "talkToMeta": "Respuesta en un día hábil · ES / EN"
+    },
+    "stats": [
+      {
+        "value": "20 a 40",
+        "label": "llamadas recuperadas al mes, por sucursal"
+      },
+      {
+        "value": "10% a 20%",
+        "label": "más cotizaciones cerradas"
+      },
+      {
+        "value": "6 a 12 hrs",
+        "label": "a la semana recuperadas, por sucursal"
+      }
+    ]
   },
   "vertical": {
     "painsTitle": "¿Le suena conocido?",

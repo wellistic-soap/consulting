@@ -52,6 +52,8 @@ src/lib/                    site config (incl. Calendly link builder), SEO helpe
 
 All copy lives in the two message files. Do not hardcode strings in components.
 
+Design references (Claude Design export) live in `design/`. They are documentation, not shipped code; the tokens and component styles are recreated in `globals.css` and `src/components/site/`.
+
 ## Deploy
 
 The Vercel project is imported from GitHub, so pushes to `main` deploy to production and pull requests get preview URLs. Manual deploy (after `npx vercel login` as wellistic-soap and `npx vercel link`):

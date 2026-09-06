@@ -45,7 +45,7 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
         <SectionHeading eyebrow="01" title={v("painsTitle")} />
         <ul className="grid gap-4 sm:grid-cols-2">
           {pains.map((p) => (
-            <li key={p} className="flex gap-3 rounded-xl border border-border bg-card p-5">
+            <li key={p} className="flex gap-3 card p-5">
               <CircleAlert className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
               <p className="text-base leading-relaxed">{p}</p>
             </li>
@@ -58,7 +58,7 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
         <SectionHeading eyebrow="02" title={v("workflowsTitle")} />
         <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {workflows.map((w, i) => (
-            <li key={w.title} className="rounded-xl border border-border bg-card p-6">
+            <li key={w.title} className="card p-6">
               <span className="font-mono text-xs font-semibold text-primary">{String(i + 1).padStart(2, "0")}</span>
               <h3 className="mt-2 font-sans text-lg font-semibold tracking-tight">{w.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.desc}</p>
@@ -69,12 +69,12 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
 
       {/* Trust */}
       <Section tone="primary" className="py-12 sm:py-16">
-        <h2 className="text-2xl font-semibold sm:text-3xl">{v("trustTitle")}</h2>
+        <h2 className="text-[clamp(28px,3vw,40px)] font-semibold leading-[1.06] tracking-[-0.03em]">{v("trustTitle")}</h2>
         <ul className="mt-6 grid gap-4 sm:grid-cols-2">
           {trust.map((item) => (
             <li key={item} className="flex gap-3">
-              <Check className="mt-1 size-5 shrink-0 text-primary-foreground/80" aria-hidden="true" />
-              <p className="text-base text-primary-foreground/95">{item}</p>
+              <Check className="mt-1 size-5 shrink-0 text-white/80" aria-hidden="true" />
+              <p className="text-base text-white/90">{item}</p>
             </li>
           ))}
         </ul>
@@ -85,7 +85,7 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
         <SectionHeading eyebrow={`03 / ${v("roiLabel")}`} title={v("useCasesTitle")} subtitle={v("useCasesSubtitle")} />
         <ol className="grid gap-5 md:grid-cols-2">
           {useCases.map((u, i) => (
-            <li key={u.title} className="flex flex-col rounded-lg border border-border bg-card p-6">
+            <li key={u.title} className="flex flex-col card p-6">
               <div className="flex items-baseline gap-3">
                 <span className="font-mono text-xs font-semibold text-primary">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="font-sans text-xl font-semibold tracking-tight">{u.title}</h3>

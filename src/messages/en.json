@@ -40,6 +40,15 @@
       "audit": "Audit",
       "build": "Build",
       "run": "Run"
+    },
+    "typical": "Typical",
+    "navShort": {
+      "dealers": "Dealers",
+      "homeServices": "Home services",
+      "dental": "Dental",
+      "auto": "Auto",
+      "gyms": "Gyms",
+      "pricing": "Pricing"
     }
   },
   "meta": {
@@ -83,9 +92,10 @@
   "home": {
     "hero": {
       "headline": "Your phones answered. Your follow-ups done. Your team back to the work that pays.",
-      "proof": "We build the automations, chatbots, and AI agents that handle calls, scheduling, and follow-up for established local businesses, connected to the systems you already use. You see the numbers before you spend a dollar on a build.",
+      "proof": "We build the systems that handle calls, scheduling, and follow-up, connected to the software you already use. You see the numbers before you spend a dollar on a build.",
       "cta": "Book a call with Cris",
-      "secondary": "See how it works"
+      "secondary": "See how it works",
+      "eyebrow": "Automations, chatbots and AI agents for local businesses"
     },
     "verticals": {
       "title": "Who we work with",
@@ -120,32 +130,32 @@
         {
           "title": "After-hours and overflow calls answered",
           "desc": "A voice agent picks up, handles the call, and logs it. Nights, weekends, and when the counter is slammed.",
-          "metric": "Typical: 20 to 40 recovered calls per month, per location"
+          "metric": "20 to 40 recovered calls per month, per location"
         },
         {
           "title": "Quote and estimate follow-up",
           "desc": "Every open quote gets a follow-up by text and phone until the customer answers.",
-          "metric": "Typical: 10% to 20% more quotes closed"
+          "metric": "10% to 20% more quotes closed"
         },
         {
           "title": "Scheduling and reminders",
           "desc": "Booked by phone or text, confirmed, and reminded. Your front desk stays on the customer in front of them.",
-          "metric": "Typical: 6 to 12 hours a week back, per location"
+          "metric": "6 to 12 hours a week back, per location"
         },
         {
           "title": "Parts and inventory questions",
           "desc": "A chatbot on your site and text line answers from your own system, including stock at other locations.",
-          "metric": "Typical: answered in under 10 seconds instead of a callback"
+          "metric": "Answered in under 10 seconds instead of a callback"
         },
         {
           "title": "Intake and paperwork before the visit",
           "desc": "Forms, insurance, vehicle and equipment details collected before the customer walks in.",
-          "metric": "Typical: 5 to 10 hours a week back"
+          "metric": "5 to 10 hours a week back"
         },
         {
           "title": "Daily numbers from every location",
           "desc": "Calls, bookings, open quotes, and reviews from each location in one morning message.",
-          "metric": "Typical: 3 to 5 hours a week back for the owner"
+          "metric": "3 to 5 hours a week back for the owner"
         }
       ]
     },
@@ -172,10 +182,11 @@
       "run": {
         "step": "Step 3",
         "title": "Ongoing support",
-        "price": "$750 or $2,500 per month",
+        "price": "$750 or $2,500 / mo",
         "tag": "After a build",
         "desc": "Monitor keeps what we built watched and fixed. Improve adds a new workflow or improvement every month. Or run it yourself. You own it either way."
-      }
+      },
+      "noRetainer": "No retainer required. Build and support are never sold from this site."
     },
     "who": {
       "title": "Who we are",
@@ -221,8 +232,25 @@
     "finalCta": {
       "title": "No forms. No sales deck. Pick a time and Cris calls you.",
       "desc": "Choose a slot that works for you, in English or Spanish. Cris calls at that time, from a real phone.",
-      "cta": "Book a call with Cris"
-    }
+      "cta": "Book a call with Cris",
+      "talkTo": "Talk to Cris",
+      "talkToSub": "One person. No sales team.",
+      "talkToMeta": "Reply within one business day · EN / ES"
+    },
+    "stats": [
+      {
+        "value": "20 to 40",
+        "label": "recovered calls per month, per location"
+      },
+      {
+        "value": "10% to 20%",
+        "label": "more quotes closed"
+      },
+      {
+        "value": "6 to 12 hrs",
+        "label": "a week back, per location"
+      }
+    ]
   },
   "vertical": {
     "painsTitle": "Sound familiar?",

@@ -18,8 +18,8 @@ export function MobileCtaBar({
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85 md:hidden">
       <div className="container-site flex gap-2 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        {shareTitle && <ShareButton title={shareTitle} size="lg" className="shrink-0 px-4" />}
-        <CtaLink vertical={vertical} size="lg" className="flex-1">
+        {shareTitle && <ShareButton title={shareTitle} size="lg" className="h-12 shrink-0 px-4" />}
+        <CtaLink vertical={vertical} size="lg" className="h-12 flex-1 rounded-md">
           {label}
         </CtaLink>
       </div>

@@ -1,31 +1,33 @@
 @import "tailwindcss";
 
 /*
-  Groundwork theme
-  Primary: deep green. Background: warm off-white. Accent: rust orange (CTAs only).
-  All pairs below meet WCAG AA at the sizes they are used.
+  Groundwork theme (Slate handoff, 2026-09-05)
+  Primary: slate. Background: warm off-white. Accent: brass, used only on the booking CTA and its badge.
+  To go back to the green palette, swap primary/secondary/accent for #1f4d3a / #eef2ee / #c2410c.
 */
 :root {
-  --background: #faf7f2;
+  --background: #f8f6f1;
   --foreground: #1c1a17;
   --card: #ffffff;
   --card-foreground: #1c1a17;
   --popover: #ffffff;
   --popover-foreground: #1c1a17;
-  --primary: #1f4d3a;
+  --primary: #24384d;
+  --primary-rgb: 36, 56, 77;
   --primary-foreground: #ffffff;
-  --secondary: #eef2ee;
-  --secondary-foreground: #1f4d3a;
-  --muted: #f1ede6;
+  --secondary: #e9eef3;
+  --secondary-foreground: #24384d;
+  --muted: #efece6;
   --muted-foreground: #5b564f;
-  --accent: #c2410c;
+  --accent: #b45309;
   --accent-foreground: #ffffff;
-  --accent-hover: #a83708;
+  --accent-hover: #92400e;
   --destructive: #b42318;
-  --border: #e3ddd3;
+  --border: #e1dcd3;
   --input: #cfc8bd;
-  --ring: #1f4d3a;
+  --ring: #24384d;
   --radius: 0.375rem;
+  --radius-card: 10px;
 }
 
 @theme inline {
@@ -52,9 +54,9 @@
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 6px);
+  --radius-card: var(--radius-card);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-serif: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -68,16 +70,18 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
   h1, h2, h3 {
-    @apply font-sans tracking-tight text-balance;
+    @apply text-balance;
     letter-spacing: -0.025em;
   }
   ::selection {
-    background: #d9e5dc;
+    background: var(--secondary);
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   }
 }
 
@@ -85,7 +89,37 @@
   .container-site {
     @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
   }
-  /* Subtle engineering-grid backgrounds, drawn on a pseudo-element so content is never masked */
+  .section-pad {
+    padding-block: clamp(64px, 9vw, 128px);
+  }
+  .eyebrow {
+    @apply font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary;
+  }
+  .mono-label {
+    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground;
+  }
+  .card {
+    @apply bg-card rounded-[var(--radius-card)];
+    box-shadow: 0 1px 2px rgba(28, 26, 23, 0.04), 0 8px 24px rgba(28, 26, 23, 0.06);
+  }
+  .card-lift {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .card-lift:hover {
+    box-shadow: 0 2px 4px rgba(28, 26, 23, 0.05), 0 16px 40px rgba(28, 26, 23, 0.1);
+    transform: translateY(-2px);
+  }
+  .shadow-card {
+    box-shadow: 0 1px 2px rgba(28, 26, 23, 0.04), 0 8px 24px rgba(28, 26, 23, 0.06);
+  }
+  .shadow-card-hover {
+    box-shadow: 0 2px 4px rgba(28, 26, 23, 0.05), 0 16px 40px rgba(28, 26, 23, 0.1);
+  }
+  .shadow-audit {
+    box-shadow: 0 0 0 2px var(--primary), 0 2px 4px rgba(28, 26, 23, 0.04), 0 24px 48px -12px rgba(var(--primary-rgb), 0.25);
+  }
+
+  /* Engineering-grid backgrounds on a pseudo-element so content is never masked */
   .grid-bg,
   .grid-bg-dark {
     position: relative;
@@ -105,16 +139,17 @@
   }
   .grid-bg::before {
     background-image:
-      linear-gradient(to right, rgba(31, 77, 58, 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(31, 77, 58, 0.08) 1px, transparent 1px);
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      linear-gradient(to right, rgba(var(--primary-rgb), 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--primary-rgb), 0.08) 1px, transparent 1px);
+    -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
   }
   .grid-bg-dark::before {
     background-image:
       linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   }
+
   .prose-legal h2 {
     @apply mt-10 mb-3 text-xl font-semibold;
   }

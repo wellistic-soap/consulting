@@ -7,52 +7,38 @@ export function Footer() {
   const t = useTranslations("common");
   const locale = useLocale();
   const year = new Date().getFullYear();
+  const linkClass = "block py-2.5 text-sm leading-6 text-foreground hover:text-primary";
   return (
-    <footer className="border-t border-border bg-muted/50">
-      <div className="container-site py-12">
-        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
-          <div>
-            <div className="flex items-center gap-2 text-xl font-semibold tracking-tight text-primary">
-              <Logo />
-              {t("siteName")}
-            </div>
-            <p className="mt-3 max-w-sm text-sm text-muted-foreground">{t("tagline")}</p>
-            <p className="mt-4 text-sm font-medium text-foreground">{t("qualifier")}</p>
-          </div>
-          <nav aria-label={t("nav.verticals")}>
-            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("nav.verticals")}</p>
-            <ul className="mt-3 space-y-2 text-sm">
-              {VERTICALS.map((v) => (
-                <li key={v.key}>
-                  <Link href={v.path} className="hover:text-primary">
-                    {t(`nav.${v.key}`)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <nav aria-label="Secondary">
-            <ul className="space-y-2 text-sm md:mt-7">
-              <li>
-                <Link href="/pricing" className="hover:text-primary">{t("nav.pricing")}</Link>
-              </li>
-              <li>
-                <a href={bookingHref({ locale })} target="_blank" rel="noopener" className="hover:text-primary">{t("nav.callback")}</a>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-primary">{t("footer.privacy")}</Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-primary">{t("footer.terms")}</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
-          <p>
-            &copy; {year} {t("siteName")}. {t("footer.rights")}
+    <footer className="border-t border-border">
+      <div className="container-site grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 py-10">
+        <div>
+          <p className="flex items-center gap-2 text-[17px] font-bold tracking-tight">
+            <Logo />
+            {t("siteName")}
           </p>
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">{t("tagline")}</p>
+          <p className="mt-2 font-mono text-xs text-muted-foreground">{t("qualifier")}</p>
         </div>
+        <nav aria-label={t("nav.verticals")}>
+          <p className="mono-label mb-3 font-semibold tracking-[0.18em]">{t("nav.verticals")}</p>
+          {VERTICALS.map((v) => (
+            <Link key={v.key} href={v.path} className={linkClass}>
+              {t(`nav.${v.key}`)}
+            </Link>
+          ))}
+        </nav>
+        <nav aria-label="Secondary">
+          <p className="mono-label mb-3 font-semibold tracking-[0.18em]">{t("siteName")}</p>
+          <Link href="/pricing" className={linkClass}>{t("nav.pricing")}</Link>
+          <a href={bookingHref({ locale })} target="_blank" rel="noopener" className={linkClass}>{t("cta.primary")}</a>
+          <Link href="/privacy" className={linkClass}>{t("footer.privacy")}</Link>
+          <Link href="/terms" className={linkClass}>{t("footer.terms")}</Link>
+        </nav>
+      </div>
+      <div className="border-t border-border">
+        <p className="container-site py-4 font-mono text-xs text-muted-foreground">
+          &copy; {year} {t("siteName")}. {t("footer.rights")}
+        </p>
       </div>
     </footer>
   );

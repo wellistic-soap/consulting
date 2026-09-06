@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#f8f6f1;color:#1c1a17;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+a{color:#24384d;text-decoration:none;}a:hover{text-decoration:underline;}
+h1,h2,h3,h4,p{margin:0;}
+</style>
+</helmet>
+
+<div style="max-width:1120px;margin:0 auto;padding:32px 20px 96px;">
+
+<header style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;padding-bottom:24px;border-bottom:1px solid #e1dcd3;">
+  <div>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#24384d;margin-bottom:12px;">Groundwork / Style sheet v2 · Slate</p>
+    <h1 style="font-size:clamp(30px,4vw,44px);font-weight:600;letter-spacing:-0.025em;line-height:1.05;">Tokens, type, cards, buttons, grid.</h1>
+    <p style="margin-top:12px;color:#5b564f;font-size:16px;max-width:560px;text-wrap:pretty;">Hand this to an engineer working in Tailwind v4. Every spec below is a class string or a CSS value, nothing else.</p>
+  </div>
+  <div style="display:flex;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;">
+    <span style="border:1px solid #e1dcd3;padding:6px 10px;border-radius:6px;">Inter</span>
+    <span style="border:1px solid #e1dcd3;padding:6px 10px;border-radius:6px;">JetBrains Mono</span>
+    <span style="border:1px solid #e1dcd3;padding:6px 10px;border-radius:6px;">radius 6px</span>
+  </div>
+</header>
+
+<!-- 01 COLOR -->
+<section style="padding-top:56px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">01</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Color</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;">
+    <sc-for list="{{ colors }}" as="c" hint-placeholder-count="8">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;overflow:hidden;background:#fff;">
+        <div style="height:72px;background:{{ c.hex }};border-bottom:1px solid #e1dcd3;"></div>
+        <div style="padding:10px 12px;">
+          <p style="font-size:14px;font-weight:600;">{{ c.name }}</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;margin-top:2px;">{{ c.hex }}</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:6px;">{{ c.tw }}</p>
+          <p style="font-size:12px;color:#5b564f;margin-top:6px;line-height:1.4;">{{ c.use }}</p>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+    <div style="border:1px solid #e1dcd3;border-radius:6px;padding:14px 16px;background:#fff;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;">Contrast (AA)</p>
+      <p style="font-size:14px;margin-top:8px;line-height:1.6;">text on background <span style="font-family:'JetBrains Mono',monospace;color:#24384d;">15.7:1</span><br>muted on background <span style="font-family:'JetBrains Mono',monospace;color:#24384d;">6.3:1</span><br>white on primary <span style="font-family:'JetBrains Mono',monospace;color:#24384d;">11.6:1</span><br>white on accent <span style="font-family:'JetBrains Mono',monospace;color:#24384d;">4.8:1</span><br>primary on background <span style="font-family:'JetBrains Mono',monospace;color:#24384d;">10.6:1</span></p>
+    </div>
+    <div style="border:1px solid #e1dcd3;border-radius:6px;padding:14px 16px;background:#fff;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;">Rules</p>
+      <p style="font-size:14px;margin-top:8px;line-height:1.6;color:#1c1a17;">Accent is for the booking CTA and its badge only. Never for text, icons, borders or hover states elsewhere. No gradients anywhere. Dark sections are <span style="font-family:'JetBrains Mono',monospace;">bg-primary</span> (slate) with the light grid, never black.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 TYPE -->
+<section style="padding-top:64px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">02</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Type scale</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <p style="color:#5b564f;font-size:14px;margin-bottom:20px;max-width:640px;text-wrap:pretty;">Inter for all text and headlines, <span style="font-family:'JetBrains Mono',monospace;">tracking-[-0.025em]</span> on h1 to h3. JetBrains Mono only for eyebrows, prices, metrics and section numbers. Body never below 16px on phones.</p>
+  <div style="display:flex;flex-direction:column;border-top:1px solid #e1dcd3;">
+    <sc-for list="{{ type }}" as="t" hint-placeholder-count="9">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,320px);gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid #e1dcd3;">
+        <p style="font-family:{{ t.family }};font-size:{{ t.size }};font-weight:{{ t.weight }};letter-spacing:{{ t.ls }};line-height:{{ t.lh }};color:{{ t.color }};text-transform:{{ t.tt }};min-width:0;overflow-wrap:anywhere;">{{ t.sample }}</p>
+        <div style="min-width:0;">
+          <p style="font-size:13px;font-weight:600;">{{ t.name }}</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">{{ t.tw }}</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5b564f;margin-top:2px;">{{ t.spec }}</p>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 03 SPACING -->
+<section style="padding-top:64px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">03</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Spacing and layout</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+    <div style="border:1px solid #e1dcd3;border-radius:6px;padding:20px;background:#fff;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;margin-bottom:14px;">Scale (4px base)</p>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <sc-for list="{{ spacing }}" as="s" hint-placeholder-count="8">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;width:44px;">{{ s.px }}</span>
+            <span style="height:12px;width:{{ s.px }};background:#24384d;border-radius:2px;flex:none;"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#24384d;">{{ s.tw }}</span>
+            <span style="font-size:12px;color:#5b564f;">{{ s.use }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <sc-for list="{{ layout }}" as="l" hint-placeholder-count="5">
+        <div style="border:1px solid #e1dcd3;border-radius:6px;padding:14px 16px;background:#fff;">
+          <p style="font-size:14px;font-weight:600;">{{ l.name }}</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">{{ l.tw }}</p>
+          <p style="font-size:13px;color:#5b564f;margin-top:4px;">{{ l.note }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 04 GRID -->
+<section style="padding-top:64px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">04</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Engineering grid</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+    <div style="border:1px solid #e1dcd3;border-radius:6px;overflow:hidden;background:#fff;">
+      <div style="position:relative;height:200px;background-color:#f8f6f1;background-image:linear-gradient(to right,rgba(36,56,77,0.08) 1px,transparent 1px),linear-gradient(to bottom,rgba(36,56,77,0.08) 1px,transparent 1px);background-size:32px 32px;background-position:center top;-webkit-mask-image:linear-gradient(to bottom,black 40%,transparent 100%);mask-image:linear-gradient(to bottom,black 40%,transparent 100%);padding:28px;">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;text-transform:uppercase;">Light / hero</p>
+        <p style="font-size:26px;font-weight:600;letter-spacing:-0.025em;margin-top:10px;max-width:320px;line-height:1.1;">Fewer missed calls. More booked jobs.</p>
+      </div>
+      <div style="padding:14px 16px;border-top:1px solid #e1dcd3;">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#24384d;">.grid-bg</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5b564f;margin-top:6px;line-height:1.7;">line rgba(36,56,77,0.08) 1px<br>cell 32px x 32px, position center top<br>mask linear-gradient(to bottom, black 40%, transparent 100%)<br>drawn on ::before, pointer-events none, content relative</p>
+      </div>
+    </div>
+    <div style="border:1px solid #e1dcd3;border-radius:6px;overflow:hidden;background:#fff;">
+      <div style="position:relative;height:200px;background-color:#24384d;background-image:linear-gradient(to right,rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:32px 32px;background-position:center top;padding:28px;color:#fff;">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.85);">Dark / trust band</p>
+        <p style="font-size:26px;font-weight:600;letter-spacing:-0.025em;margin-top:10px;max-width:320px;line-height:1.1;">Runs in your accounts. You own the work.</p>
+      </div>
+      <div style="padding:14px 16px;border-top:1px solid #e1dcd3;">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#24384d;">.grid-bg-dark  +  bg-primary text-primary-foreground</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5b564f;margin-top:6px;line-height:1.7;">line rgba(255,255,255,0.06) 1px<br>cell 32px x 32px, no mask<br>eyebrows on dark: text-white/85, body: text-white/80 (min 4.5:1)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 BUTTONS -->
+<section style="padding-top:64px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">05</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Buttons</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <p style="color:#5b564f;font-size:14px;margin-bottom:20px;max-width:640px;text-wrap:pretty;">One accent button per screen: the booking CTA. Everything else is primary, outline or ghost. Minimum height 44px on phones (size lg or xl). Base: <span style="font-family:'JetBrains Mono',monospace;color:#24384d;">inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors focus-visible:ring-[3px] focus-visible:ring-ring/50</span></p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;">
+    <sc-for list="{{ buttons }}" as="b" hint-placeholder-count="5">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;padding:20px;background:#fff;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:center;justify-content:center;min-height:72px;background:{{ b.bgDemo }};border-radius:6px;padding:12px;">
+          <button style="display:inline-flex;align-items:center;justify-content:center;gap:8px;height:{{ b.h }};padding:0 {{ b.px }};border-radius:{{ b.r }};font-family:Inter,sans-serif;font-size:{{ b.fs }};font-weight:{{ b.fw }};background:{{ b.bg }};color:{{ b.fg }};border:1px solid {{ b.border }};cursor:pointer;box-shadow:{{ b.shadow }};white-space:nowrap;" style-hover="background:{{ b.hover }}">{{ b.label }}</button>
+        </div>
+        <div>
+          <p style="font-size:14px;font-weight:600;">{{ b.name }}</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">{{ b.tw }}</p>
+          <p style="font-size:13px;color:#5b564f;margin-top:6px;">{{ b.use }}</p>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top:20px;border:1px solid #e1dcd3;border-radius:6px;padding:14px 16px;background:#fff;">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;">Sizes</p>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#24384d;margin-top:8px;line-height:1.8;overflow-wrap:anywhere;">sm  h-8 px-3 text-sm<br>default  h-9 px-4 text-sm<br>lg  h-11 px-6 text-base  (44px, phone minimum)<br>xl  h-13 px-7 text-base font-semibold rounded-lg  (52px, hero + pricing CTA)</p>
+  </div>
+</section>
+
+<!-- 06 CARDS -->
+<section style="padding-top:64px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">06</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Cards</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:start;">
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:#fff;padding:24px;">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">01</p>
+        <h3 style="font-size:18px;font-weight:600;letter-spacing:-0.02em;margin-top:12px;">Missed-call text back</h3>
+        <p style="font-size:15px;color:#5b564f;margin-top:8px;line-height:1.55;text-wrap:pretty;">A caller who hangs up gets a text in 30 seconds with a link to book.</p>
+        <div style="margin-top:16px;padding-top:12px;border-top:1px solid #e1dcd3;display:flex;gap:8px;align-items:baseline;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;">Typical:</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:#24384d;">+18% booked calls</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Example / use-case card</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">rounded-lg border border-border bg-card p-6 · number: font-mono text-xs font-semibold tracking-[0.18em] text-primary · metric row: mt-4 pt-3 border-t border-border font-mono</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Every figure is prefixed "Typical:". No icons needed.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #24384d;box-shadow:0 0 0 2px #24384d,0 10px 15px -3px rgba(28,26,23,0.1),0 4px 6px -4px rgba(28,26,23,0.1);border-radius:6px;background:#fff;padding:24px;">
+        <span style="display:inline-flex;background:#b45309;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:9999px;">Start here</span>
+        <h3 style="font-size:24px;font-weight:600;letter-spacing:-0.025em;margin-top:16px;">Audit</h3>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:40px;font-weight:600;letter-spacing:-0.02em;color:#24384d;margin-top:8px;">$3,000</p>
+        <p style="font-size:14px;font-weight:500;color:#5b564f;margin-top:4px;">Two weeks, fixed price</p>
+        <div style="margin-top:20px;background:#e9eef3;color:#24384d;font-size:15px;font-weight:600;text-align:center;padding:12px 16px;border-radius:6px;">Credited in full toward your build</div>
+        <button style="margin-top:12px;width:100%;height:52px;border-radius:8px;background:#b45309;color:#fff;border:0;font-family:Inter,sans-serif;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 1px 2px rgba(28,26,23,0.08);" style-hover="background:#92400e">Book a call with Cris</button>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Dominant pricing card (Audit only)</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">rounded-lg border border-primary ring-2 ring-primary bg-card shadow-lg p-6 sm:p-9 · price: font-mono text-5xl font-semibold tracking-tight text-primary · credit: rounded-lg bg-secondary px-4 py-3 font-semibold text-primary</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">The only card on the site with a buy button.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:rgba(255,255,255,0.6);padding:24px;">
+        <span style="display:inline-flex;background:#efece6;color:#5b564f;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:9999px;">Retainer</span>
+        <h3 style="font-size:22px;font-weight:600;letter-spacing:-0.025em;margin-top:16px;">Monitor</h3>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:600;letter-spacing:-0.02em;color:#24384d;margin-top:8px;">$750 / mo</p>
+        <p style="font-size:15px;font-weight:500;margin-top:12px;">We watch it so you do not have to.</p>
+        <p style="font-size:14px;color:#5b564f;margin-top:20px;">No retainer required.</p>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Secondary pricing card (Build, Monitor, Improve)</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">rounded-lg border border-border bg-card/60 p-6 sm:p-8 · tag: rounded-full bg-muted text-muted-foreground · price: font-mono text-2xl font-semibold text-primary</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Never carries a CTA. Ends with a plain note.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:#fff;padding:24px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#24384d;">Eyebrow label</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;">Muted label</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div><p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#1c1a17;">The problem</p><p style="font-size:15px;color:#5b564f;margin-top:2px;">Quotes sit in an inbox for two days.</p></div>
+          <div><p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#1c1a17;">What we build</p><p style="font-size:15px;color:#5b564f;margin-top:2px;">An agent that drafts the quote from your price list.</p></div>
+          <div><p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#1c1a17;">Typical impact</p><p style="font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;color:#24384d;margin-top:2px;">Same-day quotes, 4 hrs saved per week</p></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">"Where the money is" card</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">labels: font-mono text-[11px] font-semibold uppercase tracking-[0.12em] · impact value: font-mono text-[15px] font-semibold text-primary</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Three fixed labels, always in this order.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="position:relative;height:180px;border-radius:12px;background:#e9eef3;overflow:hidden;">
+        <div style="position:absolute;left:24px;right:24px;top:24px;height:40%;border-radius:6px;background:rgba(36,56,77,0.15);"></div>
+        <div style="position:absolute;left:24px;bottom:24px;height:25%;width:33%;border-radius:6px;background:rgba(36,56,77,0.25);"></div>
+        <div style="position:absolute;right:24px;bottom:24px;height:25%;width:40%;border-radius:6px;background:rgba(194,65,12,0.25);"></div>
+        <span style="position:absolute;right:12px;bottom:8px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(36,56,77,0.5);">portrait / cris</span>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Image slot placeholder</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">rounded-xl bg-secondary · data-image-slot="name" · label: font-mono text-[10px] uppercase text-primary/50</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Swap for next/image under 80 KB. No stock photos.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 07 PATTERNS FROM REFERENCES -->
+<section style="padding-top:64px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">07</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Patterns borrowed from references</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <p style="color:#5b564f;font-size:14px;margin-bottom:20px;max-width:640px;text-wrap:pretty;">Four moves worth stealing from aimakers.co, espresso.ai and simular.ai, restated in Groundwork's palette. None of the illustration, video or gradient work comes with them.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:start;">
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:#fff;padding:24px;display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;gap:14px;align-items:center;">
+          <div style="width:56px;height:56px;border-radius:6px;background:#e9eef3;flex:none;position:relative;overflow:hidden;"><span style="position:absolute;inset:auto 4px 3px auto;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(36,56,77,0.5);">cris</span></div>
+          <div>
+            <p style="font-size:16px;font-weight:600;letter-spacing:-0.01em;">{{ founderTitle }}</p>
+            <p style="font-size:14px;color:#5b564f;margin-top:2px;">{{ founderSub }}</p>
+          </div>
+        </div>
+        <button style="width:100%;height:48px;border-radius:6px;border:0;background:#b45309;color:#fff;font-family:Inter,sans-serif;font-size:16px;font-weight:600;cursor:pointer;" style-hover="background:#92400e">{{ ctaLong }}</button>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;">{{ founderMeta }}</p>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Named-person CTA <span style="color:#5b564f;font-weight:400;">(aimakers "Talk to Mark")</span></p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">rounded-lg border border-border bg-card p-6 · portrait size-14 rounded-md bg-secondary · meta: font-mono text-xs text-muted-foreground</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Cris is the product. Use in the hero and final CTA instead of an anonymous button.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:#fff;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));">
+        <div style="padding:20px 16px;border-right:1px solid #e1dcd3;"><p style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#24384d;">30s</p><p style="font-size:13px;color:#5b564f;margin-top:6px;line-height:1.4;">Typical text-back time</p></div>
+        <div style="padding:20px 16px;border-right:1px solid #e1dcd3;"><p style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#24384d;">2 wk</p><p style="font-size:13px;color:#5b564f;margin-top:6px;line-height:1.4;">Audit, start to report</p></div>
+        <div style="padding:20px 16px;"><p style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#24384d;">0</p><p style="font-size:13px;color:#5b564f;margin-top:6px;line-height:1.4;">New logins for your staff</p></div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Metric strip <span style="color:#5b564f;font-weight:400;">(simular benchmark trio)</span></p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">grid grid-cols-3 divide-x divide-border rounded-lg border border-border bg-card · value: font-mono text-3xl font-semibold text-primary · label: text-[13px] text-muted-foreground</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Three numbers max, each labeled "Typical". Sits under the hero as the one sentence of proof.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="border:1px solid #24384d;border-radius:6px;background:#fff;padding:18px 20px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:baseline;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;color:#24384d;">STEP 01</span>
+          <div><p style="font-size:17px;font-weight:600;letter-spacing:-0.01em;">Audit <span style="font-family:'JetBrains Mono',monospace;font-weight:600;color:#24384d;">$3,000</span></p><p style="font-size:14px;color:#5b564f;margin-top:4px;">Two weeks. A written plan you keep either way.</p></div>
+        </div>
+        <div style="border:1px solid #e1dcd3;border-radius:6px;background:rgba(255,255,255,0.6);padding:14px 20px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:baseline;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;color:#5b564f;">STEP 02</span>
+          <p style="font-size:15px;font-weight:600;">Build <span style="font-weight:400;color:#5b564f;">Fixed quote before we start.</span></p>
+        </div>
+        <div style="border:1px solid #e1dcd3;border-radius:6px;background:rgba(255,255,255,0.6);padding:14px 20px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:baseline;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;color:#5b564f;">STEP 03</span>
+          <p style="font-size:15px;font-weight:600;">Ongoing support <span style="font-weight:400;color:#5b564f;">Optional. No retainer required.</span></p>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Step ladder <span style="color:#5b564f;font-weight:400;">(aimakers STEP 01/02/03)</span></p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">step 1: border-primary bg-card p-5 · steps 2-3: border-border bg-card/60 py-3.5 · label: font-mono text-[11px] font-semibold tracking-[0.18em]</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Weight decreases down the ladder so the Audit stays dominant. "How it works" section on Home.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:#fff;padding:24px;">
+        <p style="font-size:17px;font-weight:500;letter-spacing:-0.01em;line-height:1.45;text-wrap:pretty;">"We stopped losing after-hours calls in the first week. Cris set it up inside the phone system we already had."</p>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid #e1dcd3;flex-wrap:wrap;">
+          <p style="font-size:14px;font-weight:600;">Owner, three-location HVAC company</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;">Typical: +12 jobs / mo</p>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Quote card <span style="color:#5b564f;font-weight:400;">(espresso testimonials)</span></p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">rounded-lg border border-border bg-card p-6 · quote: text-[17px] font-medium leading-snug · footer: mt-4 pt-3.5 border-t border-border flex justify-between</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Role and business type, not a logo wall. Add only once a real client says it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 07 NAV / MOBILE -->
+<section style="padding-top:64px;">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:#24384d;">08</span>
+    <h2 style="font-size:28px;font-weight:600;letter-spacing:-0.025em;">Header, language toggle, mobile bar</h2>
+    <span style="flex:1;height:1px;background:#e1dcd3;align-self:center;"></span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:#fff;overflow:hidden;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid #e1dcd3;">
+          <span style="font-weight:700;letter-spacing:-0.02em;font-size:17px;">Groundwork</span>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <button style="height:40px;padding:0 12px;border-radius:6px;border:1px solid rgba(36,56,77,0.3);background:transparent;color:#24384d;font-family:Inter,sans-serif;font-size:14px;font-weight:500;cursor:pointer;" style-hover="background:#e9eef3">{{ toggleLabel }}</button>
+            <button style="height:40px;padding:0 16px;border-radius:6px;border:0;background:#b45309;color:#fff;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;" style-hover="background:#92400e">{{ ctaShort }}</button>
+          </div>
+        </div>
+        <div style="padding:16px;background:#f8f6f1;">
+          <p style="font-size:13px;color:#5b564f;">Header stays 56px tall, sticky, <span style="font-family:'JetBrains Mono',monospace;">bg-background/90 backdrop-blur border-b border-border</span>.</p>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Language toggle</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">inline-flex h-10 items-center rounded-md border border-primary/30 px-3 text-sm font-medium text-primary hover:bg-secondary · shows the other language name, keeps path and query</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="border:1px solid #e1dcd3;border-radius:6px;background:#fff;overflow:hidden;">
+        <div style="height:80px;background:#f8f6f1;"></div>
+        <div style="display:flex;gap:8px;padding:12px 16px;border-top:1px solid #e1dcd3;background:rgba(248,246,241,0.95);">
+          <button style="height:44px;padding:0 16px;border-radius:6px;border:1px solid rgba(36,56,77,0.3);background:#f8f6f1;color:#24384d;font-family:Inter,sans-serif;font-size:16px;font-weight:500;flex:none;cursor:pointer;" style-hover="background:#e9eef3">{{ shareLabel }}</button>
+          <button style="height:44px;flex:1;border-radius:6px;border:0;background:#b45309;color:#fff;font-family:Inter,sans-serif;font-size:16px;font-weight:600;cursor:pointer;" style-hover="background:#92400e">{{ ctaLong }}</button>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;">Fixed mobile CTA bar (below md)</p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#24384d;margin-top:4px;line-height:1.6;overflow-wrap:anywhere;">fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur md:hidden · inner: flex gap-2 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] · add h-20 spacer after main</p>
+        <p style="font-size:13px;color:#5b564f;margin-top:6px;">Share is outline, CTA is accent and takes the remaining width.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;locale&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;es&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;'en' | 'es'&quot;,&quot;section&quot;:&quot;Preview&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const es = this.props.locale === 'es';
+    return {
+      toggleLabel: es ? 'English' : 'Español',
+      ctaShort: es ? 'Agendar' : 'Book a call',
+      ctaLong: es ? 'Agenda una llamada con Cris' : 'Book a call with Cris',
+      shareLabel: es ? 'Compartir' : 'Share',
+      founderTitle: es ? 'Habla con Cris' : 'Talk to Cris',
+      founderSub: es ? 'Una persona. Sin equipo de ventas.' : 'One person. No sales team.',
+      founderMeta: es ? 'Respuesta en un día hábil · EN / ES' : 'Reply within one business day · EN / ES',
+      colors: [
+        { name: 'Primary', hex: '#24384d', tw: 'bg-primary text-primary', use: 'Slate. Headings accents, dark bands, mono labels, outline borders at /30' },
+        { name: 'Background', hex: '#f8f6f1', tw: 'bg-background', use: 'Page ground. Warm, never pure white' },
+        { name: 'Card', hex: '#ffffff', tw: 'bg-card', use: 'Cards on the warm ground. Secondary cards use bg-card/60' },
+        { name: 'Foreground', hex: '#1c1a17', tw: 'text-foreground', use: 'Body and headlines' },
+        { name: 'Muted foreground', hex: '#5b564f', tw: 'text-muted-foreground', use: 'Supporting copy, notes, muted labels' },
+        { name: 'Accent', hex: '#b45309', tw: 'bg-accent hover:bg-accent-hover', use: 'Booking CTA and its badge only. Hover #92400e' },
+        { name: 'Secondary', hex: '#e9eef3', tw: 'bg-secondary', use: 'Tinted panels, credit line box, hover fills, image slots' },
+        { name: 'Muted', hex: '#efece6', tw: 'bg-muted', use: 'Alternate section ground at /60, neutral tags' },
+        { name: 'Border', hex: '#e1dcd3', tw: 'border-border', use: 'All rules and card borders, 1px' },
+        { name: 'Input', hex: '#cfc8bd', tw: 'border-input', use: 'Form field borders' },
+      ],
+      type: [
+        { name: 'Display / h1', sample: 'Fewer missed calls. More booked jobs.', family: 'Inter', size: '44px', weight: 600, ls: '-0.025em', lh: '1.05', color: '#1c1a17', tt: 'none', tw: 'text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-balance', spec: '36 / 48 / 60px · lh 1.05' },
+        { name: 'Section / h2', sample: 'Who we work with', family: 'Inter', size: '32px', weight: 600, ls: '-0.025em', lh: '1.1', color: '#1c1a17', tt: 'none', tw: 'text-3xl sm:text-4xl font-semibold tracking-tight', spec: '30 / 36px · lh 1.1' },
+        { name: 'Card title / h3', sample: 'Missed-call text back', family: 'Inter', size: '20px', weight: 600, ls: '-0.02em', lh: '1.25', color: '#1c1a17', tt: 'none', tw: 'text-xl font-semibold tracking-tight', spec: '20px · lh 1.25' },
+        { name: 'Lead', sample: 'We build the automations. You keep the accounts.', family: 'Inter', size: '18px', weight: 400, ls: '0', lh: '1.55', color: '#5b564f', tt: 'none', tw: 'text-base sm:text-lg text-muted-foreground', spec: '16 / 18px · lh 1.55' },
+        { name: 'Body', sample: 'Short sentences. Speak to the owner, not the IT person.', family: 'Inter', size: '16px', weight: 400, ls: '0', lh: '1.6', color: '#1c1a17', tt: 'none', tw: 'text-base leading-relaxed', spec: '16px · lh 1.6 · never smaller on phones' },
+        { name: 'Small / list', sample: 'Written report you keep either way', family: 'Inter', size: '14px', weight: 400, ls: '0', lh: '1.5', color: '#1c1a17', tt: 'none', tw: 'text-sm', spec: '14px · list items, notes, desktop only under 16' },
+        { name: 'Price', sample: '$3,000', family: "'JetBrains Mono', monospace", size: '48px', weight: 600, ls: '-0.02em', lh: '1', color: '#24384d', tt: 'none', tw: 'font-mono text-5xl font-semibold tracking-tight text-primary', spec: '48px Audit · text-2xl (24px) Build and retainers' },
+        { name: 'Metric', sample: 'Typical: +18% booked calls', family: "'JetBrains Mono', monospace", size: '14px', weight: 600, ls: '0', lh: '1.4', color: '#24384d', tt: 'none', tw: 'font-mono text-sm font-semibold text-primary', spec: '14px · always prefixed Typical:' },
+        { name: 'Eyebrow / section number', sample: '01  Who we work with', family: "'JetBrains Mono', monospace", size: '12px', weight: 600, ls: '0.18em', lh: '1.4', color: '#24384d', tt: 'uppercase', tw: 'font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary', spec: '12px · mb-3 above h2' },
+      ],
+      spacing: [
+        { px: '4px', tw: '1', use: 'icon gaps' },
+        { px: '8px', tw: '2', use: 'button gap, chip gap' },
+        { px: '12px', tw: '3', use: 'eyebrow to heading' },
+        { px: '16px', tw: '4', use: 'inside small cards' },
+        { px: '20px', tw: '5', use: 'card grid gap, phone gutter' },
+        { px: '24px', tw: '6', use: 'card padding' },
+        { px: '32px', tw: '8', use: 'desktop gutter, grid cell' },
+        { px: '56px', tw: '14', use: 'section py on phone' },
+        { px: '80px', tw: '20', use: 'section py on desktop' },
+      ],
+      layout: [
+        { name: 'Container', tw: 'mx-auto w-full max-w-6xl px-5 sm:px-8', note: '1152px max. 20px gutter at 390, 32px above 640.' },
+        { name: 'Section', tw: 'py-14 sm:py-20', note: 'Tones: default, muted (bg-muted/60), primary (grid-bg-dark bg-primary).' },
+        { name: 'Section heading block', tw: 'mb-8 sm:mb-10 max-w-2xl', note: 'Eyebrow with number, h2, optional lead.' },
+        { name: 'Card grids', tw: 'grid gap-5 sm:grid-cols-2 lg:grid-cols-3', note: 'Five verticals: lg:grid-cols-5 with dealers first. Pricing: lg:grid-cols-[1.35fr_1fr].' },
+        { name: 'Radii', tw: 'rounded-md 6px · rounded-lg 8px · rounded-xl 12px · rounded-full', note: 'Buttons md, cards lg, image slots xl, tags full.' },
+      ],
+      buttons: [
+        { name: 'Accent (CTA)', label: 'Book a call with Cris', bg: '#b45309', fg: '#fff', border: 'transparent', hover: '#92400e', h: '52px', px: '28px', r: '8px', fs: '16px', fw: 600, shadow: '0 1px 2px rgba(28,26,23,0.08)', bgDemo: '#f8f6f1', tw: 'variant=accent size=xl · bg-accent text-accent-foreground hover:bg-accent-hover shadow-sm', use: 'The only sale on the site. One per screen.' },
+        { name: 'Primary', label: 'See pricing', bg: '#24384d', fg: '#fff', border: 'transparent', hover: 'rgba(36,56,77,0.9)', h: '44px', px: '24px', r: '6px', fs: '16px', fw: 500, shadow: 'none', bgDemo: '#f8f6f1', tw: 'variant=default size=lg · bg-primary text-primary-foreground hover:bg-primary/90', use: 'Navigation actions, never a purchase.' },
+        { name: 'Outline', label: 'Share this page', bg: '#f8f6f1', fg: '#24384d', border: 'rgba(36,56,77,0.3)', hover: '#e9eef3', h: '44px', px: '24px', r: '6px', fs: '16px', fw: 500, shadow: 'none', bgDemo: '#f8f6f1', tw: 'variant=outline size=lg · border border-primary/30 bg-background text-primary hover:bg-secondary', use: 'Share, language toggle, secondary links.' },
+        { name: 'On dark', label: 'Book a call with Cris', bg: '#b45309', fg: '#fff', border: 'transparent', hover: '#92400e', h: '44px', px: '24px', r: '6px', fs: '16px', fw: 600, shadow: 'none', bgDemo: '#24384d', tw: 'variant=accent size=lg on bg-primary · outline on dark: border-white/30 text-white hover:bg-white/10', use: 'Trust band and final CTA.' },
+        { name: 'Ghost', label: 'Privacy', bg: 'transparent', fg: '#24384d', border: 'transparent', hover: '#e9eef3', h: '36px', px: '16px', r: '6px', fs: '14px', fw: 500, shadow: 'none', bgDemo: '#f8f6f1', tw: 'variant=ghost · hover:bg-secondary hover:text-secondary-foreground', use: 'Footer and menu links.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

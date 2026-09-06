@@ -13,7 +13,7 @@ export function Section({ id, children, className, tone = "default", as: Tag = "
     <Tag
       id={id}
       className={cn(
-        "py-14 sm:py-20",
+        "section-pad",
         tone === "muted" && "bg-muted/60",
         tone === "primary" && "grid-bg-dark bg-primary text-primary-foreground",
         className,
@@ -30,20 +30,24 @@ export function SectionHeading({
   eyebrow,
   align = "left",
   className,
+  onDark = false,
 }: {
   title: string;
   subtitle?: string;
   eyebrow?: string;
   align?: "left" | "center";
   className?: string;
+  onDark?: boolean;
 }) {
   return (
-    <div className={cn("mb-8 max-w-2xl sm:mb-10", align === "center" && "mx-auto text-center", className)}>
-      {eyebrow && (
-        <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary">{eyebrow}</p>
+    <div className={cn("mb-12 max-w-2xl", align === "center" && "mx-auto text-center", className)}>
+      {eyebrow && <p className={cn("eyebrow mb-3", onDark && "text-white/85")}>{eyebrow}</p>}
+      <h2 className="text-[clamp(32px,3.6vw,48px)] font-semibold leading-[1.06] tracking-[-0.03em]">{title}</h2>
+      {subtitle && (
+        <p className={cn("mt-4 text-[clamp(17px,1.4vw,20px)] leading-normal text-pretty", onDark ? "text-white/80" : "text-muted-foreground")}>
+          {subtitle}
+        </p>
       )}
-      <h2 className="text-3xl font-semibold sm:text-4xl">{title}</h2>
-      {subtitle && <p className="mt-3 text-base text-muted-foreground sm:text-lg">{subtitle}</p>}
     </div>
   );
 }

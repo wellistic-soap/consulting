@@ -23,7 +23,7 @@ function Toggle({ className }: { className?: string }) {
       lang={other}
       aria-label={t("aria")}
       className={cn(
-        "inline-flex h-10 items-center rounded-md border border-primary/30 px-3 text-sm font-medium text-primary hover:bg-secondary",
+        "inline-flex h-11 items-center rounded-md border border-primary/30 px-3 text-sm font-medium text-primary transition-colors hover:bg-secondary",
         className,
       )}
     >
@@ -34,7 +34,7 @@ function Toggle({ className }: { className?: string }) {
 
 export function LanguageToggle({ className }: { className?: string }) {
   return (
-    <Suspense fallback={<span className={cn("inline-block h-10 w-20", className)} />}>
+    <Suspense fallback={<span className={cn("inline-block h-11 w-20", className)} />}>
       <Toggle className={className} />
     </Suspense>
   );

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{--primary:#24384d;--primary-rgb:36,56,77;--secondary:#e9eef3;--bg:#f8f6f1;--bg-rgb:248,246,241;--muted:#efece6;--muted-rgb:239,236,230;--border:#e1dcd3;--accent:#b45309;--accent-hover:#92400e;}
+body[data-palette="green"]{--primary:#1f4d3a;--primary-rgb:31,77,58;--secondary:#eef2ee;--bg:#faf7f2;--bg-rgb:250,247,242;--muted:#f1ede6;--muted-rgb:241,237,230;--border:#e3ddd3;--accent:#c2410c;--accent-hover:#a83708;}
+body[data-palette="graphite"]{--primary:#2a2926;--primary-rgb:42,41,38;--secondary:#ebe9e4;--bg:#f6f5f2;--bg-rgb:246,245,242;--muted:#f0eee9;--muted-rgb:240,238,233;--border:#dedad3;--accent:#0f766e;--accent-hover:#115e59;}
+html,body{margin:0;padding:0;overflow-x:hidden;background:var(--bg);color:#1c1a17;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+a{color:var(--primary);text-decoration:none;}a:hover{text-decoration:underline;}
+h1,h2,h3,h4,p{margin:0;}
+button{font-family:inherit;}
+</style>
+</helmet>
+
+<div data-screen-label="Home" style="min-height:100vh;display:flex;flex-direction:column;">
+
+<!-- Header -->
+<header style="position:sticky;top:0;z-index:30;background:rgba(var(--bg-rgb),0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);">
+  <div style="max-width:1152px;margin:0 auto;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <a href="#" style="display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;letter-spacing:-0.02em;color:#1c1a17;">
+      <span style="width:14px;height:14px;background:var(--primary);border-radius:2px;display:inline-block;"></span>Groundwork
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;gap:4px;">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="6">
+          <a href="{{ n.href }}" style="padding:8px 10px;font-size:14px;font-weight:500;color:#1c1a17;border-radius:6px;" style-hover="background:var(--secondary);text-decoration:none;">{{ n.label }}</a>
+        </sc-for>
+      </nav>
+    </sc-if>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <button onClick="{{ toggleLocale }}" style="height:44px;padding:0 12px;border-radius:6px;border:1px solid rgba(var(--primary-rgb),0.3);background:transparent;color:var(--primary);font-size:14px;font-weight:500;cursor:pointer;" style-hover="background:var(--secondary)">{{ t.langToggle }}</button>
+      <sc-if value="{{ isTabletUp }}" hint-placeholder-val="{{ true }}">
+        <a href="#book" style="display:inline-flex;align-items:center;height:44px;padding:0 16px;border-radius:6px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;" style-hover="background:var(--accent-hover);text-decoration:none;">{{ t.navCta }}</a>
+      </sc-if>
+      <sc-if value="{{ isCompact }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="{{ t.menuLabel }}" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;border:0;background:transparent;color:var(--primary);cursor:pointer;" style-hover="background:var(--secondary)">
+          <span style="display:flex;flex-direction:column;gap:5px;width:18px;"><span style="height:2px;background:var(--primary);"></span><span style="height:2px;background:var(--primary);"></span><span style="height:2px;background:var(--primary);"></span></span>
+        </button>
+      </sc-if>
+    </div>
+  </div>
+</header>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav aria-label="Main" style="position:fixed;left:0;right:0;top:56px;bottom:0;z-index:50;overflow-y:auto;border-top:1px solid var(--border);background:var(--bg);">
+      <div style="max-width:1152px;margin:0 auto;padding:16px 20px 32px;display:flex;flex-direction:column;">
+        <p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#5b564f;padding:8px 8px 4px;">{{ t.verticalsTitle }}</p>
+        <sc-for list="{{ t.verticals }}" as="v" hint-placeholder-count="5">
+          <a href="{{ v.href }}" style="display:block;padding:12px 8px;border-radius:6px;font-size:18px;font-weight:500;color:#1c1a17;" style-hover="background:var(--secondary);text-decoration:none;">{{ v.title }}</a>
+        </sc-for>
+        <div style="height:1px;background:var(--border);margin:12px 0;"></div>
+        <a href="/pricing" style="display:block;padding:12px 8px;border-radius:6px;font-size:18px;font-weight:500;color:#1c1a17;" style-hover="background:var(--secondary);text-decoration:none;">{{ t.pricingLabel }}</a>
+        <a href="#book" onClick="{{ closeMenu }}" style="margin-top:16px;display:inline-flex;align-items:center;justify-content:center;height:52px;border-radius:8px;background:var(--accent);color:#fff;font-size:16px;font-weight:600;" style-hover="background:var(--accent-hover);text-decoration:none;">{{ t.heroCta }}</a>
+      </div>
+    </nav>
+  </sc-if>
+
+<!-- Hero -->
+<section style="position:relative;background-color:var(--bg);background-image:linear-gradient(to right,rgba(var(--primary-rgb),0.08) 1px,transparent 1px),linear-gradient(to bottom,rgba(var(--primary-rgb),0.08) 1px,transparent 1px);background-size:32px 32px;background-position:center top;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(var(--bg-rgb),0) 30%,var(--bg) 100%);pointer-events:none;"></div>
+  <div style="position:relative;max-width:1152px;margin:0 auto;padding:clamp(56px,10vw,136px) 20px clamp(40px,6vw,80px);">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);margin-bottom:20px;">{{ t.heroEyebrow }}</p>
+    <h1 style="font-size:clamp(38px,5.6vw,72px);font-weight:600;letter-spacing:-0.035em;line-height:1.0;max-width:920px;text-wrap:balance;">{{ t.heroHeadline }}</h1>
+    <p style="margin-top:24px;font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:#5b564f;max-width:600px;text-wrap:pretty;">{{ t.heroProof }}</p>
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;">
+      <a href="#book" style="display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:8px;background:var(--accent);color:#fff;font-size:16px;font-weight:600;box-shadow:0 1px 2px rgba(28,26,23,0.08);transition:background .2s ease,transform .2s ease;" style-hover="background:var(--accent-hover);transform:scale(1.02);text-decoration:none;">{{ t.heroCta }}</a>
+      <a href="#how" style="font-size:16px;font-weight:500;color:var(--primary);display:inline-flex;align-items:center;gap:6px;min-height:44px;">{{ t.heroSecondary }} <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div style="margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-radius:12px;background:#fff;box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);overflow:hidden;">
+      <sc-for list="{{ t.stats }}" as="s" hint-placeholder-count="3">
+        <div style="padding:24px 28px;border-right:1px solid var(--muted);border-bottom:1px solid var(--muted);margin-right:-1px;margin-bottom:-1px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;">{{ t.typical }}</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:clamp(26px,2.4vw,32px);font-weight:600;letter-spacing:-0.02em;color:var(--primary);margin-top:6px;">{{ s.value }}</p>
+          <p style="font-size:14px;color:#5b564f;margin-top:6px;line-height:1.4;">{{ s.label }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;">{{ t.qualifier }}</p>
+  </div>
+</section>
+
+<!-- 01 Who we work with -->
+<section id="who-we-work-with" style="background:rgba(var(--muted-rgb),0.6);">
+  <div style="max-width:1152px;margin:0 auto;padding:clamp(64px,9vw,128px) 20px;">
+    <div style="max-width:640px;margin-bottom:48px;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);margin-bottom:12px;">01</p>
+      <h2 style="font-size:clamp(32px,3.6vw,48px);font-weight:600;letter-spacing:-0.03em;line-height:1.06;">{{ t.verticalsTitle }}</h2>
+      <p style="margin-top:16px;font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:#5b564f;text-wrap:pretty;">{{ t.verticalsSub }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:16px;">
+      <sc-for list="{{ t.verticals }}" as="v" hint-placeholder-count="5">
+        <a href="{{ v.href }}" style="display:flex;flex-direction:column;min-height:200px;padding:20px;border-radius:10px;background:#fff;border:1px solid {{ v.border }};color:#1c1a17;box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);transition:box-shadow .3s ease,transform .3s ease;" style-hover="box-shadow:0 2px 4px rgba(28,26,23,0.05),0 16px 40px rgba(28,26,23,0.10);transform:translateY(-2px);text-decoration:none;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:var(--primary);">{{ v.num }}</p>
+          <h3 style="font-size:18px;font-weight:600;letter-spacing:-0.02em;line-height:1.25;margin-top:14px;">{{ v.title }}</h3>
+          <p style="font-size:14px;line-height:1.5;color:#5b564f;margin-top:8px;flex:1;">{{ v.desc }}</p>
+          <p style="font-size:14px;font-weight:500;color:var(--primary);margin-top:16px;">{{ t.learnMore }} &rarr;</p>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 02 What we take off your plate -->
+<section id="automate">
+  <div style="max-width:1152px;margin:0 auto;padding:clamp(64px,9vw,128px) 20px;">
+    <div style="max-width:640px;margin-bottom:48px;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);margin-bottom:12px;">02</p>
+      <h2 style="font-size:clamp(32px,3.6vw,48px);font-weight:600;letter-spacing:-0.03em;line-height:1.06;">{{ t.automateTitle }}</h2>
+      <p style="margin-top:16px;font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:#5b564f;text-wrap:pretty;">{{ t.automateSub }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
+      <sc-for list="{{ t.automate }}" as="a" hint-placeholder-count="6">
+        <div style="display:flex;flex-direction:column;padding:28px;border-radius:10px;background:#fff;box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);transition:box-shadow .3s ease,transform .3s ease;" style-hover="box-shadow:0 2px 4px rgba(28,26,23,0.05),0 16px 40px rgba(28,26,23,0.10);transform:translateY(-2px);">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;color:var(--primary);">{{ a.num }}</p>
+          <h3 style="font-size:19px;font-weight:600;letter-spacing:-0.02em;line-height:1.25;margin-top:14px;text-wrap:balance;">{{ a.title }}</h3>
+          <p style="font-size:15px;line-height:1.55;color:#5b564f;margin-top:8px;flex:1;text-wrap:pretty;">{{ a.desc }}</p>
+          <div style="margin-top:20px;padding-top:12px;border-top:1px solid var(--border);display:flex;gap:10px;align-items:baseline;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;flex:none;">{{ t.typical }}</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--primary);line-height:1.4;">{{ a.metric }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin-top:20px;font-size:14px;color:#5b564f;max-width:640px;">{{ t.typicalNote }}</p>
+  </div>
+</section>
+
+<!-- 03 How it works -->
+<section id="how" style="background:rgba(var(--muted-rgb),0.6);">
+  <div style="max-width:1152px;margin:0 auto;padding:clamp(64px,9vw,128px) 20px;">
+    <div style="max-width:640px;margin-bottom:48px;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);margin-bottom:12px;">03</p>
+      <h2 style="font-size:clamp(32px,3.6vw,48px);font-weight:600;letter-spacing:-0.03em;line-height:1.06;">{{ t.howTitle }}</h2>
+      <p style="margin-top:16px;font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:#5b564f;text-wrap:pretty;">{{ t.howSub }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:start;">
+      <div style="display:flex;flex-direction:column;padding:clamp(22px,3vw,36px);border-radius:12px;background:#fff;border:1px solid var(--primary);box-shadow:0 0 0 2px var(--primary),0 2px 4px rgba(28,26,23,0.04),0 24px 48px -12px rgba(var(--primary-rgb),0.25);">
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);">{{ t.step1 }}</span>
+          <span style="display:inline-flex;background:var(--accent);color:#fff;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:9999px;">{{ t.auditBadge }}</span>
+        </div>
+        <h3 style="font-size:clamp(24px,2.4vw,30px);font-weight:600;letter-spacing:-0.025em;line-height:1.1;margin-top:16px;">{{ t.auditTitle }}</h3>
+        <div style="display:flex;gap:12px;align-items:baseline;margin-top:8px;flex-wrap:wrap;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:clamp(40px,4vw,48px);font-weight:600;letter-spacing:-0.02em;color:var(--primary);line-height:1;">$3,000</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#5b564f;white-space:nowrap;">/ {{ t.auditDuration }}</p>
+        </div>
+        <p style="margin-top:20px;font-size:16px;line-height:1.55;color:#5b564f;text-wrap:pretty;">{{ t.auditDesc }}</p>
+        <div style="margin-top:24px;background:var(--secondary);color:var(--primary);font-size:15px;font-weight:600;text-align:center;padding:12px 16px;border-radius:6px;line-height:1.4;">{{ t.auditCredit }}</div>
+        <a href="#book" style="margin-top:12px;display:inline-flex;align-items:center;justify-content:center;height:52px;border-radius:8px;background:var(--accent);color:#fff;font-size:16px;font-weight:600;box-shadow:0 1px 2px rgba(28,26,23,0.08);transition:background .2s ease,transform .2s ease;" style-hover="background:var(--accent-hover);transform:scale(1.02);text-decoration:none;">{{ t.heroCta }}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="padding:28px;border-radius:10px;background:rgba(255,255,255,0.7);box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#5b564f;">{{ t.step2 }}</p>
+          <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-top:12px;">
+            <h3 style="font-size:22px;font-weight:600;letter-spacing:-0.025em;">{{ t.buildTitle }}</h3>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--primary);">{{ t.buildPrice }}</p>
+          </div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;margin-top:8px;">{{ t.buildTag }}</p>
+          <p style="margin-top:12px;font-size:15px;line-height:1.55;color:#5b564f;text-wrap:pretty;">{{ t.buildDesc }}</p>
+        </div>
+        <div style="padding:28px;border-radius:10px;background:rgba(255,255,255,0.7);box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#5b564f;">{{ t.step3 }}</p>
+          <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-top:12px;">
+            <h3 style="font-size:22px;font-weight:600;letter-spacing:-0.025em;">{{ t.runTitle }}</h3>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--primary);">{{ t.runPrice }}</p>
+          </div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5b564f;margin-top:8px;">{{ t.runTag }}</p>
+          <p style="margin-top:12px;font-size:15px;line-height:1.55;color:#5b564f;text-wrap:pretty;">{{ t.runDesc }}</p>
+        </div>
+        <p style="font-size:14px;color:#5b564f;padding:0 4px;">{{ t.noRetainer }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 Who we are -->
+<section id="who-we-are">
+  <div style="max-width:1152px;margin:0 auto;padding:clamp(64px,9vw,128px) 20px;">
+    <div style="max-width:640px;margin-bottom:48px;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);margin-bottom:12px;">04</p>
+      <h2 style="font-size:clamp(32px,3.6vw,48px);font-weight:600;letter-spacing:-0.03em;line-height:1.06;">{{ t.whoTitle }}</h2>
+      <p style="margin-top:16px;font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:#5b564f;">{{ t.whoSub }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
+      <sc-for list="{{ t.people }}" as="p" hint-placeholder-count="2">
+        <div style="display:flex;flex-wrap:wrap;gap:20px;padding:28px;border-radius:10px;background:#fff;box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);">
+          <div style="position:relative;width:112px;height:140px;flex:none;border-radius:6px;background:var(--secondary);overflow:hidden;">
+            <div style="position:absolute;left:14px;right:14px;top:14px;height:40%;border-radius:4px;background:rgba(var(--primary-rgb),0.15);"></div>
+            <div style="position:absolute;left:14px;bottom:14px;width:40%;height:22%;border-radius:4px;background:rgba(var(--primary-rgb),0.25);"></div>
+            <span style="position:absolute;right:8px;bottom:6px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(var(--primary-rgb),0.5);">{{ p.slot }}</span>
+          </div>
+          <div style="flex:1 1 200px;min-width:0;">
+            <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.02em;">{{ p.name }}</h3>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--primary);margin-top:6px;">{{ p.role }}</p>
+            <p style="font-size:15px;line-height:1.55;color:#5b564f;margin-top:12px;text-wrap:pretty;">{{ p.bio }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- Trust band -->
+<section style="background-color:var(--primary);background-image:linear-gradient(to right,rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:32px 32px;background-position:center top;color:#fff;">
+  <div style="max-width:1152px;margin:0 auto;padding:clamp(64px,9vw,128px) 20px;">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-bottom:12px;">05</p>
+    <h2 style="font-size:clamp(32px,3.6vw,48px);font-weight:600;letter-spacing:-0.03em;line-height:1.06;max-width:640px;text-wrap:balance;">{{ t.trustTitle }}</h2>
+    <div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px 24px;">
+      <sc-for list="{{ t.trust }}" as="tr" hint-placeholder-count="4">
+        <div style="border-top:1px solid rgba(255,255,255,0.25);padding-top:16px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;color:rgba(255,255,255,0.7);">{{ tr.num }}</p>
+          <h3 style="font-size:18px;font-weight:600;letter-spacing:-0.02em;margin-top:10px;">{{ tr.title }}</h3>
+          <p style="font-size:15px;line-height:1.55;color:rgba(255,255,255,0.82);margin-top:8px;text-wrap:pretty;">{{ tr.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing teaser -->
+<section>
+  <div style="max-width:1152px;margin:0 auto;padding:clamp(72px,9vw,128px) 20px 0;">
+    <div style="display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;padding:clamp(24px,3vw,40px);border-radius:12px;background:#fff;box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);">
+      <div style="flex:1 1 420px;min-width:0;">
+        <h2 style="font-size:clamp(24px,2.4vw,30px);font-weight:600;letter-spacing:-0.025em;line-height:1.15;">{{ t.teaserTitle }}</h2>
+        <p style="margin-top:10px;font-size:16px;line-height:1.55;color:#5b564f;text-wrap:pretty;">{{ t.teaserDesc }}</p>
+      </div>
+      <a href="#" style="display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 24px;border-radius:6px;border:1px solid rgba(var(--primary-rgb),0.3);color:var(--primary);font-size:16px;font-weight:500;flex:none;" style-hover="background:var(--secondary);text-decoration:none;">{{ t.teaserCta }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section id="book">
+  <div style="max-width:1152px;margin:0 auto;padding:clamp(64px,8vw,112px) 20px;display:flex;flex-direction:column;align-items:center;text-align:center;">
+    <h2 style="font-size:clamp(30px,3.4vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.08;max-width:720px;text-wrap:balance;">{{ t.finalTitle }}</h2>
+    <p style="margin-top:16px;font-size:17px;line-height:1.5;color:#5b564f;max-width:520px;text-wrap:pretty;">{{ t.finalDesc }}</p>
+    <div style="margin-top:36px;width:100%;max-width:420px;padding:28px;border-radius:12px;background:#fff;box-shadow:0 1px 2px rgba(28,26,23,0.04),0 8px 24px rgba(28,26,23,0.06);display:flex;flex-direction:column;gap:16px;text-align:left;">
+      <div style="display:flex;gap:14px;align-items:center;">
+        <div style="width:56px;height:56px;border-radius:6px;background:var(--secondary);flex:none;position:relative;overflow:hidden;"><span style="position:absolute;right:4px;bottom:3px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(var(--primary-rgb),0.5);">cris</span></div>
+        <div>
+          <p style="font-size:16px;font-weight:600;letter-spacing:-0.01em;">{{ t.talkTo }}</p>
+          <p style="font-size:14px;color:#5b564f;margin-top:2px;">{{ t.talkToSub }}</p>
+        </div>
+      </div>
+      <a href="#" style="display:inline-flex;align-items:center;justify-content:center;height:52px;border-radius:8px;background:var(--accent);color:#fff;font-size:16px;font-weight:600;" style-hover="background:var(--accent-hover);text-decoration:none;">{{ t.heroCta }}</a>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;">{{ t.talkToMeta }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="border-top:1px solid var(--border);margin-top:auto;">
+  <div style="max-width:1152px;margin:0 auto;padding:40px 20px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;">
+    <div>
+      <p style="display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;letter-spacing:-0.02em;"><span style="width:14px;height:14px;background:var(--primary);border-radius:2px;display:inline-block;"></span>Groundwork</p>
+      <p style="margin-top:12px;font-size:14px;color:#5b564f;line-height:1.5;">{{ t.tagline }}</p>
+      <p style="margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;">{{ t.qualifier }}</p>
+    </div>
+    <div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#5b564f;margin-bottom:12px;">{{ t.verticalsTitle }}</p>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <sc-for list="{{ t.verticals }}" as="v" hint-placeholder-count="5">
+          <a href="{{ v.href }}" style="font-size:14px;color:#1c1a17;display:inline-block;padding:10px 0;line-height:24px;">{{ v.title }}</a>
+        </sc-for>
+      </div>
+    </div>
+    <div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#5b564f;margin-bottom:12px;">Groundwork</p>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <sc-for list="{{ t.footerLinks }}" as="f" hint-placeholder-count="4">
+          <a href="{{ f.href }}" style="font-size:14px;color:#1c1a17;display:inline-block;padding:10px 0;line-height:24px;">{{ f.label }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1152px;margin:0 auto;padding:16px 20px;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:12px;color:#5b564f;">&copy; 2026 Groundwork. {{ t.rights }}</div>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}"><div style="height:80px;"></div></sc-if>
+</footer>
+
+<!-- Mobile CTA bar -->
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:40;border-top:1px solid var(--border);background:rgba(var(--bg-rgb),0.95);backdrop-filter:blur(8px);padding:12px 20px max(12px,env(safe-area-inset-bottom));">
+    <a href="#book" style="display:flex;align-items:center;justify-content:center;height:48px;border-radius:6px;background:var(--accent);color:#fff;font-size:16px;font-weight:600;" style-hover="background:var(--accent-hover);text-decoration:none;">{{ t.heroCta }}</a>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;locale&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;es&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;'en' | 'es'&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;palette&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;green&quot;,&quot;slate&quot;,&quot;graphite&quot;],&quot;default&quot;:&quot;green&quot;,&quot;tsType&quot;:&quot;'green' | 'slate' | 'graphite'&quot;,&quot;section&quot;:&quot;Look&quot;}}">
+class Component extends DCLogic {
+  state = { locale: null, w: 1440, menuOpen: false };
+  componentDidMount() {
+    this._r = () => this.setState(s => ({ w: window.innerWidth, menuOpen: window.innerWidth >= 1024 ? false : s.menuOpen }));
+    this._r();
+    this._applyPalette();
+    window.addEventListener('resize', this._r);
+  }
+  componentDidUpdate() { document.body.style.overflow = this.state.menuOpen ? 'hidden' : ''; this._applyPalette(); }
+  _applyPalette() { document.body.setAttribute('data-palette', this.props.palette ?? 'slate'); }
+  componentWillUnmount() { window.removeEventListener('resize', this._r); document.body.style.overflow = ''; }
+  renderVals() {
+    const locale = this.state.locale ?? this.props.locale ?? 'en';
+    const es = locale === 'es';
+    const w = this.state.w;
+    const hrefs = ['/dealers', '/home-services', '/dental', '/auto', '/gyms'];
+    const nums = ['01', '02', '03', '04', '05', '06'];
+    const en = {
+      langToggle: 'Español', navCta: 'Book a call', learnMore: 'Learn more', typical: 'Typical', tagline: 'Phones answered. Follow-ups done. Hours back.',
+      qualifier: 'Designed for businesses doing $2M+ in annual revenue.', rights: 'All rights reserved.',
+      heroEyebrow: 'Automations, chatbots and AI agents for local businesses',
+      heroHeadline: 'Your phones answered. Your follow-ups done. Your team back to the work that pays.',
+      heroProof: 'We build the systems that handle calls, scheduling, and follow-up, connected to the software you already use. You see the numbers before you spend a dollar on a build.',
+      heroCta: 'Book a call with Cris', heroSecondary: 'See how it works',
+      stats: [{ value: '20 to 40', label: 'recovered calls per month, per location' }, { value: '10% to 20%', label: 'more quotes closed' }, { value: '6 to 12 hrs', label: 'a week back, per location' }],
+      verticalsTitle: 'Who we work with', verticalsSub: 'Established businesses with real call volume and more than one thing going on at once.',
+      verticals: [['Equipment dealers', 'John Deere and other authorized dealers. Parts, service, quotes, and seasonal call volume.'], ['Home services', 'HVAC, plumbing, and pest control with 3+ locations or 20+ trucks.'], ['Dental and orthodontic groups', 'Practices with 2+ locations. After-hours scheduling, insurance, recall.'], ['Auto shops and service chains', '2+ locations. Appointments, estimate approvals, parts updates.'], ['Gyms and fitness chains', '2+ locations. Lead follow-up, cancellation saves, reactivation.']],
+      automateTitle: 'What we take off your plate', automateSub: 'Six things that eat hours and lose money in most of the businesses we visit. Voice agents, chatbots, and plain automation, whichever fits.',
+      automate: [['After-hours and overflow calls answered', 'A voice agent picks up, handles the call, and logs it. Nights, weekends, and when the counter is slammed.', '20 to 40 recovered calls per month, per location'], ['Quote and estimate follow-up', 'Every open quote gets a follow-up by text and phone until the customer answers.', '10% to 20% more quotes closed'], ['Scheduling and reminders', 'Booked by phone or text, confirmed, and reminded. Your front desk stays on the customer in front of them.', '6 to 12 hours a week back, per location'], ['Parts and inventory questions', 'A chatbot on your site and text line answers from your own system, including stock at other locations.', 'Answered in under 10 seconds instead of a callback'], ['Intake and paperwork before the visit', 'Forms, insurance, vehicle and equipment details collected before the customer walks in.', '5 to 10 hours a week back'], ['Daily numbers from every location', 'Calls, bookings, open quotes, and reviews from each location in one morning message.', '3 to 5 hours a week back for the owner']],
+      typicalNote: 'Figures shown are typical ranges from similar businesses, not guarantees. Your audit measures your real numbers.',
+      howTitle: 'How it works', howSub: 'One thing to buy. Everything after that is scoped from what we find.',
+      step1: 'Step 1', step2: 'Step 2', step3: 'Step 3', auditBadge: 'Start here', auditTitle: 'AI Opportunity Audit', auditDuration: 'Two weeks',
+      auditDesc: 'We spend two weeks in your operation. We map your top five workflows, quantify the hours and dollars you are losing, and deliver a prioritized build plan.',
+      auditCredit: 'Your $3,000 is credited in full when you move to a build.',
+      buildTitle: 'Workflow Build', buildPrice: '$15,000 to $25,000', buildTag: 'Scoped from your audit', buildDesc: 'We build the workflows that pay back fastest, connected to the systems you already use.',
+      runTitle: 'Ongoing support', runPrice: '$750 or $2,500 / mo', runTag: 'After a build', runDesc: 'Monitor keeps what we built watched and fixed. Improve adds a new workflow or improvement every month. Or run it yourself. You own it either way.',
+      noRetainer: 'No retainer required. Build and support are never sold from this site.',
+      whoTitle: 'Who we are', whoSub: 'Two people. One builds it, one shows up.',
+      people: [{ name: 'Oz Merchant', role: 'Builds the engineering', bio: '25+ years building software companies. Six startups, four exits. Oz leads the engineering behind every workflow we ship.', slot: 'photo / oz' }, { name: 'Cris [LAST NAME]', role: 'Leads client relationships', bio: '15 years at John Deere and a small business owner himself. Cris knows how a dealership and a service shop actually run. Fluent in Spanish.', slot: 'photo / cris' }],
+      trustTitle: 'Built to fit how you already work',
+      trust: [['Works with your systems', 'Automations, chatbots, and agents that connect to the dealer, CRM, scheduling, and phone systems you already use. No rip and replace.'], ['Runs in your accounts', 'Anything we build runs on servers and accounts set up in your name. You hold the keys. We only have the access you give us.'], ['Your data stays in your systems', 'We do not host or store your customer or patient data. It stays in the systems and vendors you already have, under the agreements you already have with them.'], ['You own the work', 'Everything we build for you belongs to you, including the documentation.']],
+      teaserTitle: 'One price to start. No surprises.', teaserDesc: 'The AI Opportunity Audit is $3,000 and takes two weeks. It is the only thing you buy from this site, and it is credited in full toward a build. Build and support pricing is fixed and published.', teaserCta: 'See pricing',
+      finalTitle: 'No forms. No sales deck. Pick a time and Cris calls you.', finalDesc: 'Choose a slot that works for you, in English or Spanish. Cris calls at that time, from a real phone.',
+      talkTo: 'Talk to Cris', talkToSub: 'One person. No sales team.', talkToMeta: 'Reply within one business day · EN / ES',
+      footerLinks: [['Pricing', '/pricing'], ['Book a call', '#book'], ['Privacy', '/privacy'], ['Terms', '/terms']],
+    };
+    const esd = {
+      langToggle: 'English', navCta: 'Agendar', learnMore: 'Más información', typical: 'Típico', tagline: 'Teléfonos contestados. Seguimientos hechos. Horas recuperadas.',
+      qualifier: 'Diseñado para negocios con ingresos anuales de $2M o más.', rights: 'Todos los derechos reservados.',
+      heroEyebrow: 'Automatizaciones, chatbots y agentes de IA para negocios locales',
+      heroHeadline: 'Sus teléfonos contestados. Sus seguimientos hechos. Su equipo de vuelta al trabajo que paga.',
+      heroProof: 'Construimos los sistemas que manejan llamadas, citas y seguimientos, conectados al software que ya usa. Usted ve los números antes de gastar un dólar en construir algo.',
+      heroCta: 'Agende una llamada con Cris', heroSecondary: 'Vea cómo funciona',
+      stats: [{ value: '20 a 40', label: 'llamadas recuperadas al mes, por sucursal' }, { value: '10% a 20%', label: 'más cotizaciones cerradas' }, { value: '6 a 12 hrs', label: 'a la semana recuperadas, por sucursal' }],
+      verticalsTitle: 'Con quién trabajamos', verticalsSub: 'Negocios establecidos, con volumen real de llamadas y más de una cosa pasando a la vez.',
+      verticals: [['Distribuidores de equipo', 'John Deere y otros distribuidores autorizados. Refacciones, servicio, cotizaciones y llamadas de temporada.'], ['Servicios para el hogar', 'HVAC, plomería y control de plagas con 3 o más sucursales o 20 o más camionetas.'], ['Grupos dentales y de ortodoncia', 'Consultorios con 2 o más sucursales. Citas fuera de horario, seguros, pacientes que regresan.'], ['Talleres y cadenas automotrices', '2 o más sucursales. Citas, aprobación de presupuestos, avisos de refacciones.'], ['Gimnasios y cadenas de fitness', '2 o más sucursales. Seguimiento a prospectos, rescate de cancelaciones, reactivación.']],
+      automateTitle: 'Lo que le quitamos de encima', automateSub: 'Seis cosas que se comen horas y pierden dinero en casi todos los negocios que visitamos. Agentes de voz, chatbots o automatización simple, lo que mejor encaje.',
+      automate: [['Llamadas fuera de horario y de sobreflujo, contestadas', 'Un agente de voz contesta, atiende la llamada y la registra. Noches, fines de semana y cuando el mostrador está a reventar.', 'De 20 a 40 llamadas recuperadas al mes, por sucursal'], ['Seguimiento a cotizaciones y presupuestos', 'Cada cotización abierta recibe seguimiento por texto y por teléfono hasta que el cliente responde.', 'De 10% a 20% más cotizaciones cerradas'], ['Citas y recordatorios', 'Se agenda por teléfono o texto, se confirma y se recuerda. Su recepción se queda con el cliente que tiene enfrente.', 'De 6 a 12 horas a la semana recuperadas, por sucursal'], ['Preguntas de refacciones e inventario', 'Un chatbot en su sitio y su línea de texto responde desde su propio sistema, incluyendo existencias en otras sucursales.', 'Respuesta en menos de 10 segundos en lugar de una llamada de regreso'], ['Registro y papeleo antes de la visita', 'Formularios, seguro, datos del vehículo o del equipo, recopilados antes de que el cliente llegue.', 'De 5 a 10 horas a la semana recuperadas'], ['Números diarios de cada sucursal', 'Llamadas, citas, cotizaciones abiertas y reseñas de cada sucursal, en un solo mensaje por la mañana.', 'De 3 a 5 horas a la semana recuperadas para el dueño']],
+      typicalNote: 'Las cifras son rangos típicos de negocios similares, no garantías. Su auditoría mide sus números reales.',
+      howTitle: 'Cómo funciona', howSub: 'Una sola cosa que comprar. Todo lo demás se define a partir de lo que encontramos.',
+      step1: 'Paso 1', step2: 'Paso 2', step3: 'Paso 3', auditBadge: 'Empiece aquí', auditTitle: 'Auditoría de Oportunidades de IA', auditDuration: 'Dos semanas',
+      auditDesc: 'Pasamos dos semanas en su operación. Mapeamos sus cinco procesos principales, cuantificamos las horas y los dólares que está perdiendo, y le entregamos un plan de construcción priorizado.',
+      auditCredit: 'Sus $3,000 se acreditan en su totalidad cuando pasa a una construcción.',
+      buildTitle: 'Construcción de procesos', buildPrice: 'De $15,000 a $25,000', buildTag: 'Definido a partir de su auditoría', buildDesc: 'Construimos los procesos que se pagan solos más rápido, conectados a los sistemas que ya usa.',
+      runTitle: 'Soporte continuo', runPrice: '$750 o $2,500 al mes', runTag: 'Después de una construcción', runDesc: 'Monitoreo vigila y corrige lo que construimos. Mejora Continua agrega un proceso o una mejora cada mes. O usted lo opera por su cuenta. De cualquier forma, es suyo.',
+      noRetainer: 'No se requiere contrato mensual. La construcción y el soporte nunca se venden desde este sitio.',
+      whoTitle: 'Quiénes somos', whoSub: 'Dos personas. Uno lo construye, el otro se presenta en su negocio.',
+      people: [{ name: 'Oz Merchant', role: 'Dirige la ingeniería', bio: 'Más de 25 años construyendo empresas de software. Seis startups, cuatro ventas exitosas. Oz dirige la ingeniería detrás de cada proceso que entregamos.', slot: 'foto / oz' }, { name: 'Cris [APELLIDO]', role: 'Dirige la relación con clientes', bio: '15 años en John Deere y dueño de su propio negocio. Cris sabe cómo funciona de verdad una distribuidora y un taller. Habla español.', slot: 'foto / cris' }],
+      trustTitle: 'Hecho para encajar con la forma en que ya trabaja',
+      trust: [['Funciona con sus sistemas', 'Automatizaciones, chatbots y agentes que se conectan al sistema de distribuidor, CRM, agenda y teléfono que ya usa. No hay que cambiar nada.'], ['Corre en sus propias cuentas', 'Todo lo que construimos corre en servidores y cuentas a su nombre. Usted tiene las llaves. Nosotros solo tenemos el acceso que usted nos da.'], ['Sus datos se quedan en sus sistemas', 'No alojamos ni almacenamos datos de sus clientes o pacientes. Se quedan en los sistemas y proveedores que ya tiene, bajo los acuerdos que ya tiene con ellos.'], ['El trabajo es suyo', 'Todo lo que construimos para usted le pertenece, incluyendo la documentación.']],
+      teaserTitle: 'Un solo precio para empezar. Sin sorpresas.', teaserDesc: 'La Auditoría de Oportunidades de IA cuesta $3,000 y toma dos semanas. Es lo único que se compra en este sitio, y se acredita en su totalidad a una construcción. Los precios de construcción y soporte son fijos y están publicados.', teaserCta: 'Ver precios',
+      finalTitle: 'Sin formularios. Sin presentaciones de ventas. Elija una hora y Cris le llama.', finalDesc: 'Escoja el horario que le convenga, en español o en inglés. Cris le llama a esa hora, desde un teléfono de verdad.',
+      talkTo: 'Hable con Cris', talkToSub: 'Una persona. Sin equipo de ventas.', talkToMeta: 'Respuesta en un día hábil · ES / EN',
+      footerLinks: [['Precios', '/pricing'], ['Agendar una llamada', '#book'], ['Privacidad', '/privacy'], ['Términos', '/terms']],
+    };
+    const d = es ? esd : en;
+    const t = {
+      ...d,
+      verticals: d.verticals.map((v, i) => ({ num: nums[i], title: v[0], desc: v[1], href: hrefs[i], border: i === 0 ? 'rgba(var(--primary-rgb),0.6)' : 'transparent' })),
+      automate: d.automate.map((a, i) => ({ num: nums[i], title: a[0], desc: a[1], metric: a[2] })),
+      trust: d.trust.map((x, i) => ({ num: nums[i], title: x[0], desc: x[1] })),
+      footerLinks: d.footerLinks.map(f => ({ label: f[0], href: f[1] })),
+    };
+    const navLabels = es ? ['Distribuidores', 'Hogar', 'Dental', 'Automotriz', 'Gimnasios', 'Precios'] : ['Dealers', 'Home services', 'Dental', 'Auto', 'Gyms', 'Pricing'];
+    const nav = navLabels.map((label, i) => ({ label, href: hrefs[i] ?? '/pricing' }));
+    t.menuLabel = this.state.menuOpen ? (es ? 'Cerrar menú' : 'Close menu') : (es ? 'Abrir menú' : 'Open menu');
+    t.pricingLabel = es ? 'Precios' : 'Pricing';
+    return {
+      t, nav,
+      isDesktop: w >= 1024,
+      isTabletUp: w >= 768,
+      isCompact: w < 1024,
+      isMobile: w < 768,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      toggleLocale: () => this.setState({ locale: es ? 'en' : 'es' }),
+    };
+  }
+}
+</script>
+</body>
+</html>

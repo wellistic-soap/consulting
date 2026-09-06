@@ -18,7 +18,7 @@ const inter = Inter({
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["400", "500", "600"],
   variable: "--font-mono",
   display: "swap",
 });

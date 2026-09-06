@@ -12,7 +12,7 @@ export async function PricingTiers({ locale }: { locale: Locale }) {
     <div className="space-y-12">
       {/* Audit (dominant) and Build */}
       <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr]">
-        <div className="flex flex-col rounded-lg border border-primary bg-card p-6 shadow-lg ring-2 ring-primary sm:p-9">
+        <div className="flex flex-col shadow-audit rounded-xl border border-primary bg-card p-6 sm:p-9">
           <span className="inline-flex w-fit rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
             {t("audit.badge")}
           </span>
@@ -36,7 +36,7 @@ export async function PricingTiers({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-lg border border-border bg-card/60 p-6 sm:p-8">
+        <div className="flex flex-col card/60 p-6 sm:p-8">
           <span className="inline-flex w-fit rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             {t("build.tag")}
           </span>
@@ -61,7 +61,7 @@ export async function PricingTiers({ locale }: { locale: Locale }) {
         <p className="mt-2 text-base text-muted-foreground">{t("retainerIntro")}</p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {(["monitor", "improve"] as const).map((tier) => (
-            <div key={tier} className={cn("flex flex-col rounded-lg border border-border bg-card/60 p-6 sm:p-8")}>
+            <div key={tier} className={cn("flex flex-col card/60 p-6 sm:p-8")}>
               <span className="inline-flex w-fit rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 {t(`${tier}.tag`)}
               </span>

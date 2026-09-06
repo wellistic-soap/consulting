@@ -56,6 +56,20 @@ Audit lowered to reduce first-call friction; retainer split so support obligatio
 - **Design pass toward a more technical feel**: Inter headlines with tight tracking instead of serif, JetBrains Mono for eyebrows, prices, metrics, and section numbers, a faint engineering grid behind the hero and in dark bands, numbered sections, tighter radii. The palette is unchanged. A full brief for a deeper redesign is in DESIGN-PROMPT.md.
 - **Spanish phrases flagged for native review from this revision**: "Corre en sus propias cuentas," "No tomamos custodia de datos de pacientes," "Dónde está el dinero" (section title, intentionally blunt), "Impacto típico," and "sobreflujo" again in the home services use cases.
 
+## Slate design handoff implemented (2026-09-05, evening)
+
+Implemented from the Claude Design project export (`design/design_handoff_groundwork/README.md`, plus the `Groundwork Home.dc.html` and `Groundwork Style Sheet.dc.html` artboards, kept in `design/` as references and never shipped).
+
+- **Palette**: primary moved from deep green `#1f4d3a` to slate `#24384d`; accent from rust to brass `#b45309`, used only on the booking CTA and its badge. The artboard offers green, slate, and graphite variants; the handoff README specifies slate, so slate shipped. Switching back is a four-value edit at the top of `globals.css`.
+- **Cards**: hard outlines replaced by soft depth (`.card`, `.card-lift`, `.shadow-audit` utilities); 10 px card radius, 12 px on hero strip, Audit, teaser, and final CTA; 6 px on buttons and tags.
+- **Type scale**: clamp-based h1 (38 to 72 px) and h2 (32 to 48 px), 19 px card titles, 15 px card body, mono for eyebrows, prices, metrics, and step labels. Section padding is `clamp(64px, 9vw, 128px)`.
+- **New Home elements**: hero eyebrow and three-cell metric strip, Build and Support stacked beside the Audit card with the "No retainer required" line, numbered trust band with top rules instead of icons, a named-person card ("Talk to Cris") in the final CTA.
+- **Header**: 56 px, short nav labels at 1024 px and up, header CTA at 768 px and up, hamburger below 1024 px; the menu sheet is portaled to `body` because the header's backdrop blur would otherwise trap a fixed child. All header controls are 44 px tall.
+- **Footer**: three auto-fit columns, 44 px link rows, mono bottom bar.
+- **Other pages**: vertical and pricing pages received the same tokens, card styles, and section rhythm so the site stays one system; their structure is unchanged.
+- **Copy additions** from the handoff, both languages: hero eyebrow, shorter hero proof, the three metric-strip stats, "No retainer required" line, the three "Talk to Cris" strings, short nav labels, "Typical" label. The handoff's Spanish qualifier variant was not adopted; the existing one stays.
+- **Spanish for native review**: "Hogar" as the short nav label for home services, "Automotriz" for auto, "Respuesta en un día hábil".
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."
