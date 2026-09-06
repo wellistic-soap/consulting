@@ -4,7 +4,7 @@ import type { Locale } from "@/i18n/routing";
 import type { VerticalKey } from "@/lib/site";
 import { CtaLink } from "./CtaLink";
 import { MobileCtaBar, MobileCtaSpacer } from "./MobileCtaBar";
-import { Placeholder } from "./Placeholder";
+import Image from "next/image";
 import { Section, SectionHeading } from "./Section";
 import { ShareButton } from "./ShareButton";
 
@@ -36,7 +36,14 @@ export async function VerticalPage({ locale, vertical }: { locale: Locale; verti
               <ShareButton title={shareTitle} size="xl" className="hidden md:inline-flex" />
             </div>
           </div>
-          <Placeholder slot={`${vertical}-hero`} label="hero" className="hidden aspect-[4/3] md:block" />
+          <Image
+            src={`/images/heroes/${vertical}.webp`}
+            alt={t("hero.imageAlt")}
+            width={1200}
+            height={900}
+            sizes="(min-width: 1152px) 440px, (min-width: 768px) 40vw, 0px"
+            className="card hidden aspect-[4/3] w-full object-cover md:block"
+          />
         </div>
       </Section>
 

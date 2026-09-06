@@ -268,7 +268,8 @@
   "dealers": {
     "hero": {
       "headline": "Preguntas de refacciones contestadas. Servicio agendado. Cada llamada de temporada de cosecha capturada.",
-      "sub": "Para John Deere y otros distribuidores autorizados de equipo con una o más sucursales."
+      "sub": "Para John Deere y otros distribuidores autorizados de equipo con una o más sucursales.",
+      "imageAlt": "Mostrador de refacciones en una distribuidora de equipo con un tractor en el taller al fondo"
     },
     "pains": [
       "El mostrador de refacciones está a reventar y el teléfono no deja de sonar.",
@@ -352,7 +353,8 @@
   "homeServices": {
     "hero": {
       "headline": "Cada llamada perdida, contestada. Cada presupuesto, con seguimiento. Cada camioneta, en control.",
-      "sub": "Para empresas de HVAC, plomería y control de plagas con 3 o más sucursales o 20 o más camionetas."
+      "sub": "Para empresas de HVAC, plomería y control de plagas con 3 o más sucursales o 20 o más camionetas.",
+      "imageAlt": "Fila de camionetas de servicio blancas con escaleras en el techo, estacionadas al amanecer"
     },
     "pains": [
       "Las llamadas no se contestan cuando la oficina está saturada, y esos clientes le llaman a la siguiente empresa de la lista.",
@@ -434,7 +436,8 @@
   "dental": {
     "hero": {
       "headline": "Citas fuera de horario. Seguro verificado antes del sillón. Pacientes que regresan.",
-      "sub": "Para grupos dentales y de ortodoncia con dos o más sucursales."
+      "sub": "Para grupos dentales y de ortodoncia con dos o más sucursales.",
+      "imageAlt": "Recepción tranquila de un consultorio dental con una sala de tratamiento abierta al fondo"
     },
     "pains": [
       "Los pacientes llaman después de las 5, les contesta el buzón, y agendan en otro lado.",
@@ -510,7 +513,8 @@
   "auto": {
     "hero": {
       "headline": "Citas agendadas. Presupuestos aprobados más rápido. Clientes que saben dónde está su carro.",
-      "sub": "Para talleres mecánicos y cadenas de servicio automotriz con dos o más sucursales."
+      "sub": "Para talleres mecánicos y cadenas de servicio automotriz con dos o más sucursales.",
+      "imageAlt": "Taller mecánico independiente con un carro levantado en la rampa"
     },
     "pains": [
       "El asesor de servicio está con un cliente y el teléfono suena sin que nadie conteste.",
@@ -586,7 +590,8 @@
   "gyms": {
     "hero": {
       "headline": "Prospectos contactados en minutos. Cancelaciones rescatadas. Miembros que regresan.",
-      "sub": "Para gimnasios y cadenas de fitness con dos o más sucursales."
+      "sub": "Para gimnasios y cadenas de fitness con dos o más sucursales.",
+      "imageAlt": "Recepción vacía de un gimnasio a la hora de abrir"
     },
     "pains": [
       "Los prospectos llegan por internet en la noche y se les llama a la tarde siguiente, si acaso.",

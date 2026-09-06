@@ -268,7 +268,8 @@
   "dealers": {
     "hero": {
       "headline": "Parts questions answered. Service booked. Every harvest-season call captured.",
-      "sub": "For John Deere and other authorized equipment dealers with one or more locations."
+      "sub": "For John Deere and other authorized equipment dealers with one or more locations.",
+      "imageAlt": "Parts counter at an equipment dealership with a tractor in the service bay behind it"
     },
     "pains": [
       "The parts counter is slammed and the phone keeps ringing.",
@@ -352,7 +353,8 @@
   "homeServices": {
     "hero": {
       "headline": "Every missed call answered. Every estimate followed up. Every truck accounted for.",
-      "sub": "For HVAC, plumbing, and pest control companies with 3+ locations or 20+ trucks."
+      "sub": "For HVAC, plumbing, and pest control companies with 3+ locations or 20+ trucks.",
+      "imageAlt": "Row of white service vans with roof ladders parked at sunrise"
     },
     "pains": [
       "Calls go unanswered when the office is slammed, and those customers call the next company on the list.",
@@ -434,7 +436,8 @@
   "dental": {
     "hero": {
       "headline": "After-hours scheduling. Insurance verified before the chair. Patients who come back.",
-      "sub": "For dental and orthodontic groups with two or more locations."
+      "sub": "For dental and orthodontic groups with two or more locations.",
+      "imageAlt": "Quiet dental office front desk with a treatment room open behind it"
     },
     "pains": [
       "Patients call after 5 and get voicemail, then book somewhere else.",
@@ -510,7 +513,8 @@
   "auto": {
     "hero": {
       "headline": "Appointments booked. Estimates approved faster. Customers who know where their car is.",
-      "sub": "For auto repair shops and service chains with two or more locations."
+      "sub": "For auto repair shops and service chains with two or more locations.",
+      "imageAlt": "Independent auto repair shop with a car raised on a lift"
     },
     "pains": [
       "The service writer is with a customer and the phone rings out.",
@@ -586,7 +590,8 @@
   "gyms": {
     "hero": {
       "headline": "Leads followed up in minutes. Cancellations saved. Members who come back.",
-      "sub": "For gyms and fitness chains with two or more locations."
+      "sub": "For gyms and fitness chains with two or more locations.",
+      "imageAlt": "Empty gym front desk at opening time"
     },
     "pains": [
       "Web leads come in overnight and get called the next afternoon, if at all.",

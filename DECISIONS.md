@@ -70,6 +70,10 @@ Implemented from the Claude Design project export (`design/design_handoff_ground
 - **Copy additions** from the handoff, both languages: hero eyebrow, shorter hero proof, the three metric-strip stats, "No retainer required" line, the three "Talk to Cris" strings, short nav labels, "Typical" label. The handoff's Spanish qualifier variant was not adopted; the existing one stays.
 - **Spanish for native review**: "Hogar" as the short nav label for home services, "Automotriz" for auto, "Respuesta en un día hábil".
 
+## Hero imagery (2026-09-05)
+
+The five vertical hero slots now carry DALL-E images generated from IMAGE-PROMPTS.md, converted with sharp to 1200 x 900 WebP at quality 75 with attention-based cropping. All land between 23 and 66 KB. They render only at 768 px and up, so phone pages do not download them; the `sizes` attribute caps desktop requests at 440 px wide. Alt text lives in each vertical's `hero.imageAlt` in both message files. Portrait slots remain placeholders until real photos exist.
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."

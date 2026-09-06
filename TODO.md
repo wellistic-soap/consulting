@@ -18,8 +18,11 @@ Every placeholder still to fill, in rough priority order.
 
 ## 3. Imagery
 
-- Vertical hero slots (`data-image-slot="dealers-hero"` etc.) in `src/components/site/VerticalPage.tsx`. Only shown at tablet width and up. Keep each under 80 KB to stay inside the 500 KB page budget.
-- Logo: `src/components/site/Logo.tsx` is a simple two-block mark. Replace with the real logo SVG.
+Prompts for every slot are in `IMAGE-PROMPTS.md`.
+
+- Vertical hero images are in place (`public/images/heroes/*.webp`, 23 to 66 KB each, generated with DALL-E from the prompts). Originals are kept in `design/uploads/` (gitignored). Regenerate and re-run the conversion if you want different scenes.
+- Portrait slots still need real photos: `portrait-oz`, `portrait-cris` (448 x 560) and `portrait-cris-small` (224 x 224) in `src/app/[locale]/page.tsx`. Swap the `Placeholder` for `next/image`, WebP under 40 KB.
+- Logo: `src/components/site/Logo.tsx` is a 14 px square. Replace with the real mark.
 - Favicon: `src/app/favicon.ico` is the Next.js default. Replace it.
 
 ## 4. Calendly and environment variables
