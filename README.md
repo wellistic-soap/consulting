@@ -10,7 +10,7 @@ See `DECISIONS.md` for design and copy decisions and `TODO.md` for every placeho
 
 ## Stack
 
-Next.js 15 (App Router, static generation), TypeScript, Tailwind CSS v4, shadcn/ui primitives, next-intl for routing and messages, Vercel Analytics. Every CTA opens Cris's Calendly page; there is no form or backend.
+Next.js 15 (App Router, static generation), TypeScript, Tailwind CSS v4, shadcn/ui primitives, next-intl for routing and messages, Vercel Analytics. Every CTA opens Cris's cal.com booking page; there is no form or backend.
 
 ## Local setup
 
@@ -33,7 +33,7 @@ npm run lint
 | Variable | Purpose |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Public URL, no trailing slash. Used for canonical, hreflang, sitemap, OG images. |
-| `NEXT_PUBLIC_CALENDLY_URL` | Cris's Calendly booking link. Every CTA on the site opens it in a new tab, tagged with `utm_source=site`, `utm_campaign=<vertical>`, and `utm_content=<locale>` so Calendly shows where the booking came from. |
+| `NEXT_PUBLIC_BOOKING_URL` | Cris's booking link (cal.com). Defaults to https://cal.com/aricgroup/30min in code; set the variable only to override it. Every CTA opens it in a new tab, tagged with `utm_source=site`, `utm_campaign=<vertical>`, and `utm_content=<locale>` so Calendly shows where the booking came from. |
 
 Both are build-time public variables: change them in Vercel and redeploy.
 

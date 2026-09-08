@@ -84,6 +84,13 @@ Spanish for native review: "ejecutivos de cuenta" (account managers; some agenci
 
 Oz chose **Hecho AI** ("hecho" is Spanish for "done," and it reads the same in English). Site name, page titles, and the OG card were renamed. The wordmark PNG Oz supplied is dark (near black) on transparent; it is served from `public/brand/` at 84 px and 126 px heights for the 28 px header and footer renders, replacing the placeholder square-plus-text mark. The dark trust band carries no logo, so no light version is needed yet. Favicon still to be cut from the mark. Likely domain: hechoai.com.
 
+## Booking link, bios, order (2026-09-08)
+
+- Every CTA now points at Cris's cal.com link, `https://cal.com/aricgroup/30min`, set as the code default so no env var is required. `NEXT_PUBLIC_BOOKING_URL` overrides it. The old `NEXT_PUBLIC_CALENDLY_URL` name is still read for compatibility.
+- Portraits of Cris and Oz are live (`public/images/people/`, 16 to 21 KB each, plus a 7 KB square of Cris for the Talk to Cris card).
+- A short "The name" card sits under the people cards on Home: hecho means done, and that is the promise. Spanish title uses "ya quedó," the everyday phrase, and is flagged for native review.
+- Cris's last name is Baez. His card is first (left on desktop) in "Who we are"; Oz is second. Oz's bio says 20+ years, corrected from 25+.
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."

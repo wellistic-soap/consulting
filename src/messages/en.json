@@ -204,10 +204,10 @@
       "oz": {
         "name": "Oz Merchant",
         "role": "Builds the engineering",
-        "bio": "25+ years building software companies. Six startups, four exits. Oz leads the engineering behind every workflow we ship."
+        "bio": "20+ years building software companies. Six startups, four exits. Oz leads the engineering behind every workflow we ship."
       },
       "cris": {
-        "name": "Cris [LAST NAME]",
+        "name": "Cris Baez",
         "role": "Leads client relationships",
         "bio": "15 years at John Deere and a small business owner himself. Cris knows how a dealership and a service shop actually run. Fluent in Spanish."
       },
@@ -260,7 +260,13 @@
         "value": "6 to 12 hrs",
         "label": "a week back, per location"
       }
-    ]
+    ],
+    "name": {
+      "eyebrow": "The name",
+      "word": "hecho",
+      "title": "Hecho means done.",
+      "body": "In Spanish, hecho is what you say when the job is finished. It is the word we want you to hear at the end of every call: the phones answered, the follow-ups sent, the report on your desk. We help you use AI to get things done faster and with less of your team's time, inside the systems you already run."
+    }
   },
   "vertical": {
     "painsTitle": "Sound familiar?",

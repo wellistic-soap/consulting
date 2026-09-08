@@ -204,10 +204,10 @@
       "oz": {
         "name": "Oz Merchant",
         "role": "Dirige la ingeniería",
-        "bio": "Más de 25 años construyendo empresas de software. Seis startups, cuatro ventas exitosas. Oz dirige la ingeniería detrás de cada proceso que entregamos."
+        "bio": "Más de 20 años construyendo empresas de software. Seis startups, cuatro ventas exitosas. Oz dirige la ingeniería detrás de cada proceso que entregamos."
       },
       "cris": {
-        "name": "Cris [APELLIDO]",
+        "name": "Cris Baez",
         "role": "Dirige la relación con clientes",
         "bio": "15 años en John Deere y dueño de su propio negocio. Cris sabe cómo funciona de verdad una distribuidora y un taller. Habla español."
       },
@@ -260,7 +260,13 @@
         "value": "6 a 12 hrs",
         "label": "a la semana recuperadas, por sucursal"
       }
-    ]
+    ],
+    "name": {
+      "eyebrow": "El nombre",
+      "word": "hecho",
+      "title": "Hecho, como en \"ya quedó\".",
+      "body": "Hecho es lo que se dice cuando el trabajo quedó terminado. Es la palabra que queremos que escuche al final de cada llamada: los teléfonos contestados, los seguimientos enviados, el reporte en su escritorio. Le ayudamos a usar la IA para hacer las cosas más rápido y con menos tiempo de su equipo, dentro de los sistemas que ya opera."
+    }
   },
   "vertical": {
     "painsTitle": "¿Le suena conocido?",

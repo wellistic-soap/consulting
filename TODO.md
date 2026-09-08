@@ -11,30 +11,27 @@ Done on 2026-09-08: the site is named **Hecho AI** everywhere (site name, page t
 
 ## 2. People
 
-- Cris's last name: `home.who.cris.name` in both message files (`[LAST NAME]` / `[APELLIDO]`).
 - Confirm both bios (`home.who.oz.bio`, `home.who.cris.bio`) in both languages.
-- Portrait photos: replace the two `Placeholder` slots `portrait-oz` and `portrait-cris` in `src/app/[locale]/page.tsx` with `next/image`. Square crops, at least 320 px, under 40 KB each.
+- Portrait photos are in place (`public/images/people/`). Originals in `design/uploads/`.
 
 ## 3. Imagery
 
 Prompts for every slot are in `IMAGE-PROMPTS.md`.
 
 - Vertical hero images are in place for all six verticals (`public/images/heroes/*.webp`, 23 to 66 KB each, generated with DALL-E from the prompts). Originals are kept in `design/uploads/` (gitignored). Regenerate and re-run the conversion if you want different scenes.
-- Portrait slots still need real photos: `portrait-oz`, `portrait-cris` (448 x 560) and `portrait-cris-small` (224 x 224) in `src/app/[locale]/page.tsx`. Swap the `Placeholder` for `next/image`, WebP under 40 KB.
 - Favicon: `src/app/favicon.ico` is the Next.js default. Replace it.
 
-## 4. Calendly and environment variables
+## 4. Environment variables
 
-Cris sets up a Calendly account and creates one event type (suggested: "Call with Cris, 20 minutes", phone call, with a question for preferred language). Then in the wellistic-soap Vercel project, Settings, Environment Variables, add for Production and Preview:
+The booking link is set in code (`https://cal.com/aricgroup/30min` in `src/lib/site.ts`), so the only variable the site needs is the public URL. In the wellistic-soap Vercel project, Settings, Environment Variables, add for Production and Preview:
 
 ```
-NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/<cris-handle>/<event>
-NEXT_PUBLIC_SITE_URL=https://<the project's vercel.app URL, later the custom domain>
+NEXT_PUBLIC_SITE_URL=https://<the project's vercel.app URL, later hechoai.com>
 ```
 
-Redeploy after adding them (Deployments, Redeploy). Until the Calendly URL is set, every CTA opens `https://calendly.com/REPLACE_ME`, which is a Calendly 404.
+Optional: `NEXT_PUBLIC_BOOKING_URL` overrides the booking link without a code change. Redeploy after adding either.
 
-Optional: in Calendly, turn on UTM tracking so each booking shows `utm_campaign` (which vertical page the owner was on) and `utm_content` (en or es).
+Optional: in cal.com, UTM parameters arrive with each booking (`utm_campaign` is the vertical page, `utm_content` is en or es).
 
 ## 5. Clean up the first deploy
 

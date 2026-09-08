@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 import { VERTICALS } from "@/lib/site";
 import { CtaLink } from "@/components/site/CtaLink";
 import { MobileCtaBar, MobileCtaSpacer } from "@/components/site/MobileCtaBar";
-import { Placeholder } from "@/components/site/Placeholder";
+import Image from "next/image";
 import { Section, SectionHeading } from "@/components/site/Section";
 import { cn } from "@/lib/utils";
 
@@ -148,10 +148,16 @@ export default async function HomePage({ params }: Params) {
       <Section>
         <SectionHeading eyebrow="04" title={t("who.title")} subtitle={t("who.subtitle")} />
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4">
-          {(["oz", "cris"] as const).map((p) => (
+          {(["cris", "oz"] as const).map((p) => (
             <div key={p} className="card flex flex-wrap gap-5 p-7">
-              {/* IMAGE SLOT: portrait photo */}
-              <Placeholder slot={`portrait-${p}`} label={`photo / ${p}`} className="h-[140px] w-28 shrink-0" />
+              <Image
+                src={`/images/people/${p}.webp`}
+                alt={t(`who.${p}.name`)}
+                width={448}
+                height={560}
+                sizes="112px"
+                className="h-[140px] w-28 shrink-0 rounded-md object-cover"
+              />
               <div className="min-w-0 flex-1 basis-[200px]">
                 <h3 className="text-xl font-semibold tracking-tight">{t(`who.${p}.name`)}</h3>
                 <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary">{t(`who.${p}.role`)}</p>
@@ -159,6 +165,16 @@ export default async function HomePage({ params }: Params) {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* The name */}
+        <div className="card mt-6 grid items-start gap-6 rounded-xl p-7 md:grid-cols-[auto_1fr] md:gap-10 md:p-9">
+          <p className="font-mono text-[clamp(40px,5vw,64px)] font-semibold leading-none tracking-tight text-primary">{t("name.word")}</p>
+          <div>
+            <p className="eyebrow mb-2">{t("name.eyebrow")}</p>
+            <h3 className="text-[clamp(22px,2.4vw,28px)] font-semibold leading-tight tracking-[-0.025em]">{t("name.title")}</h3>
+            <p className="mt-3 max-w-2xl text-base leading-[1.55] text-pretty text-muted-foreground">{t("name.body")}</p>
+          </div>
         </div>
       </Section>
 
@@ -202,8 +218,14 @@ export default async function HomePage({ params }: Params) {
           <p className="mt-4 max-w-[520px] text-[17px] leading-normal text-pretty text-muted-foreground">{t("finalCta.desc")}</p>
           <div className="card mt-9 flex w-full max-w-[420px] flex-col gap-4 rounded-xl p-7 text-left">
             <div className="flex items-center gap-3.5">
-              {/* IMAGE SLOT: small portrait of Cris */}
-              <Placeholder slot="portrait-cris-small" label="cris" className="size-14 shrink-0" />
+              <Image
+                src="/images/people/cris-small.webp"
+                alt={t("who.cris.name")}
+                width={224}
+                height={224}
+                sizes="56px"
+                className="size-14 shrink-0 rounded-md object-cover"
+              />
               <div>
                 <p className="text-base font-semibold tracking-tight">{t("finalCta.talkTo")}</p>
                 <p className="mt-0.5 text-sm text-muted-foreground">{t("finalCta.talkToSub")}</p>
