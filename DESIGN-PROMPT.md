@@ -4,7 +4,7 @@ Paste this into Claude Design (or any design tool that takes a brief) to get a s
 
 ---
 
-Design a bilingual (English and Spanish) marketing site for **Groundwork**, a small firm that builds automations, chatbots, and AI agents for established local businesses: equipment dealers (John Deere and similar), multi-location HVAC and plumbing companies, dental groups, auto service chains, and gyms. One salesperson, Cris, shows this site on his phone in a lobby and hands it to a 50-year-old owner. Every decision serves that moment.
+Design a bilingual (English and Spanish) marketing site for **Hecho AI**, a small firm that builds automations, chatbots, and AI agents for established local businesses: equipment dealers (John Deere and similar), multi-location HVAC and plumbing companies, dental groups, auto service chains, and gyms. One salesperson, Cris, shows this site on his phone in a lobby and hands it to a 50-year-old owner. Every decision serves that moment.
 
 **Feel**: technical and precise, but calm. Think a well-run engineering firm's site, not a startup landing page. Signals of competence: monospace numerals and labels, thin rules, an engineering grid in the background, generous whitespace, numbered sections (01, 02, 03), tight sans headlines. No gradients, no glowing orbs, no robots, no chat-bubble illustrations, no sparkle icons, no stock photos of handshakes.
 

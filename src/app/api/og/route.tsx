@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
   const pageParam = searchParams.get("page") ?? "home";
   const page: MetaKey = pageParam in en.meta ? (pageParam as MetaKey) : "home";
   const m = MESSAGES[locale];
-  const title = m.meta[page].title.replace(/\s*\|\s*Groundwork$/, "").replace(/^Groundwork\s*\|\s*/, "");
+  const title = m.meta[page].title.replace(/\s*\|\s*Hecho AI$/, "").replace(/^Hecho AI\s*\|\s*/, "");
   const desc = m.meta[page].description;
 
   return new ImageResponse(

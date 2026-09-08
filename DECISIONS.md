@@ -80,6 +80,10 @@ Added a sixth vertical at `/agencies` (EN and ES) because Cris knows many agency
 
 Spanish for native review: "ejecutivos de cuenta" (account managers; some agencies say "gerentes de cuenta"), "respuesta inmediata a prospectos" for speed-to-lead, "onboarding" left in English as agencies use it.
 
+## Name: Hecho AI (2026-09-08)
+
+Oz chose **Hecho AI** ("hecho" is Spanish for "done," and it reads the same in English). Site name, page titles, and the OG card were renamed. The wordmark PNG Oz supplied is dark (near black) on transparent; it is served from `public/brand/` at 84 px and 126 px heights for the 28 px header and footer renders, replacing the placeholder square-plus-text mark. The dark trust band carries no logo, so no light version is needed yet. Favicon still to be cut from the mark. Likely domain: hechoai.com.
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."

@@ -1,6 +1,6 @@
-# Groundwork marketing site
+# Hecho AI marketing site
 
-Bilingual (English / Spanish) marketing site for Groundwork, an AI operations consultancy for established local and regional businesses. Built for one use case: Cris pulls it up on his phone in a lobby and hands it to an owner.
+Bilingual (English / Spanish) marketing site for Hecho AI, an AI operations consultancy for established local and regional businesses. Built for one use case: Cris pulls it up on his phone in a lobby and hands it to an owner.
 
 - Production: the `consulting` project in the wellistic-soap Vercel account (URL assigned on first deploy; set it in `NEXT_PUBLIC_SITE_URL`)
 - GitHub: https://github.com/wellistic-soap/consulting

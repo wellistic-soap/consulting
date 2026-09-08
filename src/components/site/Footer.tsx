@@ -12,10 +12,7 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="container-site grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 py-10">
         <div>
-          <p className="flex items-center gap-2 text-[17px] font-bold tracking-tight">
-            <Logo />
-            {t("siteName")}
-          </p>
+          <Logo height={24} />
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">{t("tagline")}</p>
           <p className="mt-2 font-mono text-xs text-muted-foreground">{t("qualifier")}</p>
         </div>

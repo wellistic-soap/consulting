@@ -1,6 +1,6 @@
 {
   "common": {
-    "siteName": "Groundwork",
+    "siteName": "Hecho AI",
     "tagline": "Phones answered. Follow-ups done. Hours back.",
     "skipToContent": "Skip to content",
     "nav": {
@@ -55,43 +55,43 @@
   },
   "meta": {
     "home": {
-      "title": "Groundwork | Phones answered, follow-ups done, hours back",
+      "title": "Hecho AI | Phones answered, follow-ups done, hours back",
       "description": "We build and run the systems that answer calls, book service, and follow up on quotes for equipment dealers, home services, dental groups, auto shops, and gyms. Start with a $3,000 two-week audit. Book a call with Cris."
     },
     "dealers": {
-      "title": "AI operations for equipment dealers | Groundwork",
+      "title": "AI operations for equipment dealers | Hecho AI",
       "description": "Parts questions answered by phone and text, service booked, every harvest-season call captured. For John Deere and other authorized dealers."
     },
     "homeServices": {
-      "title": "AI operations for HVAC, plumbing, and pest control | Groundwork",
+      "title": "AI operations for HVAC, plumbing, and pest control | Hecho AI",
       "description": "Missed calls answered, estimates followed up, job notes done. For multi-location home services companies."
     },
     "dental": {
-      "title": "AI operations for dental and orthodontic groups | Groundwork",
+      "title": "AI operations for dental and orthodontic groups | Hecho AI",
       "description": "After-hours scheduling, insurance verified before the visit, recall outreach that brings patients back. Runs inside your practice management system."
     },
     "auto": {
-      "title": "AI operations for auto shops and service chains | Groundwork",
+      "title": "AI operations for auto shops and service chains | Hecho AI",
       "description": "Appointments booked, estimates approved faster, customers updated on parts. For multi-location auto service."
     },
     "gyms": {
-      "title": "AI operations for gyms and fitness chains | Groundwork",
+      "title": "AI operations for gyms and fitness chains | Hecho AI",
       "description": "Leads followed up in minutes, cancellations saved, past members brought back. For multi-location gyms."
     },
     "pricing": {
-      "title": "Pricing | Groundwork",
+      "title": "Pricing | Hecho AI",
       "description": "The AI Opportunity Audit is $3,000 and takes two weeks, credited in full toward a build. Build is $15,000 to $25,000. Ongoing support from $750 a month. No surprises."
     },
     "privacy": {
-      "title": "Privacy policy | Groundwork",
-      "description": "How Groundwork handles the information you share with us."
+      "title": "Privacy policy | Hecho AI",
+      "description": "How Hecho AI handles the information you share with us."
     },
     "terms": {
-      "title": "Terms of service | Groundwork",
+      "title": "Terms of service | Hecho AI",
       "description": "The terms that apply to this website and our services."
     },
     "agencies": {
-      "title": "AI operations for marketing agencies | Groundwork",
+      "title": "AI operations for marketing agencies | Hecho AI",
       "description": "Leads answered in minutes, client reports drafted by morning, proposals followed up. Automations and agents for marketing agencies, running in your accounts."
     }
   },

@@ -11,9 +11,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/92 backdrop-blur supports-[backdrop-filter]:bg-background/92">
       <div className="container-site flex h-14 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 text-[17px] font-bold tracking-tight text-foreground" aria-label={t("siteName")}>
-          <Logo />
-          {t("siteName")}
+        <Link href="/" className="flex items-center" aria-label={t("siteName")}>
+          <Logo height={26} />
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">

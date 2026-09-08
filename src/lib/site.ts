@@ -1,4 +1,4 @@
-export const SITE_NAME = "Groundwork"; // TODO: replace with final company name
+export const SITE_NAME = "Hecho AI";
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 ).replace(/\/$/, "");

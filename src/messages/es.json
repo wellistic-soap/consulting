@@ -1,6 +1,6 @@
 {
   "common": {
-    "siteName": "Groundwork",
+    "siteName": "Hecho AI",
     "tagline": "Teléfonos contestados. Seguimientos hechos. Horas recuperadas.",
     "skipToContent": "Ir al contenido",
     "nav": {
@@ -55,43 +55,43 @@
   },
   "meta": {
     "home": {
-      "title": "Groundwork | Teléfonos contestados, seguimientos hechos, horas recuperadas",
+      "title": "Hecho AI | Teléfonos contestados, seguimientos hechos, horas recuperadas",
       "description": "Construimos y operamos los sistemas que contestan llamadas, agendan servicio y dan seguimiento a cotizaciones para distribuidores de equipo, servicios para el hogar, grupos dentales, talleres y gimnasios. Empiece con una auditoría de $3,000 y dos semanas. Agende una llamada con Cris."
     },
     "dealers": {
-      "title": "Operaciones con IA para distribuidores de equipo | Groundwork",
+      "title": "Operaciones con IA para distribuidores de equipo | Hecho AI",
       "description": "Preguntas de refacciones contestadas por teléfono y texto, servicio agendado, cada llamada de temporada de cosecha capturada. Para John Deere y otros distribuidores autorizados."
     },
     "homeServices": {
-      "title": "Operaciones con IA para HVAC, plomería y control de plagas | Groundwork",
+      "title": "Operaciones con IA para HVAC, plomería y control de plagas | Hecho AI",
       "description": "Llamadas perdidas contestadas, presupuestos con seguimiento, notas de trabajo listas. Para empresas de servicios para el hogar con varias sucursales."
     },
     "dental": {
-      "title": "Operaciones con IA para grupos dentales y de ortodoncia | Groundwork",
+      "title": "Operaciones con IA para grupos dentales y de ortodoncia | Hecho AI",
       "description": "Citas fuera de horario, seguro verificado antes de la visita, pacientes que regresan. Corre dentro de su sistema de administración del consultorio."
     },
     "auto": {
-      "title": "Operaciones con IA para talleres automotrices | Groundwork",
+      "title": "Operaciones con IA para talleres automotrices | Hecho AI",
       "description": "Citas agendadas, presupuestos aprobados más rápido, clientes informados sobre sus refacciones. Para talleres con varias sucursales."
     },
     "gyms": {
-      "title": "Operaciones con IA para gimnasios | Groundwork",
+      "title": "Operaciones con IA para gimnasios | Hecho AI",
       "description": "Prospectos contactados en minutos, cancelaciones rescatadas, exmiembros que regresan. Para gimnasios con varias sucursales."
     },
     "pricing": {
-      "title": "Precios | Groundwork",
+      "title": "Precios | Hecho AI",
       "description": "La Auditoría de Oportunidades de IA cuesta $3,000, toma dos semanas y se acredita en su totalidad a una construcción. La construcción cuesta de $15,000 a $25,000. Soporte continuo desde $750 al mes. Sin sorpresas."
     },
     "privacy": {
-      "title": "Política de privacidad | Groundwork",
-      "description": "Cómo Groundwork maneja la información que usted comparte con nosotros."
+      "title": "Política de privacidad | Hecho AI",
+      "description": "Cómo Hecho AI maneja la información que usted comparte con nosotros."
     },
     "terms": {
-      "title": "Términos de servicio | Groundwork",
+      "title": "Términos de servicio | Hecho AI",
       "description": "Los términos que aplican a este sitio y a nuestros servicios."
     },
     "agencies": {
-      "title": "Operaciones con IA para agencias de marketing | Groundwork",
+      "title": "Operaciones con IA para agencias de marketing | Hecho AI",
       "description": "Prospectos contestados en minutos, reportes de clientes redactados por la mañana, propuestas con seguimiento. Automatizaciones y agentes para agencias de marketing, corriendo en sus cuentas."
     }
   },

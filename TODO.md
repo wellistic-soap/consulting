@@ -2,12 +2,11 @@
 
 Every placeholder still to fill, in rough priority order.
 
-## 1. Company name
+## 1. Company name and logo
 
-- `src/lib/site.ts`: `SITE_NAME` (currently "Groundwork").
-- `src/messages/en.json` and `src/messages/es.json`: `common.siteName` and every `meta.*.title` that ends in `| Groundwork`.
-- `src/app/api/og/route.tsx`: the title-stripping regex references "Groundwork."
-- `README.md` and `DECISIONS.md` mention the working name.
+Done on 2026-09-08: the site is named **Hecho AI** everywhere (site name, page titles, OG image) and the wordmark logo is in `public/brand/`. Still to do:
+
+- Favicon: `src/app/favicon.ico` is still the Next.js default. Export a 32 px and 180 px icon from the logo mark and replace it (an `icon.png` and `apple-icon.png` in `src/app/` also work).
 - Legal pages: `[COMPANY LEGAL NAME]`, `[ADDRESS]`, `[CONTACT EMAIL]`, `[STATE]`, `[DATE]` in `legal.privacy` and `legal.terms` in both message files. Have a lawyer read both pages.
 
 ## 2. People
@@ -22,7 +21,6 @@ Prompts for every slot are in `IMAGE-PROMPTS.md`.
 
 - Vertical hero images are in place for all six verticals (`public/images/heroes/*.webp`, 23 to 66 KB each, generated with DALL-E from the prompts). Originals are kept in `design/uploads/` (gitignored). Regenerate and re-run the conversion if you want different scenes.
 - Portrait slots still need real photos: `portrait-oz`, `portrait-cris` (448 x 560) and `portrait-cris-small` (224 x 224) in `src/app/[locale]/page.tsx`. Swap the `Placeholder` for `next/image`, WebP under 40 KB.
-- Logo: `src/components/site/Logo.tsx` is a 14 px square. Replace with the real mark.
 - Favicon: `src/app/favicon.ico` is the Next.js default. Replace it.
 
 ## 4. Calendly and environment variables
@@ -49,15 +47,15 @@ gh repo delete ozmerchant/groundwork-site --yes
 
 ## 6. Custom domain## 6. Custom domain
 
-Nothing is attached yet. When the domain (`[DOMAIN]`) is ready:
+Nothing is attached yet. The likely domain is `hechoai.com` (whois showed it available on 2026-09-07; register it first). When it is ready:
 
-1. Vercel dashboard: wellistic-soap's projects, project `consulting`, Settings, Domains, Add. Enter `[DOMAIN]` and also `www.[DOMAIN]`. Choose to redirect `www` to the apex (or the reverse).
+1. Vercel dashboard: wellistic-soap's projects, project `consulting`, Settings, Domains, Add. Enter `hechoai.com` and also `www.hechoai.com`. Choose to redirect `www` to the apex (or the reverse).
 2. At the DNS provider, add:
    - `A` record, host `@`, value `76.76.21.21`
    - `CNAME` record, host `www`, value `cname.vercel-dns.com`
    Vercel shows the exact records for your setup on the same screen; use those if they differ.
 3. Wait for the domain to show "Valid Configuration" in Vercel. SSL is automatic.
-4. Update `NEXT_PUBLIC_SITE_URL` in Vercel (Production) to `https://[DOMAIN]` and redeploy so canonical, hreflang, sitemap, and OG URLs use the real domain.
+4. Update `NEXT_PUBLIC_SITE_URL` in Vercel (Production) to `https://hechoai.com` and redeploy so canonical, hreflang, sitemap, and OG URLs use the real domain.
 
 ## 7. Content review
 
