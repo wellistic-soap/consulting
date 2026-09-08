@@ -41,7 +41,7 @@ Keep every hero under 80 KB so vertical pages stay under the 500 KB budget. Conv
 > [style block] A modern gym front desk with a wood counter, a row of water bottles, and a wall clock, empty at opening time. Equipment out of focus behind glass. Soft morning light. The left third of the frame is the plain counter surface.
 
 **agencies-hero**
-> [style block] A tall whiteboard in a modern agency office covered in a hand-drawn funnel diagram and colored sticky notes, seen at a slight angle. One person's arm and shoulder at the right edge, marker in hand. A brass desk lamp on a table in the foreground, out of focus. The left third of the frame is the plain wall beside the whiteboard.
+> [style block] A marketing agency's glass-walled meeting room mid-morning. Three people seen from behind and in profile, leaning over a long wood table covered with printed campaign mockups, sticky notes, and two closed laptops. A large window behind them with soft light. Faces turned toward the table, not the camera. The left third of the frame is the plain glass wall and floor.
 
 ## Optional
 
