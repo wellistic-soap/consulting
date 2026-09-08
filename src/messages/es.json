@@ -13,7 +13,8 @@
       "pricing": "Precios",
       "callback": "Agendar",
       "menu": "Abrir menú",
-      "close": "Cerrar menú"
+      "close": "Cerrar menú",
+      "agencies": "Agencias de marketing"
     },
     "cta": {
       "primary": "Agende una llamada con Cris",
@@ -48,7 +49,8 @@
       "dental": "Dental",
       "auto": "Automotriz",
       "gyms": "Gimnasios",
-      "pricing": "Precios"
+      "pricing": "Precios",
+      "agencies": "Agencias"
     }
   },
   "meta": {
@@ -87,6 +89,10 @@
     "terms": {
       "title": "Términos de servicio | Groundwork",
       "description": "Los términos que aplican a este sitio y a nuestros servicios."
+    },
+    "agencies": {
+      "title": "Operaciones con IA para agencias de marketing | Groundwork",
+      "description": "Prospectos contestados en minutos, reportes de clientes redactados por la mañana, propuestas con seguimiento. Automatizaciones y agentes para agencias de marketing, corriendo en sus cuentas."
     }
   },
   "home": {
@@ -120,6 +126,10 @@
         "gyms": {
           "title": "Gimnasios y cadenas de fitness",
           "desc": "2 o más sucursales. Seguimiento a prospectos, rescate de cancelaciones, reactivación."
+        },
+        "agencies": {
+          "title": "Agencias de marketing",
+          "desc": "2 o más ejecutivos de cuenta. Respuesta inmediata a prospectos, reportes de clientes, seguimiento a propuestas."
         }
       }
     },
@@ -824,5 +834,92 @@
     "title": "Esa página no existe.",
     "desc": "Pruebe la página de inicio, o agende una llamada con Cris.",
     "home": "Ir al inicio"
+  },
+  "agencies": {
+    "hero": {
+      "headline": "Prospectos contestados en minutos. Reportes listos por la mañana. Ejecutivos de cuenta de vuelta al trabajo que los clientes pagan.",
+      "sub": "Para agencias de marketing con dos o más ejecutivos de cuenta y una cartera de clientes que los mantiene ocupados.",
+      "imageAlt": "Oficina de agencia por la mañana con dos escritorios, monitores apagados y un pizarrón con nombres de clientes"
+    },
+    "pains": [
+      "Un prospecto llena el formulario de su sitio y recibe respuesta a la tarde siguiente, cuando ya eligió a otra agencia.",
+      "Los ejecutivos de cuenta pasan la primera semana de cada mes armando reportes en lugar de hablar con clientes.",
+      "Las propuestas salen y el seguimiento depende de quién se acuerde.",
+      "Se entera de que un cliente está inconforme cuando escribe para cancelar, no antes."
+    ],
+    "workflows": [
+      {
+        "title": "Calificación de prospectos entrantes",
+        "desc": "Cada formulario y llamada entrante recibe respuesta en un minuto, unas preguntas de calificación y una reunión agendada en el calendario de la persona correcta."
+      },
+      {
+        "title": "Secuencias de seguimiento a propuestas",
+        "desc": "Las propuestas abiertas reciben seguimiento por correo, texto y teléfono con el calendario que usted define, y la respuesta queda en su CRM."
+      },
+      {
+        "title": "Agente de reportes para clientes",
+        "desc": "Junta los números de anuncios, analítica y CRM de cada cliente en un primer borrador del reporte mensual, en su plantilla, listo para que una persona agregue la historia."
+      },
+      {
+        "title": "Automatización de onboarding",
+        "desc": "Contratos, cuestionarios de inicio, solicitudes de acceso y agenda de arranque, siempre de la misma forma."
+      },
+      {
+        "title": "Notas de reunión y siguientes pasos",
+        "desc": "Las llamadas con clientes se convierten en resumen, tareas y actualizaciones al CRM antes de que el ejecutivo vuelva a su escritorio."
+      },
+      {
+        "title": "Señales de retención",
+        "desc": "Pagos atrasados, baja de actividad y reuniones perdidas se avisan al responsable de la cuenta con tiempo para hacer algo."
+      }
+    ],
+    "trust": [
+      "Funciona con HubSpot, GoHighLevel, Slack, Google Ads, Meta y las herramientas de reportes que ya usa.",
+      "Corre en cuentas a su nombre. Los datos de sus clientes se quedan en sus sistemas; nosotros no los alojamos.",
+      "Todo lo que construimos para usted le pertenece, incluyendo la documentación.",
+      "¿Quiere ofrecerlo a sus propios clientes? Lo construimos bajo su marca y usted es dueño de la relación."
+    ],
+    "useCases": [
+      {
+        "title": "Agente de respuesta inmediata a prospectos",
+        "problem": "Los prospectos entrantes esperan horas a una persona. Para entonces la mayoría ya habló con otras dos agencias.",
+        "build": "Un agente que responde en menos de un minuto, hace tres preguntas de calificación y agenda una llamada con la persona correcta.",
+        "roi": "Típico: el doble de prospectos entrantes llegando a una primera llamada"
+      },
+      {
+        "title": "Agente de reportes mensuales",
+        "problem": "La semana de reportes se come el 20% del mes de cada ejecutivo de cuenta.",
+        "build": "Un agente que junta los números de cada cliente en su plantilla de reporte y redacta el resumen. Las personas agregan la historia.",
+        "roi": "Típico: de 15 a 25 horas al mes recuperadas por ejecutivo de cuenta"
+      },
+      {
+        "title": "Secuencias de seguimiento a propuestas",
+        "problem": "Las propuestas se quedan abiertas y nadie las persigue con constancia.",
+        "build": "Seguimiento automático por correo, texto y teléfono hasta que el prospecto responde, con el resultado en su CRM.",
+        "roi": "Típico: de 10% a 20% más propuestas cerradas"
+      },
+      {
+        "title": "Automatización del onboarding de clientes",
+        "problem": "Cada cliente nuevo se incorpora un poco distinto y algo se olvida.",
+        "build": "Contrato, cuestionario, solicitudes de acceso y agenda de arranque corren igual cada vez, con una lista de verificación que su equipo ve.",
+        "roi": "Típico: onboarding de dos semanas a una"
+      },
+      {
+        "title": "Notas de reunión al CRM",
+        "problem": "Las llamadas con clientes terminan y las notas viven en la cabeza de alguien.",
+        "build": "Resumen, tareas y actualizaciones al CRM generados desde la grabación de la llamada, y revisados por el ejecutivo de cuenta.",
+        "roi": "Típico: de 3 a 5 horas a la semana recuperadas por ejecutivo de cuenta"
+      },
+      {
+        "title": "Alerta temprana de cancelaciones",
+        "problem": "Se entera de que un cliente se va cuando llega el correo de cancelación.",
+        "build": "Un agente que vigila pagos, actividad y asistencia a reuniones y avisa al responsable de las cuentas en riesgo.",
+        "roi": "Típico: de 1 a 2 cuentas rescatadas por trimestre"
+      }
+    ],
+    "cta": {
+      "title": "Descubra cuántos prospectos y horas está perdiendo su agencia.",
+      "desc": "La auditoría toma dos semanas y le da un número con el que puede actuar."
+    }
   }
 }

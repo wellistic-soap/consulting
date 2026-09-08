@@ -20,7 +20,7 @@ Every placeholder still to fill, in rough priority order.
 
 Prompts for every slot are in `IMAGE-PROMPTS.md`.
 
-- Vertical hero images are in place (`public/images/heroes/*.webp`, 23 to 66 KB each, generated with DALL-E from the prompts). Originals are kept in `design/uploads/` (gitignored). Regenerate and re-run the conversion if you want different scenes.
+- Vertical hero images are in place for five verticals (`public/images/heroes/*.webp`, 23 to 66 KB each, generated with DALL-E from the prompts). Originals are kept in `design/uploads/` (gitignored). Regenerate and re-run the conversion if you want different scenes. The agencies page still shows a placeholder: generate `agencies-hero` from the prompt, convert to `public/images/heroes/agencies.webp`, and add `"agencies"` to `HERO_IMAGES` in `src/lib/site.ts`.
 - Portrait slots still need real photos: `portrait-oz`, `portrait-cris` (448 x 560) and `portrait-cris-small` (224 x 224) in `src/app/[locale]/page.tsx`. Swap the `Placeholder` for `next/image`, WebP under 40 KB.
 - Logo: `src/components/site/Logo.tsx` is a 14 px square. Replace with the real mark.
 - Favicon: `src/app/favicon.ico` is the Next.js default. Replace it.

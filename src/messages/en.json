@@ -13,7 +13,8 @@
       "pricing": "Pricing",
       "callback": "Book a call",
       "menu": "Open menu",
-      "close": "Close menu"
+      "close": "Close menu",
+      "agencies": "Marketing agencies"
     },
     "cta": {
       "primary": "Book a call with Cris",
@@ -48,7 +49,8 @@
       "dental": "Dental",
       "auto": "Auto",
       "gyms": "Gyms",
-      "pricing": "Pricing"
+      "pricing": "Pricing",
+      "agencies": "Agencies"
     }
   },
   "meta": {
@@ -87,6 +89,10 @@
     "terms": {
       "title": "Terms of service | Groundwork",
       "description": "The terms that apply to this website and our services."
+    },
+    "agencies": {
+      "title": "AI operations for marketing agencies | Groundwork",
+      "description": "Leads answered in minutes, client reports drafted by morning, proposals followed up. Automations and agents for marketing agencies, running in your accounts."
     }
   },
   "home": {
@@ -120,6 +126,10 @@
         "gyms": {
           "title": "Gyms and fitness chains",
           "desc": "2+ locations. Lead follow-up, cancellation saves, reactivation."
+        },
+        "agencies": {
+          "title": "Marketing agencies",
+          "desc": "2+ account managers. Speed to lead, client reporting, proposal follow-up."
         }
       }
     },
@@ -824,5 +834,92 @@
     "title": "That page does not exist.",
     "desc": "Try the home page, or book a call with Cris.",
     "home": "Go to home"
+  },
+  "agencies": {
+    "hero": {
+      "headline": "Leads answered in minutes. Reports done by morning. Account managers back on the work clients pay for.",
+      "sub": "For marketing agencies with two or more account managers and a client list that keeps them busy.",
+      "imageAlt": "Agency office in the morning with two desks, monitors off, and a whiteboard of client names"
+    },
+    "pains": [
+      "A lead fills out the form on your site and gets a reply the next afternoon, after they already picked someone else.",
+      "Account managers spend the first week of every month building reports instead of talking to clients.",
+      "Proposals go out and the follow-up depends on who remembers.",
+      "You hear a client is unhappy when they email to cancel, not before."
+    ],
+    "workflows": [
+      {
+        "title": "Inbound lead qualification",
+        "desc": "Every form fill and inbound call gets a reply in a minute, a few qualifying questions, and a meeting booked on the right person's calendar."
+      },
+      {
+        "title": "Proposal follow-up sequences",
+        "desc": "Open proposals get followed up by email, text, and phone on a schedule you set, with the answer logged in your CRM."
+      },
+      {
+        "title": "Client reporting agent",
+        "desc": "Pulls ad, analytics, and CRM numbers for every client into a first draft of the monthly report, in your template, ready for a human to add the story."
+      },
+      {
+        "title": "Onboarding automation",
+        "desc": "Contracts, intake questionnaires, access requests, and kickoff scheduling handled the same way every time."
+      },
+      {
+        "title": "Meeting notes and next steps",
+        "desc": "Client calls turned into a summary, action items, and CRM updates before the account manager is back at the desk."
+      },
+      {
+        "title": "Retention signals",
+        "desc": "Late payments, dropped engagement, and missed meetings flagged to the account lead early enough to do something."
+      }
+    ],
+    "trust": [
+      "Works with HubSpot, GoHighLevel, Slack, Google Ads, Meta, and the reporting tools you already use.",
+      "Runs in accounts set up in your name. Your client data stays in your systems; we do not host it.",
+      "Everything we build for you belongs to you, including the documentation.",
+      "Want to offer this to your own clients? We build it under your name and you own the relationship."
+    ],
+    "useCases": [
+      {
+        "title": "Speed-to-lead agent",
+        "problem": "Inbound leads wait hours for a human. Most have talked to two other agencies by then.",
+        "build": "An agent that replies in under a minute, asks three qualifying questions, and books a call with the right person.",
+        "roi": "Typical: 2x more inbound leads reaching a first call"
+      },
+      {
+        "title": "Monthly reporting agent",
+        "problem": "Reporting week eats 20% of every account manager's month.",
+        "build": "An agent that pulls every client's numbers into your report template and drafts the summary. Humans add the story.",
+        "roi": "Typical: 15 to 25 account manager hours back per month, per manager"
+      },
+      {
+        "title": "Proposal follow-up sequences",
+        "problem": "Proposals sit open and nobody chases them consistently.",
+        "build": "Automated follow-up by email, text, and phone until the prospect answers, with the outcome in your CRM.",
+        "roi": "Typical: 10% to 20% more proposals closed"
+      },
+      {
+        "title": "Client onboarding automation",
+        "problem": "Every new client is onboarded a little differently and something gets missed.",
+        "build": "Contract, intake, access requests, and kickoff scheduling run the same way every time, with a checklist your team sees.",
+        "roi": "Typical: onboarding time cut from two weeks to one"
+      },
+      {
+        "title": "Meeting notes to CRM",
+        "problem": "Client calls end and the notes live in someone's head.",
+        "build": "Summary, action items, and CRM updates produced from the call recording, then reviewed by the account manager.",
+        "roi": "Typical: 3 to 5 hours a week back per account manager"
+      },
+      {
+        "title": "Churn early warning",
+        "problem": "You find out a client is leaving when the cancellation email arrives.",
+        "build": "An agent that watches payments, engagement, and meeting attendance and flags accounts at risk to the account lead.",
+        "roi": "Typical: 1 to 2 accounts saved per quarter"
+      }
+    ],
+    "cta": {
+      "title": "Find out how many leads and hours your agency is losing.",
+      "desc": "The audit takes two weeks and gives you a number you can act on."
+    }
   }
 }

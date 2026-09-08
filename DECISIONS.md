@@ -74,6 +74,12 @@ Implemented from the Claude Design project export (`design/design_handoff_ground
 
 The five vertical hero slots now carry DALL-E images generated from IMAGE-PROMPTS.md, converted with sharp to 1200 x 900 WebP at quality 75 with attention-based cropping. All land between 23 and 66 KB. They render only at 768 px and up, so phone pages do not download them; the `sizes` attribute caps desktop requests at 440 px wide. Alt text lives in each vertical's `hero.imageAlt` in both message files. Portrait slots remain placeholders until real photos exist.
 
+## Marketing agencies vertical (2026-09-07)
+
+Added a sixth vertical at `/agencies` (EN and ES) because Cris knows many agency owners. Same page skeleton as the other five: pain headline, four pains, six workflows, trust band, six use cases with Typical impact, CTA. The trust band includes one line inviting agencies to resell the work under their own name, since agencies are also a channel. Positioned last in the nav and on the Home grid; dealers stays first. The hero shows the placeholder until an image is generated (prompt added to IMAGE-PROMPTS.md).
+
+Spanish for native review: "ejecutivos de cuenta" (account managers; some agencies say "gerentes de cuenta"), "respuesta inmediata a prospectos" for speed-to-lead, "onboarding" left in English as agencies use it.
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."

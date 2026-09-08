@@ -7,7 +7,7 @@ export const SITE_URL = (
 export const CALENDLY_URL =
   process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/REPLACE_ME"; // TODO: set in Vercel
 
-export type VerticalKey = "dealers" | "homeServices" | "dental" | "auto" | "gyms";
+export type VerticalKey = "dealers" | "homeServices" | "dental" | "auto" | "gyms" | "agencies";
 
 export const VERTICALS: { key: VerticalKey; path: string }[] = [
   { key: "dealers", path: "/dealers" },
@@ -15,7 +15,11 @@ export const VERTICALS: { key: VerticalKey; path: string }[] = [
   { key: "dental", path: "/dental" },
   { key: "auto", path: "/auto" },
   { key: "gyms", path: "/gyms" },
+  { key: "agencies", path: "/agencies" },
 ];
+
+/** Verticals that have a real hero image in public/images/heroes. Others show the placeholder. */
+export const HERO_IMAGES: ReadonlySet<VerticalKey> = new Set(["dealers", "homeServices", "dental", "auto", "gyms"]);
 
 export const PAGE_PATHS = ["/", ...VERTICALS.map((v) => v.path), "/pricing", "/privacy", "/terms"] as const;
 

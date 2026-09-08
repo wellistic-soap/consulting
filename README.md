@@ -40,7 +40,7 @@ Both are build-time public variables: change them in Vercel and redeploy.
 ## Project layout
 
 ```
-src/app/[locale]/           pages (home, five verticals, pricing, privacy, terms)
+src/app/[locale]/           pages (home, six verticals, pricing, privacy, terms)
 src/app/api/og/             locale-aware Open Graph image
 src/app/sitemap.ts          locale-aware sitemap with hreflang alternates
 src/components/site/        header, footer, mobile CTA bar, share button, page templates

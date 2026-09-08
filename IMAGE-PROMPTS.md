@@ -17,6 +17,7 @@ Why: the palette is slate `#24384d`, off-white `#f8f6f1`, brass `#b45309`. Photo
 | `dental-hero` | Dental hero | 1792 x 1024 | same |
 | `auto-hero` | Auto hero | 1792 x 1024 | same |
 | `gyms-hero` | Gyms hero | 1792 x 1024 | same |
+| `agencies-hero` | Marketing agencies hero | 1792 x 1024 | same |
 | `portrait-oz`, `portrait-cris` | Home, "Who we are" (112 x 140 slot) | real photos, not generated | 448 x 560 (4:5), WebP, under 40 KB |
 | `portrait-cris-small` | Home, "Talk to Cris" card (56 x 56) | same photo of Cris, square crop | 224 x 224, WebP, under 15 KB |
 
@@ -38,6 +39,9 @@ Keep every hero under 80 KB so vertical pages stay under the 500 KB budget. Conv
 
 **gyms-hero**
 > [style block] A modern gym front desk with a wood counter, a row of water bottles, and a wall clock, empty at opening time. Equipment out of focus behind glass. Soft morning light. The left third of the frame is the plain counter surface.
+
+**agencies-hero**
+> [style block] A small marketing agency office early in the morning before anyone arrives. Two desks with monitors switched off, a notebook and a mug, a whiteboard in the background with a column of client names too far away to read. Large window, soft light. The left third of the frame is a plain wall.
 
 ## Optional
 

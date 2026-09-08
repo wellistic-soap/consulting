@@ -26,6 +26,7 @@ type MetaKey =
   | "dental"
   | "auto"
   | "gyms"
+  | "agencies"
   | "pricing"
   | "privacy"
   | "terms";
