@@ -65,13 +65,13 @@ export default async function HomePage({ params }: Params) {
       {/* 01 Who we work with */}
       <Section tone="muted">
         <SectionHeading eyebrow="01" title={t("verticals.title")} subtitle={t("verticals.subtitle")} />
-        <ul className="grid grid-cols-[repeat(auto-fit,minmax(168px,1fr))] gap-4">
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {VERTICALS.map((v, i) => (
             <li key={v.key}>
               <Link
                 href={v.path}
                 className={cn(
-                  "card card-lift flex min-h-[200px] flex-col border p-5 text-foreground",
+                  "card card-lift flex min-h-[180px] flex-col border p-6 text-foreground",
                   i === 0 ? "border-primary/60" : "border-transparent",
                 )}
               >
