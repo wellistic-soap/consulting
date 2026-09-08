@@ -76,7 +76,7 @@ The five vertical hero slots now carry DALL-E images generated from IMAGE-PROMPT
 
 ## Marketing agencies vertical (2026-09-07)
 
-Added a sixth vertical at `/agencies` (EN and ES) because Cris knows many agency owners. Same page skeleton as the other five: pain headline, four pains, six workflows, trust band, six use cases with Typical impact, CTA. The trust band includes one line inviting agencies to resell the work under their own name, since agencies are also a channel. Positioned last in the nav and on the Home grid; dealers stays first. The hero shows the placeholder until an image is generated (prompt added to IMAGE-PROMPTS.md).
+Added a sixth vertical at `/agencies` (EN and ES) because Cris knows many agency owners. Same page skeleton as the other five: pain headline, four pains, six workflows, trust band, six use cases with Typical impact, CTA. The trust band includes one line inviting agencies to resell the work under their own name, since agencies are also a channel. Positioned last in the nav and on the Home grid; dealers stays first. Hero image added the same day from the IMAGE-PROMPTS.md prompt.
 
 Spanish for native review: "ejecutivos de cuenta" (account managers; some agencies say "gerentes de cuenta"), "respuesta inmediata a prospectos" for speed-to-lead, "onboarding" left in English as agencies use it.
 

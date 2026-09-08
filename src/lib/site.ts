@@ -19,7 +19,7 @@ export const VERTICALS: { key: VerticalKey; path: string }[] = [
 ];
 
 /** Verticals that have a real hero image in public/images/heroes. Others show the placeholder. */
-export const HERO_IMAGES: ReadonlySet<VerticalKey> = new Set(["dealers", "homeServices", "dental", "auto", "gyms"]);
+export const HERO_IMAGES: ReadonlySet<VerticalKey> = new Set(["dealers", "homeServices", "dental", "auto", "gyms", "agencies"]);
 
 export const PAGE_PATHS = ["/", ...VERTICALS.map((v) => v.path), "/pricing", "/privacy", "/terms"] as const;
 
