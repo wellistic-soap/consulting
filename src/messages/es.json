@@ -778,7 +778,7 @@
   "legal": {
     "privacy": {
       "title": "Política de privacidad",
-      "updated": "Última actualización: [FECHA]",
+      "updated": "Última actualización: 8 de septiembre de 2026",
       "sections": [
         {
           "h": "Qué recopilamos",
@@ -798,17 +798,17 @@
         },
         {
           "h": "Sus opciones",
-          "p": "Puede pedirnos que eliminemos su información en cualquier momento escribiendo a [CONTACT EMAIL]."
+          "p": "Puede pedirnos que eliminemos su información en cualquier momento escribiendo a support@hechoai.com."
         },
         {
           "h": "Contacto",
-          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Correo: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Correo: support@hechoai.com."
         }
       ]
     },
     "terms": {
       "title": "Términos de servicio",
-      "updated": "Última actualización: [FECHA]",
+      "updated": "Última actualización: 8 de septiembre de 2026",
       "sections": [
         {
           "h": "Este sitio",
@@ -832,7 +832,7 @@
         },
         {
           "h": "Contacto",
-          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Correo: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Correo: support@hechoai.com."
         }
       ]
     }

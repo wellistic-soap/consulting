@@ -778,7 +778,7 @@
   "legal": {
     "privacy": {
       "title": "Privacy policy",
-      "updated": "Last updated: [DATE]",
+      "updated": "Last updated: September 8, 2026",
       "sections": [
         {
           "h": "What we collect",
@@ -798,17 +798,17 @@
         },
         {
           "h": "Your choices",
-          "p": "You can ask us to delete your information at any time by contacting us at [CONTACT EMAIL]."
+          "p": "You can ask us to delete your information at any time by contacting us at support@hechoai.com."
         },
         {
           "h": "Contact",
-          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Email: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Email: support@hechoai.com."
         }
       ]
     },
     "terms": {
       "title": "Terms of service",
-      "updated": "Last updated: [DATE]",
+      "updated": "Last updated: September 8, 2026",
       "sections": [
         {
           "h": "This website",
@@ -832,7 +832,7 @@
         },
         {
           "h": "Contact",
-          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Email: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Email: support@hechoai.com."
         }
       ]
     }
