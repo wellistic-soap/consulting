@@ -30,7 +30,8 @@
     "footer": {
       "privacy": "Privacidad",
       "terms": "Términos",
-      "rights": "Todos los derechos reservados."
+      "rights": "Todos los derechos reservados.",
+      "address": "300 S Main St, Holly Springs, NC 27540"
     },
     "share": {
       "button": "Compartir esta página",
@@ -801,7 +802,7 @@
         },
         {
           "h": "Contacto",
-          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Correo: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Correo: [CONTACT EMAIL]."
         }
       ]
     },
@@ -811,7 +812,7 @@
       "sections": [
         {
           "h": "Este sitio",
-          "p": "Este sitio describe los servicios de [COMPANY LEGAL NAME]. El contenido es solo informativo. Las cifras mostradas son rangos típicos y no son garantía de resultados para su negocio."
+          "p": "Este sitio describe los servicios de Hecho AI. El contenido es solo informativo. Las cifras mostradas son rangos típicos y no son garantía de resultados para su negocio."
         },
         {
           "h": "Servicios",
@@ -823,15 +824,15 @@
         },
         {
           "h": "Limitación de responsabilidad",
-          "p": "En la medida que lo permita la ley, [COMPANY LEGAL NAME] no es responsable de ninguna pérdida derivada del uso de este sitio."
+          "p": "En la medida que lo permita la ley, Hecho AI no es responsable de ninguna pérdida derivada del uso de este sitio."
         },
         {
           "h": "Ley aplicable",
-          "p": "Estos términos se rigen por las leyes del Estado de [STATE], Estados Unidos."
+          "p": "Estos términos se rigen por las leyes del Estado de Carolina del Norte, Estados Unidos."
         },
         {
           "h": "Contacto",
-          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Correo: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Correo: [CONTACT EMAIL]."
         }
       ]
     }

@@ -15,6 +15,7 @@ export function Footer() {
           <Logo height={24} />
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">{t("tagline")}</p>
           <p className="mt-2 font-mono text-xs text-muted-foreground">{t("qualifier")}</p>
+          <address className="mt-3 text-sm not-italic leading-6 text-muted-foreground">{t("footer.address")}</address>
         </div>
         <nav aria-label={t("nav.verticals")}>
           <p className="mono-label mb-3 font-semibold tracking-[0.18em]">{t("nav.verticals")}</p>

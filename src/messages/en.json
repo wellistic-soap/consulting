@@ -30,7 +30,8 @@
     "footer": {
       "privacy": "Privacy",
       "terms": "Terms",
-      "rights": "All rights reserved."
+      "rights": "All rights reserved.",
+      "address": "300 S Main St, Holly Springs, NC 27540"
     },
     "share": {
       "button": "Share this page",
@@ -801,7 +802,7 @@
         },
         {
           "h": "Contact",
-          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Email: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Email: [CONTACT EMAIL]."
         }
       ]
     },
@@ -811,7 +812,7 @@
       "sections": [
         {
           "h": "This website",
-          "p": "This website describes the services of [COMPANY LEGAL NAME]. Content is provided for information only. Figures shown are typical ranges and are not guarantees of results for your business."
+          "p": "This website describes the services of Hecho AI. Content is provided for information only. Figures shown are typical ranges and are not guarantees of results for your business."
         },
         {
           "h": "Services",
@@ -823,15 +824,15 @@
         },
         {
           "h": "Limitation of liability",
-          "p": "To the extent permitted by law, [COMPANY LEGAL NAME] is not liable for any loss arising from use of this website."
+          "p": "To the extent permitted by law, Hecho AI is not liable for any loss arising from use of this website."
         },
         {
           "h": "Governing law",
-          "p": "These terms are governed by the laws of the State of [STATE], United States."
+          "p": "These terms are governed by the laws of the State of North Carolina, United States."
         },
         {
           "h": "Contact",
-          "p": "[COMPANY LEGAL NAME], [ADDRESS]. Email: [CONTACT EMAIL]."
+          "p": "Hecho AI, 300 S Main St, Holly Springs, NC 27540. Email: [CONTACT EMAIL]."
         }
       ]
     }

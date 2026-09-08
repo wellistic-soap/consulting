@@ -7,7 +7,7 @@ Every placeholder still to fill, in rough priority order.
 Done on 2026-09-08: the site is named **Hecho AI** everywhere (site name, page titles, OG image) and the wordmark logo is in `public/brand/`. Still to do:
 
 - Favicon: `src/app/favicon.ico` is still the Next.js default. Export a 32 px and 180 px icon from the logo mark and replace it (an `icon.png` and `apple-icon.png` in `src/app/` also work).
-- Legal pages: `[COMPANY LEGAL NAME]`, `[ADDRESS]`, `[CONTACT EMAIL]`, `[STATE]`, `[DATE]` in `legal.privacy` and `legal.terms` in both message files. Have a lawyer read both pages.
+- Legal pages: address (300 S Main St, Holly Springs, NC 27540) and governing law (North Carolina) are filled in. Still placeholders: `[CONTACT EMAIL]` and `[DATE]` in `legal.privacy` and `legal.terms` in both message files. The company name on those pages is "Hecho AI"; replace with the registered legal entity name (LLC, Inc.) once known. Have a lawyer read both pages.
 
 ## 2. People
 

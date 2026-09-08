@@ -91,6 +91,10 @@ Oz chose **Hecho AI** ("hecho" is Spanish for "done," and it reads the same in E
 - A short "The name" card sits under the people cards on Home: hecho means done, and that is the promise. Spanish title uses "ya quedó," the everyday phrase, and is flagged for native review.
 - Cris's last name is Baez. His card is first (left on desktop) in "Who we are"; Oz is second. Oz's bio says 20+ years, corrected from 25+.
 
+## Address (2026-09-08)
+
+Company address is 300 S Main St, Holly Springs, NC 27540. It appears in the footer and in the Contact section of Privacy and Terms. Governing law on Terms was set to North Carolina to match; confirm with counsel. The legal-entity name is still "Hecho AI" pending the registered name.
+
 ## Headline alternates
 
 Chosen (EN): "Your phones answered. Your follow-ups done. Your team back to the work that pays."
